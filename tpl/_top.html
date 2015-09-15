@@ -1,0 +1,31 @@
+<header class="header">
+		<nav role="navigation">
+			<ul class="skip-links" id="prelude">
+				<li><a href="#main">{{tpl:lang To content}}</a></li>
+				<li><a href="#blognav">{{tpl:lang To menu}}</a></li>
+				<li><a href="#search">{{tpl:lang To search}}</a></li>
+			</ul>
+		</nav>
+		
+		<h1 class="site-title">
+		<a href="/">
+			{{tpl:BlogName encode_html="1"}}<br />
+			{{tpl:BlogDescription}}
+			</a>
+		</h1>
+		
+		<div class="banner" role="banner"><a href="#menu" id="logo"><img src="/themes/cpu-15/header/cpu_logo.svg" alt="CPU" /></a><menu id="menu"><li  class="fond_rouge"><a href="{{tpl:BlogURL}}">Index</a></li><li class="fond_orange"><a href="#">Programmes</a></li><li class="fond_jaune"><a href="#">Interviewes</a></li><li class="fond_vert"><a href="/category/Chroniques">Chroniques</a></li><li class="fond_bleu"><a href="#search">Chercher</a></li>
+		</menu>
+		<div id="top_spacer"></div>
+		<div id="ondemiroir_domain">
+		://<strong>cpu.<a href="http://om.dascritch.net">londemiroir.fr</a></strong>
+		</div>
+			
+		</div>
+	<!-- # { {tpl:SimpleMenu class="nav header__nav"}} -->
+</header>
+
+<p class="site-baseline">{{tpl:BlogDescription}}</p>
+
+<!-- # - -BEHAVIOR- - publicTopAfterContent -->
+{{tpl:SysBehavior behavior="publicTopAfterContent"}}
