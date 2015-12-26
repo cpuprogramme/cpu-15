@@ -1,8 +1,5 @@
 <article id="p{{tpl:EntryID}}" class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" lang="{{tpl:EntryLang}}" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
 
-	<!-- # New day date -->
-	<!-- # tpl:DateHeader><p class="post-day-date">{{tpl:EntryDate}}</p></tpl:DateHeader -->
-
 	<h2 class="post-title"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h2>
 
 	<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
@@ -14,15 +11,6 @@
 			{{tpl:EntryExcerpt}}
 		</div>
 	</tpl:EntryIf>
-
-	<!-- # Entry without excerpt - ->
-	<tpl:EntryIf extended="0">
-		<div class="post-content no-images calque">
-			<p>
-				{{tpl:EntryContent encode_html="1" remove_html="1" cut_string="300"}}
-			</p>
-		</div>
-	</tpl:EntryIf -->
 
 	<!-- # --BEHAVIOR-- publicEntryAfterContent -->
 	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
@@ -36,10 +24,7 @@
 				href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> › </tpl:EntryCategoriesBreadcrumb><a
 				href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a></span>
 			</tpl:EntryIf>
-			<!-- # tpl:EntryIf show_comments="1">
-			— 
-			<a href="{{tpl:EntryURL}}#comments" class="comment_count">{{tpl:EntryCommentCount}}</a>
-			</tpl:EntryIf -->
+
 			</span>
 		</p>
 
