@@ -54,22 +54,5 @@
 			</tpl:TagsFooter>
 		</tpl:EntryTags>
 
-		<!-- # Number of comments, trackbacks and attachments -->
-		<tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
-			<p class="post-info-co">
-			<tpl:Attachments>
-				<tpl:AttachmentIf is_mp3="1">
-					{{tpl:include src="_mp3_player.html"}}
-				</tpl:AttachmentIf>
-			</tpl:Attachments>
-
-			<!-- #
-			<tpl:EntryIf show_pings="1">
-			<a href="{{tpl:EntryURL}}#pings" class="ping_count">{{tpl:EntryPingCount}}</a></tpl:EntryIf>
-			<tpl:EntryIf has_attachment="1">
-			<a href="{{tpl:EntryURL}}#attachments" class="attach_count">{{tpl:EntryAttachmentCount}}</a></tpl:EntryIf>
-			-->
-			</p>
-		</tpl:EntryIf>
 	</div>
 </article>
