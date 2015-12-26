@@ -1462,6 +1462,7 @@ nav {
 	padding-top : 2em;
 	background-size: 100% auto;
 	background-position : 50% 50%;
+  background-repeat : no-repeat;
 }
 
 .calque {
