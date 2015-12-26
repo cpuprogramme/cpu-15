@@ -21,7 +21,6 @@
 
 	<div class="post-meta">
 		<p class="post-info">
-			<span class="post-author">{{tpl:lang By}} {{tpl:EntryAuthorLink}}, </span>
 			<span class="post-date">{{tpl:EntryDate}}.</span>
 			<tpl:EntryIf has_category="1">
 			<span class="post-cat"><tpl:EntryCategoriesBreadcrumb><a
@@ -41,23 +40,16 @@
 			</tpl:TagsFooter>
 		</tpl:EntryTags>
 
-		<!-- # Number of comments, trackbacks and attachments -->
-		<tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
-			<p class="post-info-co">
-			<tpl:Attachments>
-				<tpl:AttachmentIf is_mp3="1">
-					{{tpl:include src="_mp3_player.html"}}
-				</tpl:AttachmentIf>
-			</tpl:Attachments>
-			<tpl:EntryIf show_comments="1">
-			<a href="{{tpl:EntryURL}}#comments" class="comment_count">{{tpl:EntryCommentCount}}</a>
-			</tpl:EntryIf>
-			<tpl:EntryIf show_pings="1">
-			<a href="{{tpl:EntryURL}}#pings" class="ping_count">{{tpl:EntryPingCount}}</a></tpl:EntryIf>
-			<tpl:EntryIf has_attachment="1">
-			<a href="{{tpl:EntryURL}}#attachments" class="attach_count">{{tpl:EntryAttachmentCount}}</a></tpl:EntryIf>
-			</p>
-		</tpl:EntryIf>
+	<tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
+		<p class="post-info-co">
+		<tpl:Attachments>
+			<tpl:AttachmentIf is_mp3="1">
+				{{tpl:include src="_mp3_player.html"}}
+			</tpl:AttachmentIf>
+		</tpl:Attachments>
+
+		</p>
+	</tpl:EntryIf>
 
 
 	</div>
