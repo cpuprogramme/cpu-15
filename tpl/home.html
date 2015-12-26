@@ -5,7 +5,7 @@
 	<!-- First page -->
 	<tpl:SysIf current_mode="default">
 
-		<h2>Programmes</h2>
+		<h2 class="notsobig">Programmes</h2>
 
 		<tpl:Entries lastn="4" category="Programmes ?sub" no_context="1">
 
@@ -14,15 +14,15 @@
 			</tpl:LoopPosition>
 
 			<tpl:LoopPosition start="2">
-				{{tpl:include src="_entry-short.html"}}
+				{{tpl:include src="_entry-short-program.html"}}
 			</tpl:LoopPosition>
 
 		</tpl:Entries>
 
-		<p>Tous les programmes diffusés</p>
+		<p><a href="/category/Programmes">Tous les programmes diffusés</a>. Premières diffusions le Jeudi à 11h sur <a href="http://www.radio-fmr.net">Radio&lt;FMR&gt;</a></p>
 
 
-		<h2>Chroniques, Interviewes, et autres</h2>
+		<h2  class="notsobig">Chroniques, Interviewes, et autres</h2>
 
 
 		<tpl:Entries lastn="10" category="Programmes ?not" no_context="1">
@@ -33,7 +33,7 @@
 
 		</tpl:Entries>
 
-		<p>Les chroniques, interviewes, hors-micros, ...</p>
+		<p>La suite des <a href="/category/Chroniques">chroniques</a>, <a href="/category/Interviewes">interviewes</a>, hors-micros, ...</p>
 
 
 	</tpl:SysIf>

@@ -236,12 +236,12 @@ h1 {
   font-size: 3em;
   line-height: 1.2; }
 
-h2 {
+h2 , .verybig {
   font-size: 4em;
   line-height: 1.2;
   margin-bottom: 0.5em; }
 
-h3 {
+h3 , .notsobig {
   font-size: 1.75em;
   line-height: 1.33;
   margin-top: 0.5714286em;
