@@ -1469,7 +1469,8 @@ nav {
 	-webkit-transition: 0.3s all linear;
 	-moz-transition: 0.3s all linear;
 	-o-transition: 0.3s all linear;
-	transition: 0.3s all linear; 
+	transition: 0.3s all linear;
+  text-shadow : 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white;
 }
 
 
