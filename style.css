@@ -1449,7 +1449,7 @@ nav {
 }
 
 #menu:target + div + #ondemiroir_domain {
-		font-size: 1.5em; 
+		font-size: 1.5em;
 	}
 
 .fond_bleu { background : #009EDA; }
@@ -1489,9 +1489,9 @@ audio {
 
 @media screen and (max-width: 50em) {
     #ondemiroir_domain {
-     font-size: 1.5em; 
+     font-size: 1.5em;
 	}
-	
+
 	#menu:target + div + #ondemiroir_domain {
 		display:none;
 	}
