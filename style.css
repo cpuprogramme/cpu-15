@@ -976,7 +976,7 @@ a.site-title__link:visited {
       font-size: 2em; } }
 
 .post-content {
-  margin-bottom: 0 auto 1em;
+  margin : 0 auto 1em;
 
   max-width: 42em;
    }
