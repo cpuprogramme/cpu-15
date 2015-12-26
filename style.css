@@ -909,8 +909,8 @@ a.site-title__link:visited {
     POST
 ------------------------------- */
 .post {
-  max-width: 42em;
-  margin: 2em auto 6em; }
+/*  max-width: 42em;*/
+  margin: 0 auto; }
 
 .post-day-date {
   font-size: 0.875em;
