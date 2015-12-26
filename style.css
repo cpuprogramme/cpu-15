@@ -976,7 +976,10 @@ a.site-title__link:visited {
       font-size: 2em; } }
 
 .post-content {
-  margin-bottom: 1em; }
+  margin-bottom: 0 auto 1em;
+
+  max-width: 42em;
+   }
 
 .post-read-it {
   margin-bottom: 1.5em; }
