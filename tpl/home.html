@@ -5,12 +5,14 @@
 	<!-- First page -->
 	<tpl:SysIf current_mode="default">
 
-		<h2 class="notsobig">Programmes</h2>
+		<h2 class="notsobig">Dernier programme</h2>
 
 		<tpl:Entries lastn="4" category="Programmes ?sub" no_context="1">
 
 			<tpl:LoopPosition start="1" length="1">
 				{{tpl:include src="_entry-full.html"}}
+
+				<h2 class="notsobig">Programmes précédents</h2>
 			</tpl:LoopPosition>
 
 			<tpl:LoopPosition start="2">

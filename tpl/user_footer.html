@@ -1,24 +1,2 @@
 
-<script type="text/javascript">
-        $("html").addClass("js");
-        // Show/Hide main menu
-        $(document).ready(function(){
-        // totop scroll
-        $(window).scroll(function() {
-                if($(this).scrollTop() != 0) {
-                    $('#gotop').fadeIn();
-                } else {
-                    $('#gotop').fadeOut();
-                }
-            });
 
-            $('#gotop').click(function() {
-                $('body,html').animate({scrollTop:0},800);
-            });
-});
-</script>
-<!--
-Todo:
-Off-canvas
-    Passer les chaînes de caractères en variables pour les traductions.
--->

@@ -266,16 +266,21 @@ h2, h3, h4, h5, h6 {
 a {
   color: #d52125;
   text-decoration: none;
-  transition: .3s; }
-  p a:link, a:visited {
-    border-bottom: 1px solid gainsboro; }
-  p a:visited {
-    border-bottom-style: dotted; }
-  p a:hover, a:active {
-    border-color: #d52125; }
-  a:focus {
-    background-color: #d52125;
-    color: #f9f9f9; }
+  transition: .3s; 
+}
+p a:link, p a:visited {
+  border-bottom: 1px solid gainsboro; 
+}
+p a:visited {
+  border-bottom-style: dotted; 
+}
+p a:hover, p  a:active {
+  border-color: #d52125; 
+}
+p a:focus {
+  background-color: #d52125;
+  color: #f9f9f9; 
+}
 
 hr {
   border: 0;
@@ -924,7 +929,8 @@ a.site-title__link:visited {
   /*background-color: #f2f2f2;
   border-radius: 0.5714286em;*/
   padding: 0.5714286em 1.1428571em;
-  margin-bottom: 1.7142857em;
+  /*margin-bottom: 1.7142857em;*/
+  margin-bottom: 0em;
   clear: both; }
 
 .post-info {
@@ -1180,9 +1186,10 @@ button.submit:active, button.preview:active {
 
   .post-feedback h3:before {
     margin-right: 2em; } }
+    /*
 @media all and (max-width: 40em) {
   .post {
-    margin: 1em auto 3em; } }
+    margin: 1em auto 3em; } }*/
 /* ---------------------------------------------------------------- archives */
 /* general */
 @media all and (min-width: 30em) {
@@ -1429,7 +1436,7 @@ nav {
     text-decoration : none;
 
 }
-.header menu:target li a{
+.nojs .header menu:target li a , .logo_ouvert .header menu li a {
     width : 100px;
     margin : 0;
 }
@@ -1463,6 +1470,12 @@ nav {
 	background-size: 100% auto;
 	background-position : 50% 50%;
   background-repeat : no-repeat;
+  background-color: #ccc;
+}
+
+
+.banner-article.odd {
+  background-color: #bbb;
 }
 
 .calque {
@@ -1493,7 +1506,7 @@ audio {
      font-size: 1.5em;
 	}
 
-	#menu:target + div + #ondemiroir_domain {
+	.nojs #menu:target + div + #ondemiroir_domain ,  .logo_ouvert #menu + div + #ondemiroir_domain {
 		display:none;
 	}
 }
