@@ -51,7 +51,7 @@ function track_visitors_in_favor_of_a_big_advertizing_company() {
 function main() {
 	// snippet qui était dans _user_footer.tpl
 	$("html").removeClass("nojs").addClass("js");
-	//track_visitors_in_favor_of_a_big_advertizing_company();
+	track_visitors_in_favor_of_a_big_advertizing_company();
 	// la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
 
