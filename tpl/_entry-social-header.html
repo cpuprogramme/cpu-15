@@ -16,6 +16,22 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:url" content="{{tpl:EntryURL}}" />
 <meta name="twitter:title" content="{{tpl:EntryTitle encode_html="1"}}" />
+
+<tpl:AttachmentsNo>
+	<!-- meta name="twitter:card" content="summary" / -->
+</tpl:AttachmentsNo>
+<tpl:Attachments>
+	<tpl:AttachmentsHeader>
+		<!-- meta name="twitter:card" content="player" / -->
+	</tpl:AttachmentsHeader>
+	<tpl:AttachmentIf is_mp3="1">
+		<meta name="twitter:player" content="https://cpu.dascritch.net/twitter-player/{{tpl:EntryURLsegment}}" />
+		<meta name="twitter:player:width" content="480" />
+		<meta name="twitter:player:height" content="200" />
+		<meta name="twitter:player:stream" content="{{tpl:AttachmentURL}}" />
+	</tpl:AttachmentIf>
+</tpl:Attachments>
+
 <meta name="twitter:description" content="{{tpl:EntryContent full="1" encode_html="1" remove_html="1" cut_string="180"}}" />
 <meta name="twitter:image:src" content="http://cpu.dascritch.net{{tpl:EntryFirstImage no_tag="1" size="m"}}"/>
 <meta name="twitter:site" content="@CPUprogramme" />

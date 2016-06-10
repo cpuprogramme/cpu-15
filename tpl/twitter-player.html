@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style type="text/css">
+
+audio, img {  
+   width:100%; 
+   max-width:600px; 
+   height:auto; 
+   display : block;
+   margin : 0;
+}
+</style>
+
+
+<img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" />
+
+<tpl:Attachments>
+	<tpl:AttachmentIf is_mp3="1">
+		{{tpl:include src="_mp3_player.html"}}
+	</tpl:AttachmentIf>
+</tpl:Attachments>
+
+</body>
+</html>
