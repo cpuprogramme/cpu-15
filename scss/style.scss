@@ -33,3 +33,20 @@
 #main {
     //@include debug-vertical-alignment;
 }
+
+/*** SPECIFIC DSN 15 **/
+
+.blognav__widgets li, .blogextra__widgets li {
+    display: flex;
+    padding: 0;
+}
+
+.blognav__widgets li ul, .blogextra__widgets li ul {
+    margin-left: 0;
+    padding: 0;
+}
+
+.sidebar a:link, .sidebar a:visited {
+	flex: auto;
+	padding: 0.25em;
+}
