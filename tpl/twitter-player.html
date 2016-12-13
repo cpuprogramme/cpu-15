@@ -7,26 +7,55 @@
 div {
     position : relative;
     height : 200px;
+    width : 600px; 
 }
 
-audio, img {  
-   width:100%; 
+audio, img {
    max-width:600px; 
-   height:auto; 
    max-height:200px;
    display : block;
    margin : 0;
    position : absolute;
    bottom : 0px;
 }
+
+audio {
+   width:100%; 
+}
+
+img {
+   max-width:200px;
+}
+
+a {
+  text-decoration : none;
+  color : black;
+  display : block;
+  margin : 0;
+  position : absolute;
+  top : 0px; 
+  right : 0;
+  width : 400px;
+}
+
+a img {
+  display : none;
+}
+
+
+
 </style>
 
 <div>
     <img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" />
+    <a href="{{tpl:EntryURL}}">
+      <h3>{{tpl:EntryTitle}}</h3>
+      <p>{{tpl:EntryContent  encode_html="1" remove_html="1" cut_string="200"}}</p>
+    </a>
 
     <tpl:Attachments>
             <tpl:AttachmentIf is_mp3="1">
-                    {{tpl:include src="_mp3_player.html"}}
+              {{tpl:include src="_mp3_player.html"}}
             </tpl:AttachmentIf>
     </tpl:Attachments>
 </div>
