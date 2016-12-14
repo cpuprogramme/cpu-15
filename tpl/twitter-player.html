@@ -3,15 +3,33 @@
 <body>
 
 <style type="text/css">
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(/themes/cpu-15/fonts/RobotoCondensed-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(/themes/cpu-15/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+}
+
+body {
+	font-family: "Roboto Condensed", sans-serif;
+	padding : 0;
+	margin : 0;
+}
 
 div {
     position : relative;
     height : 200px;
-    width : 600px; 
+    width : 500px; 
 }
 
 audio, img {
-   max-width:600px; 
+   max-width:500px; 
    max-height:200px;
    display : block;
    margin : 0;
@@ -35,14 +53,13 @@ a {
   position : absolute;
   top : 0px; 
   right : 0;
-  width : 400px;
+  width : 300px;
 }
 
-a img {
-  display : none;
+h3 {
+    padding : 0;
+    margin : 0 0 6px;
 }
-
-
 
 </style>
 
