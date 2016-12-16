@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-<body>
-
+<head>
+        <meta charset="UTF-8" />
+        <meta name="ROBOTS" content="NOINDEX, FOLLOW" />
+	<link rel="canonical" href="{{tpl:EntryURL}}" />
+	<link rel="top" href="https://cpu.dascritch.net/" title="Accueil" />
 <style type="text/css">
 @font-face {
   font-family: 'Roboto Condensed';
@@ -16,7 +19,7 @@
   src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(/themes/cpu-15/fonts/RobotoCondensed-Bold.ttf) format('truetype');
 }
 
-body {
+* {
 	font-family: "Roboto Condensed", sans-serif;
 	padding : 0;
 	margin : 0;
@@ -24,45 +27,37 @@ body {
 
 div {
     position : relative;
-    height : 200px;
-    width : 500px; 
-}
-
-audio, img {
-   max-width:500px; 
-   max-height:200px;
-   display : block;
-   margin : 0;
-   position : absolute;
-   bottom : 0px;
-}
-
-audio {
-   width:100%; 
-}
-
-img {
-   max-width:200px;
+    display : flex;
+    align-items : center;
+    align-content : center;
 }
 
 a {
   text-decoration : none;
   color : black;
-  display : block;
-  margin : 0;
-  position : absolute;
-  top : 0px; 
-  right : 0;
-  width : 300px;
 }
 
 h3 {
-    padding : 0;
     margin : 0 0 6px;
 }
 
-</style>
+audio {
+   position : absolute;
+   bottom : 0px;
+   width:100%; 
+}
 
+</style>
+<script>
+var query = window.location.search.toLowerCase();
+document.addEventListener('DOMContentLoaded',function() {
+    if ((query.indexOf('autoplay=1')>0) || (query.indexOf('auto_play=true')>0)) {
+        document.querySelector('audio').play();
+    }
+});
+</script>
+</head>
+<body>
 <div>
     <img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" />
     <a href="{{tpl:EntryURL}}">
