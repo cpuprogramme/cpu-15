@@ -1535,3 +1535,13 @@ audio {
   margin:0.125em; 
   border-radius:0.5em;
 } 
+
+ul.tags li {
+  border: 1px solid #777;
+}
+
+ul.tags li:hover, ul.tags li:active, ul.tags li .tag:focus,
+ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
+  background : red;
+  color : white;
+}
