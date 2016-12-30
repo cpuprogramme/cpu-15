@@ -1528,7 +1528,7 @@ audio {
   padding: 0.25em;
 }
 
-#blognav .tags ul li {
+.tags li {
   display : inline-block;
   padding : 0.25em;
   border-right: 1px solid gainsboro;
