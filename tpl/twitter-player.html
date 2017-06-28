@@ -3,74 +3,71 @@
 <head>
         <meta charset="UTF-8" />
         <meta name="ROBOTS" content="NOINDEX, FOLLOW" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="canonical" href="{{tpl:EntryURL}}" />
 	<link rel="top" href="https://cpu.dascritch.net/" title="Accueil" />
-<style type="text/css">
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(/themes/cpu-15/fonts/RobotoCondensed-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(/themes/cpu-15/fonts/RobotoCondensed-Bold.ttf) format('truetype');
-}
+	<style type="text/css">
+		@font-face {
+		  font-family: 'Roboto Condensed';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Regular.ttf) format('truetype');
+		}
+		@font-face {
+		  font-family: 'Roboto Condensed';
+		  font-style: normal;
+		  font-weight: 700;
+		  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+		}
 
-* {
-	font-family: "Roboto Condensed", sans-serif;
-	padding : 0;
-	margin : 0;
-}
+		* {
+			font-family: "Roboto Condensed", sans-serif;
+			padding : 0;
+			margin : 0;
+		}
 
-div {
-    position : relative;
-    display : flex;
-    align-items : center;
-    align-content : center;
-}
+		a {
+		    position : relative;
+		    display : flex;
+		    align-items : center;
+		    align-content : center;
+		    text-decoration : none;
+		    color : black;
+		    max-height : 100%;
+		}
 
-a {
-  text-decoration : none;
-  color : black;
-}
+		h3 {
+		    margin : 0 0 6px;
+		}
 
-h3 {
-    margin : 0 0 6px;
-}
+		audio {
+		   display : block;
+		   top : 0px;
+		   width:100%; 
+		}
 
-audio {
-   position : absolute;
-   bottom : 0px;
-   width:100%; 
-}
-
-</style>
-<script>
-var query = window.location.search.toLowerCase();
-document.addEventListener('DOMContentLoaded',function() {
-    if ((query.indexOf('autoplay=1')>0) || (query.indexOf('auto_play=true')>0)) {
-        document.querySelector('audio').play();
-    }
-});
-</script>
+	</style>
+	<script>
+		var query = window.location.search.toLowerCase();
+		document.addEventListener('DOMContentLoaded',function() {
+		    if ((query.indexOf('autoplay=1')>0) || (query.indexOf('auto_play=true')>0)) {
+			document.querySelector('audio').play();
+		    }
+		});
+	</script>
 </head>
 <body>
-<div>
-    <img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" />
-    <a href="{{tpl:EntryURL}}">
-      <h3>{{tpl:EntryTitle}}</h3>
-      <p>{{tpl:EntryContent  encode_html="1" remove_html="1" cut_string="200"}}</p>
-    </a>
-
-    <tpl:Attachments>
-            <tpl:AttachmentIf is_mp3="1">
-              {{tpl:include src="_mp3_player.html"}}
-            </tpl:AttachmentIf>
-    </tpl:Attachments>
-</div>
-
+	<tpl:Attachments>
+	    <tpl:AttachmentIf is_mp3="1">
+	      {{tpl:include src="_mp3_player.html"}}
+	    </tpl:AttachmentIf>
+	</tpl:Attachments>
+	<a href="{{tpl:EntryURL}}">
+	    <img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" />
+	    <div>
+	      <h3>{{tpl:EntryTitle}}</h3>
+	      <p>{{tpl:EntryContent  encode_html="1" remove_html="1" cut_string="200"}}</p>
+	    </div>
+	</a>
 </body>
 </html>
