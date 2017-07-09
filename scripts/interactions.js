@@ -91,4 +91,8 @@ function main() {
 	document.getElementById('logo').addEventListener('click', on_switch_menu_logo);
 }
 
-window.addEventListener('DOMContentLoaded', main);
+if (document.body) {
+	main();
+} else {
+	window.addEventListener('DOMContentLoaded', main);
+}
