@@ -8,12 +8,27 @@ var html_element = null;
 // snippets dont les originaux étaient dans _user_footer.tpl
 
 function scroll_go_to_top() {
-	$('body,html').animate({scrollTop:0},800);
+	// $('body,html').animate({scrollTop:0},800);
+	/* Honte à moi : repris de https://stackoverflow.com/posts/24559613/revisions */
+
+	scrollDuration = 800;
+
+    var cosParameter = window.scrollY / 2,
+        scrollCount = 0,
+        oldTimestamp = performance.now();
+    function step (newTimestamp) {
+        scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
+        if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+        if (window.scrollY === 0) return;
+        window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+        oldTimestamp = newTimestamp;
+        window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
 }
 
-
 function on_scroll() {
-	if($(this).scrollTop() != 0) {
+	if ( (html_element.scrollTop != 0) || (document.body.scrollTop != 0) ) {
         document.body.classList.add('scrolled');
     } else {
         document.body.classList.remove('scrolled');

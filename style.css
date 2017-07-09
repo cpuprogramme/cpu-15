@@ -1513,7 +1513,7 @@ audio {
 
 /**** removing old jkery animation ***/
 body #gotop {
-  transition: opacity 1s ;
+  transition: opacity 0.2s ;
   opacity : 0;
 }
 
