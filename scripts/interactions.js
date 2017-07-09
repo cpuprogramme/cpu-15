@@ -4,6 +4,7 @@
 
 var post_remember_str = 'Se rappeler de moi';
 var html_element = null;
+var comment_form = null;
 
 // snippets dont les originaux étaient dans _user_footer.tpl
 
@@ -45,14 +46,46 @@ function add_scroll_listeners() {
 	window.addEventListener('scroll', on_scroll);
 }
 
+/** Not so useful
+
+var comment_keys = ['name', 'mail', 'site'];
+function repeal_comment_informations() {
+	for (var index in comment_keys) {
+		key = 'c_'+comment_keys[index];
+		var value = localStorage.getItem(key)
+		if (value.length > 0) {
+			document.getElementById(key).value = value;			
+		}
+	}
+}
+
+function store_comment_informations() {
+	if (!document.getElementById('c_remember').checked) {
+		return;
+	}
+	for (var index in comment_keys) {
+		key = 'c_'+comment_keys[index];
+		localStorage.setItem(key, document.getElementById(key))
+	}
+}
+**/
+
+
 function main() {
 	html_element = document.querySelector('html');
 	// snippet qui était dans _user_footer.tpl
 	html_element.classList.remove('nojs');
 	html_element.classList.add('js');
-
 	// la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
+
+	/**
+	comment_form = document.getElementById('comment_form');
+	if (comment_form) {
+		repeal_comment_informations();
+		comment_form.addEventListener('submit', store_comment_informations);
+	}
+	**/
 
 	// animation spécifique au menu/logo
 	document.getElementById('logo').addEventListener('click', on_switch_menu_logo);
