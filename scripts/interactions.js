@@ -35,23 +35,9 @@ function add_scroll_listeners() {
 	window.addEventListener('scroll', on_scroll);
 }
 
-function track_visitors_in_favor_of_a_big_advertizing_company() {
-	var advert_mogul="//ultrawaves.fr/piwik/";
-	_paq.push(['setTrackerUrl', advert_mogul+'piwik.php']);
-	_paq.push(['setSiteId', 2]);
-	var element = document.createElement('script');
-	element.type = 'text/javascript';
-	element.async=true;
-	element.defer=true;
-	element.src = advert_mogul+'piwik.js';
-	document.head.appendChild(element);
-}
-
-
 function main() {
 	// snippet qui était dans _user_footer.tpl
 	$("html").removeClass("nojs").addClass("js");
-	track_visitors_in_favor_of_a_big_advertizing_company();
 	// la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
 
