@@ -891,7 +891,7 @@ a.site-title__link:visited {
     font-weight: bold; }
 
 #gotop {
-  display: none;
+  display: block;
   z-index: 1000;
   position: fixed;
   bottom: 0;
@@ -1511,6 +1511,16 @@ audio {
 	}
 }
 
+/**** removing old jkery animation ***/
+body #gotop {
+  transition: opacity 1s ;
+  opacity : 0;
+}
+
+body.scrolled #gotop {
+  opacity : 1;
+}
+
 /*** SPECIFIC DSN 15 **/
 
 .blognav__widgets li, .blogextra__widgets li {
@@ -1545,3 +1555,6 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   background : red;
   color : white;
 }
+
+
+

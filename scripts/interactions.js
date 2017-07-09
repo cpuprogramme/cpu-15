@@ -3,10 +3,7 @@
 // pour ne pas avoir de balise <script> dans le source html, je code en dur la case à cocher. On peut le faire aussi avec un data="" , mais pas besoin : le site n'est qu'en Français
 
 var post_remember_str = 'Se rappeler de moi';
-
-var _paq = _paq || [];
-	_paq.push(['trackPageView']);
- 	_paq.push(['enableLinkTracking']);
+var html_element = null;
 
 // snippets dont les originaux étaient dans _user_footer.tpl
 
@@ -17,16 +14,14 @@ function scroll_go_to_top() {
 
 function on_scroll() {
 	if($(this).scrollTop() != 0) {
-        $('#gotop').fadeIn();
+        document.body.classList.add('scrolled');
     } else {
-        $('#gotop').fadeOut();
+        document.body.classList.remove('scrolled');
     }
 }
 
 function on_switch_menu_logo(event) {
-	console.log('on_switch_menu_logo');
-	// honnêtement, je devrais le faire avec element.classList.switch('logo_ouvert');
-	$("html").toggleClass('logo_ouvert');
+	html_element.classList.toggle('logo_ouvert');
 	event.preventDefault();
 }
 
@@ -36,8 +31,11 @@ function add_scroll_listeners() {
 }
 
 function main() {
+	html_element = document.querySelector('html');
 	// snippet qui était dans _user_footer.tpl
-	$("html").removeClass("nojs").addClass("js");
+	html_element.classList.remove('nojs');
+	html_element.classList.add('js');
+
 	// la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
 
