@@ -36,11 +36,6 @@ function on_scroll() {
     }
 }
 
-function on_switch_menu_logo(event) {
-	html_element.classList.toggle('logo_ouvert');
-	event.preventDefault();
-}
-
 function add_scroll_listeners() {
 	document.getElementById('gotop').addEventListener('click', scroll_go_to_top);
 	window.addEventListener('scroll', on_scroll);
@@ -87,8 +82,6 @@ function main() {
 	}
 	**/
 
-	// animation spécifique au menu/logo
-	document.getElementById('logo').addEventListener('click', on_switch_menu_logo);
 }
 
 if (document.body) {
