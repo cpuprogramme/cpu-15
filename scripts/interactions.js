@@ -5,6 +5,8 @@
 var post_remember_str = 'Se rappeler de moi';
 var html_element = null;
 var comment_form = null;
+var article_player = null;
+var header_player = null;
 
 // snippets dont les originaux étaient dans _user_footer.tpl
 
@@ -28,12 +30,30 @@ function scroll_go_to_top() {
     window.requestAnimationFrame(step);
 }
 
+function refresh_player_focus() {
+    if (article_player === null) {
+        article_player = document.querySelector('#content .OndeMiroirAudio-Player');
+    }
+    if ( (header_player === null) || (article_player === null)) {
+        return;
+    }
+    var position = article_player.getBoundingClientRect();
+    if ((position.y < 0) || (position.y > window.innerHeight)) {
+        header_player.classList.add('delegated');
+    } else {
+        header_player.classList.remove('delegated');
+       
+    }    
+}
+
 function on_scroll() {
-	if ( (html_element.scrollTop != 0) || (document.body.scrollTop != 0) ) {
+	if ( (html_element.scrollTop !== 0) || (document.body.scrollTop !== 0) ) {
         document.body.classList.add('scrolled');
     } else {
         document.body.classList.remove('scrolled');
     }
+
+    refresh_player_focus();
 }
 
 function add_scroll_listeners() {
@@ -68,11 +88,13 @@ function store_comment_informations() {
 
 function main() {
 	html_element = document.querySelector('html');
-	// snippet qui était dans _user_footer.tpl
-	html_element.classList.remove('nojs');
-	html_element.classList.add('js');
-	// la suite du snippet est déléguée et ré-écrite
+    header_player = document.getElementById('header-control');
+    // snippet qui était dans _user_footer.tpl
+    html_element.classList.remove('nojs');
+    html_element.classList.add('js');
+    // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
+    window.setTimeout(refresh_player_focus, 1000);
 
 	/**
 	comment_form = document.getElementById('comment_form');
