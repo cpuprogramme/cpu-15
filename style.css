@@ -1441,12 +1441,8 @@ nav {
     margin : 0;
 }
 
-#top_spacer {
-	flex : 2 2 auto;
-}
-
 #ondemiroir_domain {
-    flex: 0 2 auto;
+    flex: 1 1 auto;
     height : 64px;
     font-size : 3em;
 	-webkit-transition: 0.3s all linear;
@@ -1454,6 +1450,27 @@ nav {
 	-o-transition: 0.3s all linear;
 	transition: 0.3s all linear; 
 }
+
+
+/** CUT HERE START  */
+
+#header-control {
+  opacity : 0;
+  transition: 0.3s opacity;
+  height : 64px;
+}
+
+#header-control.delegated {
+  opacity : 1; 
+}
+
+#header-control .OndeMiroirAudio-Player-cover {
+  /* removing cover illustration for avoiding confusion */
+  display  :none;
+}
+
+
+/** CUT HERE END  */
 
 #menu:target + div + #ondemiroir_domain {
 		font-size: 1.5em;
@@ -1555,6 +1572,4 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   background : red;
   color : white;
 }
-
-
 
