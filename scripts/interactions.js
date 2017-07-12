@@ -94,7 +94,7 @@ function main() {
     html_element.classList.add('js');
     // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
-    window.setTimeout(refresh_player_focus, 1000);
+    window.setTimeout(refresh_player_focus, 3000);
 
 	/**
 	comment_form = document.getElementById('comment_form');
