@@ -1342,7 +1342,7 @@ button.submit:active, button.preview:active {
 /* *** MODULE sidebar off-canvas *** */
 
 
-.sidebar, #main {
+.js .sidebar, .js  #main {
   -webkit-transition: 0.3s all linear;
   -moz-transition: 0.3s all linear;
   -o-transition: 0.3s all linear;
