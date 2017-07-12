@@ -236,7 +236,7 @@ h1 {
   font-size: 3em;
   line-height: 1.2; }
 
-h2 , .verybig {
+/*h2 ,*/ .verybig {
   font-size: 4em;
   line-height: 1.2;
   margin-bottom: 0.5em; }
@@ -1409,59 +1409,67 @@ nav {
 	box-sizing: initial;
 }
 
-.header menu {
-    display : inline-block;
+menu {
+    display : flex;
     vertical-align : top;
 	padding : 0;
 	margin : 0;
+  width : 100%;
 }
-.header menu li {
+menu li {
+    flex : 1 0 auto;
     list-style : none;
-    display : inline-block;
     overflow:hidden;
     vertical-align : middle;
 }
-.header menu li a {
-    display : inline-block;
-    width : 0; 
-    padding-left : 4px;
-    height : 64px;
+menu li a {
+    display : block;
+    width : 100%;
+    padding : 4px;
     color : white;
     vertical-align : bottom;
     text-align : center;
-
     font-weight: bold;
-    transition-property: width;
-    transition-duration: 0.2s;
     text-decoration : none;
-
-}
-.nojs .header menu:target li a , .logo_ouvert .header menu li a {
-    width : 100px;
-    margin : 0;
 }
 
 #ondemiroir_domain {
     flex: 1 1 auto;
     height : 64px;
     font-size : 3em;
+    position : relative;
 	-webkit-transition: 0.3s all linear;
 	-moz-transition: 0.3s all linear;
 	-o-transition: 0.3s all linear;
 	transition: 0.3s all linear; 
+  overflow : hidden;
 }
 
+#motto, #header-control {
+  position : absolute;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 64px;
+}
 
-/** CUT HERE START  */
+#motto {
+  text-align : center;
+  font-size : 18px;
+  padding : 8px;
+  overflow : hidden;
+  text-overflow: ellipsis;
+}
 
 #header-control {
   opacity : 0;
   transition: 0.3s opacity;
-  height : 64px;
+  pointer-events: none;
 }
 
 #header-control.delegated {
   opacity : 1; 
+  pointer-events: auto;
 }
 
 #header-control .OndeMiroirAudio-Player-cover {
@@ -1472,9 +1480,6 @@ nav {
 
 /** CUT HERE END  */
 
-#menu:target + div + #ondemiroir_domain {
-		font-size: 1.5em;
-	}
 
 .fond_bleu { background : #009EDA; }
 .fond_vert { background : #4BB249; }
@@ -1523,9 +1528,6 @@ audio {
      font-size: 1.5em;
 	}
 
-	.nojs #menu:target + div + #ondemiroir_domain ,  .logo_ouvert #menu + div + #ondemiroir_domain {
-		display:none;
-	}
 }
 
 /**** removing old jkery animation ***/
@@ -1573,3 +1575,19 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   color : white;
 }
 
+
+.only-small {
+  display : none;
+}
+.not-small {
+  display : inline;
+}
+
+@media screen and (max-width: 40em) {
+  .only-small {
+    display : inline;
+  }
+  .not-small {
+    display : none;
+  }
+}
