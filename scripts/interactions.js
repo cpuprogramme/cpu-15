@@ -38,7 +38,7 @@ function refresh_player_focus() {
         return;
     }
     var position = article_player.getBoundingClientRect();
-    if ((position.y < 0) || (position.y > window.innerHeight)) {
+    if ((position.bottom < 0) || (position.top > window.innerHeight)) {
         header_player.classList.add('delegated');
     } else {
         header_player.classList.remove('delegated');
@@ -59,6 +59,7 @@ function on_scroll() {
 function add_scroll_listeners() {
 	document.getElementById('gotop').addEventListener('click', scroll_go_to_top);
 	window.addEventListener('scroll', on_scroll);
+	window.addEventListener('resize', on_scroll);
 }
 
 /** Not so useful
@@ -84,7 +85,6 @@ function store_comment_informations() {
 	}
 }
 **/
-
 
 function main() {
 	html_element = document.querySelector('html');
