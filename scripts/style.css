@@ -834,33 +834,6 @@ a.site-title__link:visited {
   color: white;
   margin: 0; }
 
-.prev {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('img/icon_prev.png?1418493572');
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
-
-.next {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('img/icon_next.png?1418493572');
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
-
-.prev, .next {
-  vertical-align: middle;
-  width: 2.5em;
-  height: 2.5em;
-  display: inline-block;
-  border-radius: 50%;
-  border: 1px solid gainsboro;
-  background-color: #f2f2f2; }
-  .prev:hover, .prev:focus, .next:hover, .next:focus {
-    border-width: 3px; }
-
 /* *** content info *** */
 #content-info {
   margin-bottom: 4em;
@@ -1582,6 +1555,31 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   color : white;
 }
 
+
+.breadcrumb {
+  display : flex;
+  list-style: none;
+  padding : 0;
+}
+
+.breadcrumb li {
+  list-style: none;
+  padding-right : 10px;
+  flex : 0 1 auto;
+}
+
+.breadcrumb_categories:not(:first-child) {
+  display: none;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+.spacer {
+    flex : 1 0 auto !important; /* OUI, JE SAIS */
+}
 
 .only-small {
   display : none;

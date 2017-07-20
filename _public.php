@@ -17,6 +17,7 @@ l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
 $core->url->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15_url', 'twitterplayer']);
 
 $core->tpl->addValue('EntryURLsegment',array('CPU15_template','EntryURLsegment'));
+$core->tpl->addBlock('Entry1stLevelCategory',array('CPU15_template','Entry1stLevelCategory'));
 $core->tpl->addBlock('AttachmentsNo',array('CPU15_template','AttachmentsNo'));
 
 
@@ -49,7 +50,7 @@ class CPU15_url extends dcUrlHandlers
 class CPU15_template
 {
 	public static function AttachmentsNo($attr,$content) {
-		$res =
+		return
 		"<?php\n".
 		'if ($_ctx->posts !== null && $core->media) {'."\n".
 			'$_ctx->attachments = new ArrayObject($core->media->getPostMedia($_ctx->posts->post_id));'."\n".
@@ -59,12 +60,26 @@ class CPU15_template
 		$content.
 		
 		"<?php } ?>\n";
-		
-		return $res;
 	}
 
 	public static function EntryURLsegment($attr) {
 		return '<?php echo $_ctx->posts->post_url ; ?>';
+	}
+
+	public static function Entry1stLevelCategory($attr,$content)
+	{
+		return
+		"<?php\n".
+		'$_ctx->categories = $core->blog->getCategoryParents($_ctx->posts->cat_id);'."\n".
+		'$_ctx->categories->fetch();'.
+		"\n".
+		' if ($_ctx->categories !== null) { ?>'.
+			"\n".
+			$content.
+			"\n".
+		'<?php }'.
+		"\n".
+		' $_ctx->categories = null; ?>';
 	}
 
 
