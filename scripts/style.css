@@ -273,8 +273,12 @@ h2, h3, h4, h5, h6 {
 a {
   color: #d52125;
   text-decoration: none;
+}
+
+.js a {
   transition: .3s; 
 }
+
 p a:link, p a:visited {
   border-bottom: 1px solid gainsboro; 
 }
@@ -1323,9 +1327,6 @@ button.submit:active, button.preview:active {
 
 
 .js .sidebar, .js  #main {
-  -webkit-transition: 0.3s all linear;
-  -moz-transition: 0.3s all linear;
-  -o-transition: 0.3s all linear;
   transition: 0.3s all linear; 
 }
 
@@ -1418,11 +1419,11 @@ menu li a {
     height : 64px;
     font-size : 3em;
     position : relative;
-	-webkit-transition: 0.3s all linear;
-	-moz-transition: 0.3s all linear;
-	-o-transition: 0.3s all linear;
-	transition: 0.3s all linear; 
-  overflow : hidden;
+    overflow : hidden;
+}
+
+.js #ondemiroir_domain {
+    transition: 0.3s all linear; 
 }
 
 #motto, #header-control {
@@ -1482,13 +1483,12 @@ menu li a {
 
 .calque {
 	background : rgba(255,255,255,0.2);
-	-webkit-transition: 0.3s all linear;
-	-moz-transition: 0.3s all linear;
-	-o-transition: 0.3s all linear;
-	transition: 0.3s all linear;
   text-shadow : 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
 }
 
+.js .calque {
+	transition: 0.3s all linear;
+}
 
 .calque:focus , .calque:hover {
 	background-color: white !important;
