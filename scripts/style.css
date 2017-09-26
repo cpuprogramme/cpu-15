@@ -844,6 +844,8 @@ a.site-title__link:visited {
   border-bottom: 1px solid gainsboro;
   padding: 0;
   font-size: 0.875em; }
+
+
   #content-info h2 {
     display: inline-block;
     vertical-align: top;
@@ -853,6 +855,7 @@ a.site-title__link:visited {
     color: white;
     font-size: 1.1428571em;
     text-align: center; }
+
     #content-info h2 a {
       color: white; }
   #content-info h3 {
@@ -1595,4 +1598,13 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   .not-small {
     display : none;
   }
+}
+
+.dc-page .post-date  {
+    display : none;
+}
+
+.dc-page .banner-article {
+    background : none;
+    padding-top : 0px;
 }
