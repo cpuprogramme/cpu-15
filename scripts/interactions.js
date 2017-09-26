@@ -106,7 +106,7 @@ function main() {
 
 }
 
-if (document.body) {
+if ( (document.body) && (document.getElementById('header-control')) ) {
 	main();
 } else {
 	window.addEventListener('DOMContentLoaded', main);
