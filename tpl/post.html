@@ -61,10 +61,10 @@
 			<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="not-small ellipsis"><a href="{{tpl:EntryURL}}" itemprop="url"><span itemprop="title">{{tpl:EntryTitle encode_html="1"}}</span></a></li>
 			<li class="spacer"></li>
 
-			<tpl:EntryPrevious>
+			<tpl:EntryPrevious restrict_to_category="1">
 				<li><a href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" rel="previous">←&nbsp;<span class="not-small">précédent</span></a></li>
 			</tpl:EntryPrevious>
-			<tpl:EntryNext>
+			<tpl:EntryNext  restrict_to_category="1">
 				<li>⬜</li>
 				<li><a href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" rel="next"><span class="not-small">suivant</span>&nbsp;→</a></li>
 			 </tpl:EntryNext>
