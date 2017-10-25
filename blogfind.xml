@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+	<ShortName>CPU ⬜ Carré Petit Utile</ShortName>
+	<Description>Chercher dans les archives du programme CPU</Description>
+	<Url type="text/html"
+		 method="get"
+		 template="http://cpu.dascritch.net/?q={searchTerms}">
+	</Url>
+	<LongName>Da Scritch blog find</LongName>
+	<Image height="16" width="16" type="image/png">http://cpu.dascritch.net/assets/favicon-16x16.png</Image>
+	<Image height="32" width="32" type="image/png">http://cpu.dascritch.net/assets/favicon-32x32.png</Image>
+	<Attribution>
+		Émissions © Radio FMR - Chroniques et interview Creative commons CC BY-NC 4.0
+	</Attribution>
+	<SyndicationRight>open</SyndicationRight>
+	<AdultContent>false</AdultContent>
+	<Language>FR-fr</Language>
+	<OutputEncoding>UTF-8</OutputEncoding>
+	<InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
