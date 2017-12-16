@@ -7,8 +7,8 @@
 		 template="http://cpu.dascritch.net/?q={searchTerms}">
 	</Url>
 	<LongName>Da Scritch blog find</LongName>
-	<Image height="16" width="16" type="image/png">http://cpu.dascritch.net/assets/favicon-16x16.png</Image>
-	<Image height="32" width="32" type="image/png">http://cpu.dascritch.net/assets/favicon-32x32.png</Image>
+	<Image height="16" width="16" type="image/png">https://cpu.dascritch.net/assets/favicon-16x16.png</Image>
+	<Image height="32" width="32" type="image/png">https://cpu.dascritch.net/assets/favicon-32x32.png</Image>
 	<Attribution>
 		Émissions © Radio FMR - Chroniques et interview Creative commons CC BY-NC 4.0
 	</Attribution>
