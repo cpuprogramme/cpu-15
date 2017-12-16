@@ -50,6 +50,12 @@
 	<script>
 		var query = window.location.search.toLowerCase();
 		document.addEventListener('DOMContentLoaded',function() {
+			if ( (window.self === window.top) && (window.history.length > 0) ) {
+				// We are NOT in a iframe context, we also are in a browsing context, so redirect to the canonical page
+				// see https://github.com/dascritch/cpu-15/issues/27
+				window.location = document.querySelector('[rel="canonical"]').href;
+			}
+
 		    if ((query.indexOf('autoplay=1')>0) || (query.indexOf('auto_play=true')>0)) {
 			document.querySelector('audio').play();
 		    }
