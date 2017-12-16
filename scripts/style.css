@@ -1611,15 +1611,19 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 
 
 
-.flex {
-    display : flex;
-}
+@media (min-width: 40em) {
+
+  .flex {
+      display : flex;
+  }
 
 
-.flex.wrap {
-    flex-wrap : wrap;
-}
+  .flex.wrap {
+      flex-wrap : wrap;
+  }
 
-.flex article {
-    flex : 1 1 20em;
+  .flex article {
+      flex : 1 1 20em;
+  }
+
 }
