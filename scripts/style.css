@@ -37,6 +37,7 @@
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Roboto Condensed", sans-serif;
+    line-height: 1.2;
 }
 
 
@@ -250,7 +251,6 @@ h2 , .verybig {
 
 h3 , .notsobig {
   font-size: 1.75em;
-  line-height: 1.33;
   margin-top: 0.5714286em;
   margin-bottom: 0.4285714em; }
 
@@ -1625,6 +1625,7 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 
   .flex article {
       flex : 1 1 20em;
+      margin : 2px;
   }
 
 }
