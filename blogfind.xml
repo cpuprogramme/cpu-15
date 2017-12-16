@@ -6,7 +6,7 @@
 		 method="get"
 		 template="http://cpu.dascritch.net/?q={searchTerms}">
 	</Url>
-	<LongName>Da Scritch blog find</LongName>
+	<LongName>Chercher dans CPU ⬜ Carré Petit Utile</LongName>
 	<Image height="16" width="16" type="image/png">https://cpu.dascritch.net/assets/favicon-16x16.png</Image>
 	<Image height="32" width="32" type="image/png">https://cpu.dascritch.net/assets/favicon-32x32.png</Image>
 	<Attribution>
