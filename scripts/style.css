@@ -1629,3 +1629,11 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   }
 
 }
+
+#searchbox {
+  display : flex;  
+}
+
+#searchbox input {
+   flex : 1 0 auto;
+}
