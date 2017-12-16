@@ -1487,7 +1487,7 @@ menu li a {
 .calque {
 	background : rgba(255,255,255,0.5);
   text-shadow : 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
-  line-height: 1.2; /* due to Roboto */
+  line-height: normal; /* due to Roboto */
 }
 
 .js .calque {
