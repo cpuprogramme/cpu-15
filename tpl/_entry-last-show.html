@@ -1,12 +1,12 @@
 <article id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} full banner-article" lang="{{tpl:EntryLang}}" role="article"  style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
 
 	<div class="post-meta">
-		<span class="calque">Précédente émission diffusée le {{tpl:EntryDate}}</span>
+		<span class="calque"><span class="not-small">Précédente émission </span>diffusée le {{tpl:EntryDate}}</span>
 	</div>
 
 	<h3 class="post-title verybig"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h3>
 
-	<div class="post-meta">
+	<div class="post-meta not-small">
 
 		<tpl:EntryTags>
 			<tpl:TagsHeader>
