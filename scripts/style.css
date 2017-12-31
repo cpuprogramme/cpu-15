@@ -1600,7 +1600,10 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   .only-small {
     display : inline;
   }
-  .not-small {
+
+  .not-small,
+  .tags ul,
+  .categories ul ul {
     display : none;
   }
 }
