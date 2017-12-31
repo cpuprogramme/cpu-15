@@ -1,0 +1,35 @@
+<article id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} full banner-article" lang="{{tpl:EntryLang}}" role="article"  style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
+
+	<div class="post-meta">
+		<span class="calque">Précédente émission diffusée le {{tpl:EntryDate}}</span>
+	</div>
+
+	<h3 class="post-title verybig"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h3>
+
+	<div class="post-meta">
+
+		<tpl:EntryTags>
+			<tpl:TagsHeader>
+				<span class="calque">thèmes : </span>
+				<ul class="post-tags-list">
+			</tpl:TagsHeader>
+				<li class="post-tags-item calque"><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+			<tpl:TagsFooter>
+				</ul>
+			</tpl:TagsFooter>
+		</tpl:EntryTags>
+
+	</div>
+
+	<tpl:EntryIf operator="or" show_comments="1" show_pings="1" has_attachment="1">
+		<p class="post-info-co">
+		<tpl:Attachments>
+			<tpl:AttachmentIf is_mp3="1">
+				{{tpl:include src="_mp3_player.html"}}
+			</tpl:AttachmentIf>
+		</tpl:Attachments>
+
+		</p>
+	</tpl:EntryIf>
+
+</article>
