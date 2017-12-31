@@ -4,14 +4,11 @@
 
 	<!-- First page -->
 	<tpl:SysIf current_mode="default">
-		<p>
-			Première diffusion des programmes le Jeudi à 11h sur <a href="http://www.radio-fmr.net">Radio&lt;FMR&gt;</a>. Dernière émission diffusée&nbsp;:
-		</p>
 
 		<tpl:Entries lastn="4" category="Programmes ?sub" no_context="1">
 
 			<tpl:LoopPosition start="1" length="1">
-				{{tpl:include src="_entry-full.html"}}
+				{{tpl:include src="_entry-last-show.html"}}
 
 				<h2 class="notsobig">Programmes précédents</h2>
 				<div class="flex">
