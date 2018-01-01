@@ -432,7 +432,7 @@ body {
 @media all and (max-width: 30em) {
   #main {
     padding: .5em; } }
-@media screen and (min-width: 80.1em) and (max-width: 110em) {
+@media screen and (min-width: 80.1em) and (max-width: 100em) {
   #page {
     max-width: 80em; }
 
@@ -453,7 +453,7 @@ body {
 
 } 
 }
-@media screen and (min-width: 110.1em) {
+@media screen and (min-width: 100.1em) {
   body {
     font-size: 1.125em; }
 
