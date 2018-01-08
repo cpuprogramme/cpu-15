@@ -1549,3 +1549,6 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 #searchbox input {
    flex : 1 0 auto;
 }
+
+#search { padding-top : 5.5em }
+#blogextra { padding-top : 4em }
