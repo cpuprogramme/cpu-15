@@ -1,0 +1,51 @@
+{{tpl:extends parent="__layout.html"}}
+
+<tpl:Block name="head-title">
+  <title>{{tpl:lang Serie}} - {{tpl:SerieID}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
+</tpl:Block>
+
+<tpl:Block name="meta-entry">
+  <meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
+  <meta name="date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+</tpl:Block>
+
+<tpl:Block name="head-linkrel">
+  <link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+
+  <tpl:Entries no_content="1" order="asc">
+    <tpl:EntriesHeader>
+      <tpl:Pagination>
+        <tpl:PaginationIf end="0">
+          <link rel="prev" title="{{tpl:lang previous entries}}" href="{{tpl:PaginationURL offset="1"}}" />
+        </tpl:PaginationIf>
+
+        <tpl:PaginationIf start="0">
+          <link rel="next" title="{{tpl:lang next entries}}" href="{{tpl:PaginationURL offset="-1"}}" />
+        </tpl:PaginationIf>
+      </tpl:Pagination>
+    </tpl:EntriesHeader>
+
+    <link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" />
+  </tpl:Entries>
+
+</tpl:Block>
+
+<tpl:Block name="body-tag"><body class="dc-serie"></tpl:Block>
+
+<tpl:Block name="main-content">
+  <div id="content-info">
+    <h2>{{tpl:lang Serie}} - {{tpl:SerieID}}</h2>
+  
+  </div>
+
+  <div class="content-inner">
+    <tpl:Entries order="asc">
+      {{tpl:include src="_entry-short.html"}}
+
+      <tpl:EntriesFooter>
+        {{tpl:include src="_pagination.html"}}
+      </tpl:EntriesFooter>
+
+    </tpl:Entries>
+  </div> <!-- End #content-inner -->
+</tpl:Block>
