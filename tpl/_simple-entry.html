@@ -13,7 +13,7 @@
 					</tpl:EntryIf>
 
 					<tpl:EntrySeries>
-						› <a href="{{tpl:SerieURL}}">série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</p></a>
+						› <a href="{{tpl:SerieURL}}">série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a>
 					</tpl:EntrySeries>
 				</span>
 			</p>
@@ -43,6 +43,18 @@
 
 	<!-- # --BEHAVIOR-- publicEntryAfterContent -->
 	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+
+
+<tpl:EntrySeries>
+	<h3 class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
+	<div class="flex">
+		<tpl:Entries order="asc">
+			<article class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
+				<h4 class="post-title"><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></h4>
+			</article>
+		</tpl:Entries>
+	</div>
+</tpl:EntrySeries>
 
 <!-- # Attachments -->
 <tpl:Attachments>
