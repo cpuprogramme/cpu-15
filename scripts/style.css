@@ -838,7 +838,7 @@ flex: 0 0 33%;
 .post-tags-list {
   margin: .5em 0;
   display: inline;
-  vertical-align: top; }
+  vertical-align: baseline; }
 
 .post-tags-list {
   margin: 0;
