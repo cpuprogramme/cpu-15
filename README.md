@@ -1,5 +1,12 @@
 # cpu-15
-Dotclear theme for radio show C.P.U.
+Dotclear theme for radio show C.P.U. , from Berlin theme by Dotclear's team
+
+# Dependances 
+
+- Dotclear
+- Plugins for dotclear :
+   - Series
+   - plugin-dc-ondemiroir-audio-tag
 
 # How to :
 
