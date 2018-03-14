@@ -20,6 +20,18 @@
 
 		</tpl:Entries>
 		</div>
+
+		<h2 class="notsobig">Programmes en séries</h2>
+		<div class="flex">
+			<tpl:Series limit="3" order="desc">
+				<tpl:Entries lastn="1">
+					<article class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" lang="{{tpl:EntryLang}}" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
+						<h3 class="post-title"><a href="{{tpl:SerieURL}}" class="calque">{{tpl:SerieID}}</a></h3>
+					</article>
+				</tpl:Entries>
+			</tpl:Series>
+		</div>
+
 		<p>
 			<a href="/category/Programmes">Tous les programmes diffusés</a>. Disponible en <a href="http://feeds.feedburner.com/Cpu-Programmes">flux podcast</a>. 
 		</p>
