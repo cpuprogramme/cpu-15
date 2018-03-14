@@ -73,8 +73,10 @@
 
 
 <!-- # Comments -->
+<tpl:EntryIf operator="or" show_comments="1" show_pings="1">
 	<h3 id="commentaires" class="notsobig">{{tpl:EntryCommentCount count_all="1" none="Aucun commentaire" one="Un commentaire" more="%s commentaires"}}</h3>
 	<div class="post-feedback">
+</tpl:EntryIf>
 
 	<tpl:Comments>
 		<tpl:CommentsHeader>			
@@ -105,7 +107,6 @@
 				</div>
 		</tpl:CommentsFooter>
 	</tpl:Comments>
-</tpl:EntryIf>
 
 <tpl:EntryIf comments_active="1">
 	<tpl:SysIfFormError>
