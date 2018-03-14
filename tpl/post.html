@@ -42,7 +42,7 @@
 <tpl:Block name="main-content">
 	<p class="navlinks topnl">
 		<ul class="breadcrumb">
-			<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{tpl:BlogURL}}" itemprop="url"><span itemprop="title">CPU</span></a></li>
+			<li class="not-small" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{tpl:BlogURL}}" itemprop="url"><span itemprop="title">CPU</span></a></li>
 			<li>⬜</li>
 
 			<li>
@@ -59,7 +59,7 @@
 			<li class="not-small">›</li>
 
 			<tpl:EntrySeries>
-				<li class="not-small">
+				<li class="not-small" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 					<a href="{{tpl:SerieURL}}">{{tpl:SerieID}}</a>
 				</li>
 				<li class="not-small">›</li>
