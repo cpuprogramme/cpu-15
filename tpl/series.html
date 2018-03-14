@@ -1,0 +1,37 @@
+{{tpl:extends parent="__layout.html"}}
+
+<tpl:Block name="head-title">
+  <title>Séries - {{tpl:BlogName encode_html="1"}}</title>
+</tpl:Block>
+
+<tpl:Block name="meta-robots">
+  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX"}}" />
+</tpl:Block>
+
+<tpl:Block name="head-linkrel">
+  <link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+  <link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
+</tpl:Block>
+
+<tpl:Block name="body-tag"><body class="dc-series"></tpl:Block>
+
+<tpl:Block name="main-content">
+
+  <h2>Séries</h2>
+  <p>
+    Certains sujets sont fractionnés sur plusieurs programmes.
+  </p>
+  <div class="content-inner">
+    <tpl:Series>
+    <h3><a href="{{tpl:SerieURL}}" class="tag{{tpl:SerieRoundPercent}}">{{tpl:TagID}}</a></h3>
+      <div class="flex">
+        <tpl:Entries lastn="4">
+          <article class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
+            <h4 class="post-title"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h4>
+          </article>
+        </tpl:Entries>
+    </div>
+
+    </tpl:Series>
+  </div>
+</tpl:Block>
