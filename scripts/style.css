@@ -462,7 +462,9 @@ body {
 
   .header {
     flex: 0 0 66.7%;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    box-shadow: rgba(0,0,0,0.5) 1px 1px 10px;
+  }
 
   #main {
     flex: 0 0  66.7%;
@@ -1272,6 +1274,7 @@ h1 {
 	padding : 0;
 	margin : 0;
 	border-bottom : none !important;
+  height : 64px;
 }
 
 nav {
@@ -1285,6 +1288,7 @@ nav {
     position: sticky;
     top: -20px;
 	z-index : 9;
+  margin-bottom : 8px;
 }
 
 .banner * {
@@ -1368,11 +1372,21 @@ menu a:hover {
 /** CUT HERE END  */
 
 
-.fond_bleu { background : #009EDA; }
-.fond_vert { background : #4BB249; }
-.fond_jaune { background : #F1CB29; }
-.fond_orange { background : #DA6241; }
-.fond_rouge { background : #D12625; }
+.fond_bleu {
+  background : #009EDA;
+}
+.fond_vert {
+  background : #4BB249;
+}
+.fond_jaune {
+  background : #F1CB29;
+}
+.fond_orange {
+  background : #DA6241;
+}
+.fond_rouge {
+  background : #D12625;
+}
 
 .banner-article {
 	padding-top : 2em;
@@ -1547,8 +1561,13 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 }
 
 #searchbox input {
-   flex : 1 0 auto;
+  flex : 1 0 auto;
 }
 
-#search { padding-top : 5.5em }
-#blogextra { padding-top : 4em }
+#search {
+  padding-top : 5.5em;
+}
+
+#blogextra {
+  padding-top : 4em;
+}
