@@ -760,20 +760,6 @@ flex: 0 0 33%;
   font-size: 0.875em; }
 
 
-  #content-info h2 {
-    display: inline-block;
-    vertical-align: top;
-    padding: .5em .75em;
-    border-radius: .5em;
-    background-color: #267daf;
-    color: white;
-    font-size: 1.1428571em;
-    text-align: center; }
-
-    #content-info h2 a {
-      color: white; }
-  #content-info h3 {
-    font-size: 1em; }
   #content-info ul {
     margin-top: 0.5714286em;
     padding-left: 0; }
