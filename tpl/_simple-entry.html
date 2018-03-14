@@ -46,21 +46,19 @@
 
 
 <tpl:EntrySeries>
-	<h3 class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
-	<div class="flex">
+	<h3 id="serie" class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
+	<ul>
 		<tpl:Entries order="asc">
-			<article class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
-				<h4 class="post-title"><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></h4>
-			</article>
+			<li><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></li>
 		</tpl:Entries>
-	</div>
+	</ul>
 </tpl:EntrySeries>
 
 <!-- # Attachments -->
 <tpl:Attachments>
 	<tpl:AttachmentsHeader>
+	<h3 id="pieces_jointes" class="notsobig">Pièces jointes</h3>
 	<div class="post-attachments" id="attachments">
-		<h3 class="post-attachments-title">{{tpl:lang Attachments}}</h3>
 		<ul class="post-attachments-list">
 	</tpl:AttachmentsHeader>
 			<li class="post-attachments-item {{tpl:AttachmentType}}">
@@ -73,16 +71,14 @@
 </tpl:Attachments>
 </article>
 
-<tpl:EntryIf operator="or" show_comments="1" show_pings="1">
-	<div class="post-feedback">
-</tpl:EntryIf>
 
 <!-- # Comments -->
-<tpl:EntryIf show_comments="1">
-	<tpl:Comments with_pings="1">
-		<tpl:CommentsHeader>
+	<h3 id="commentaires" class="notsobig">{{tpl:EntryCommentCount count_all="1" none="Aucun commentaire" one="Un commentaire" more="%s commentaires"}}</h3>
+	<div class="post-feedback">
+
+	<tpl:Comments>
+		<tpl:CommentsHeader>			
 			<div class="feedback__comments" id="comments">
-				<h3>{{tpl:EntryCommentCount count_all="1" none="no reactions" one="one reaction" more="%s reactions"}}</h3>
 				<ul class="comments-list">
 		</tpl:CommentsHeader>
 					<tpl:CommentIf is_ping="0">
@@ -127,14 +123,14 @@
 	<!-- # Comment form -->
 	<form class="comment-form" action="{{tpl:EntryURL}}#pr" method="post" id="comment-form" role="form">
 		<tpl:IfCommentPreview>
+			<h3 id="votre_commentaire" class="notsobig">{{tpl:lang Your comment}}</h3>
 			<div id="pr">
-				<h3>{{tpl:lang Your comment}}</h3>
 				<div class="comment-preview">{{tpl:CommentPreviewContent}}</div>
 				<p class="buttons"><button type="submit" class="submit" value="{{tpl:lang Send}}">{{tpl:lang Send}}</button></p>
 			</div>
 		</tpl:IfCommentPreview>
 
-		<h3>{{tpl:lang Add a comment}}</h3>
+		<h3 id="commenter" class="notsobig">{{tpl:lang Add a comment}}</h3>
 			<!-- # --BEHAVIOR-- publicCommentFormBeforeContent -->
 			{{tpl:SysBehavior behavior="publicCommentFormBeforeContent"}}
 
@@ -174,13 +170,6 @@
 		        </tpl:IfCommentPreviewOptional>
 			</p>
 	</form>
-</tpl:EntryIf>
-
-<tpl:EntryIf pings_active="1">
-	<div class="send-ping">
-		<h3>{{tpl:lang Add ping}}</h3>
-		<p id="ping-url">{{tpl:lang Trackback URL}}&nbsp;: {{tpl:EntryPingLink}}</p>
-	</div>
 </tpl:EntryIf>
 
 <tpl:EntryIf operator="or" show_comments="1" show_pings="1">
