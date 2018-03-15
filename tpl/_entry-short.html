@@ -5,26 +5,21 @@
 	<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
 	{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
 
-	<!-- # Entry with an excerpt -->
-	<tpl:EntryIf extended="1">
-		<div class="post-content no-images calque">
-			{{tpl:EntryExcerpt}}
-		</div>
-	</tpl:EntryIf>
-
 	<!-- # --BEHAVIOR-- publicEntryAfterContent -->
 	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
 
 	<div class="post-meta">
 		<p class="post-info">
 			<span class="calque">
-			<span class="post-date">{{tpl:EntryDate}}.</span>
-			<tpl:EntryIf has_category="1">
-			<span class="post-cat"><tpl:EntryCategoriesBreadcrumb><a
-				href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> › </tpl:EntryCategoriesBreadcrumb><a
-				href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a></span>
-			</tpl:EntryIf>
-
+				<span class="post-date">{{tpl:EntryDate}}.</span>
+				<tpl:EntryIf has_category="1">
+				<span class="post-cat"><tpl:EntryCategoriesBreadcrumb><a
+					href="{{tpl:CategoryURL}}">{{tpl:CategoryTitle encode_html="1"}}</a> › </tpl:EntryCategoriesBreadcrumb><a
+					href="{{tpl:EntryCategoryURL}}">{{tpl:EntryCategory encode_html="1"}}</a></span>
+				</tpl:EntryIf>
+				<tpl:EntrySeries>
+					 › <a href="{{tpl:SerieURL}}">{{tpl:SerieID}}</a>
+				</tpl:EntrySeries>
 			</span>
 		</p>
 
