@@ -18,6 +18,8 @@ $core->url->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15
 
 $core->tpl->addValue('EntryURLsegment',array('CPU15_template','EntryURLsegment'));
 $core->tpl->addBlock('Entry1stLevelCategory',array('CPU15_template','Entry1stLevelCategory'));
+$core->tpl->addValue('CountEntriesInSeries',array('CPU15_template','CountEntriesInSeries'));
+
 $core->tpl->addBlock('AttachmentsNo',array('CPU15_template','AttachmentsNo'));
 
 
@@ -82,6 +84,34 @@ class CPU15_template
 		' $_ctx->categories = null; ?>';
 	}
 
+	public static function CountEntriesInSeries($attr) 
+	{
+		$that = $GLOBALS['core']->tpl;
+		$f = $that->getFilters($attr);
+
+		return 
+			"<?php \n".
+			'$sql = "SELECT count(*) FROM ".'.
+		    '    $core->prefix . "meta as m," .'.
+	        '    $core->prefix . "post as p ".'.
+	        '    " WHERE m.post_id = p.post_id " .'.
+	        '    " AND post_type = \'post\' ".'.
+	        '    " AND post_status = 1 ".'.
+	        '    " AND blog_id = \'" . $core->blog->id . "\'" .'.
+       		'	" AND meta_type = \'serie\' AND meta_id = \'".$_ctx->meta->meta_id."\' ;";'.
+			'$rs = $core->con->select($sql);'.
+			'$_nb = $rs->f(0); ?>'.
+		    $that->displayCounter(
+	            sprintf($f, '$_nb'),
+	            array(
+	            	'none' => '(prochainement)', 
+	            	'one' => 'un épisode', 
+	            	'more' => '%s épisodes', 
+	            ),
+	            $attr,
+	            true
+    		);
+	}
 
 }
 
