@@ -34,18 +34,18 @@
     <tpl:EntryIf has_category="1">
     <dc:subject>{{tpl:EntryCategory encode_html="1"}}</dc:subject>
     </tpl:EntryIf>
-    <tpl:Series><dc:subject>{{tpl:SerieID}}</dc:subject></tpl:Series>
+    <tpl:EntrySeries><dc:subject>{{tpl:SerieID}}</dc:subject></tpl:EntrySeries>
     <tpl:EntryTags><dc:subject>{{tpl:TagID}}</dc:subject></tpl:EntryTags>
 
     <content type="html">
-      <tpl:Series>
+      <tpl:EntrySeries>
         &lt;p&gt;
           &lt;a href=&quot;{{tpl:SerieURL absolute_urls="1" encode_xml="1"}}&quot;&gt;
             Cette &lt;em lang=&quot;en&quot;&gt;release&lt;/em&gt; fait partie de la série 
             &lt;q&gt;{{tpl:SerieID encode_xml="1"}}&lt;/q&gt;
           &lt;/a&gt;
         &lt;/p&gt;
-      </tpl:Series>
+      </tpl:EntrySeries>
       {{tpl:EntryExcerpt absolute_urls="1" encode_xml="1"}}
     {{tpl:EntryContent absolute_urls="1" encode_xml="1"}}</content>
 
