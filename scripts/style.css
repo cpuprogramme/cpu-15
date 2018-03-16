@@ -721,6 +721,10 @@ flex: 0 0 33%;
 #q {
   width: 60%; }
 
+.series-posts .current {
+  background-color: black;
+}
+
 .category-current {
   margin-left: -2em;
   background-color: black; }
