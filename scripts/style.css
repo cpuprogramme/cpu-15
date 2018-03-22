@@ -83,8 +83,6 @@ a img {
 q, cite {
   font-style: italic; }
 
-q:before, q:after {
-  content: ""; }
 
 sup, sub {
   font-size: .75em;
@@ -332,9 +330,9 @@ blockquote:after {
   content: close-quote;
   text-align: right; }
 
-blockquote p:first-child {
-  margin-top: 0; }
-
+q, cite, quote  { 
+    quotes:"\201c" "\201d" "\00ab\00a0" "\00a0\00bb"
+}
 
 code, pre {
   background-color: #555;
