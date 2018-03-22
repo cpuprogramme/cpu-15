@@ -121,7 +121,7 @@ mark {
   background: #ff0;
   color: #000; }
 
-code, kbd, pre, samp {
+code, pre, samp {
   font-family: monospace, serif;
   font-size: 1em; }
 
@@ -305,7 +305,6 @@ hr {
   background-image: linear-gradient(left, #dcdcdc, #626262, #dcdcdc); }
 
 blockquote, q {
-  font-family: "Roboto Condensed", sans-serif;
   color: #626262;
   font-style: italic; }
 
@@ -336,15 +335,28 @@ blockquote:after {
 blockquote p:first-child {
   margin-top: 0; }
 
-kbd {
-  padding: 0.1em 0.5em; }
 
-code, pre, kbd {
+code, pre {
   background-color: #555;
   color: #EFD540;
   font-family: "Andale Mono", AndaleMono, monospace;
   font-size: 0.875em;
   padding: .1em .2em; }
+
+
+kbd {
+    background: #eee;
+    border-color:#ccc #aaa #888 #bbb;
+    border-style:solid;
+    border-width:2px 3px 3px 2px;
+    padding:0 2px;
+    color:#000000;
+    display:inline-block;
+    min-width:15px;
+    text-align:center;
+    white-space:nowrap;
+    box-shadow:0 0 5px rgba(0,0,0,0.5);
+}
 
 pre {
   padding: .5em 1em; }
