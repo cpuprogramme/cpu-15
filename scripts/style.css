@@ -237,7 +237,8 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-size: 1em;
   line-height: 1.5;
-  font-family: "Roboto Condensed", /*Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial,*/ sans-serif; }
+  font-family: "Roboto Condensed", /*Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial,*/ sans-serif; 
+}
 
 h1 {
   font-size: 3em;
@@ -274,9 +275,6 @@ a {
   text-decoration: none;
 }
 
-.js a {
-  transition: .3s; 
-}
 
 p a:link, p a:visited {
   border-bottom: 1px solid gainsboro; 
@@ -421,9 +419,16 @@ ul ul, ul ol, ol ol, ol ul {
 /** --------------------------------------------------
     layout elements
 --------------------------------------------------- */
+* {
+
+  transition:  background 0.1s, color 0.1s, opacity 0.1s;
+}
+
 body {
   background: #f2f2f2 url(img/bg_light.png);
-  color: #373737; }
+  color: #373737;
+
+}
 
 #main {
   background-color: white;
@@ -1235,12 +1240,9 @@ button.submit:active, button.preview:active {
 /* *** MODULE sidebar off-canvas *** */
 
 
-.js .sidebar, .js  #main {
-  transition: 0.3s all linear; 
-}
 
-.js #content-info h2,
-.js .content-info__feed {
+#content-info h2,
+.content-info__feed {
   margin-right: 3.5em; }
 
 @media screen and (max-width: 80em) { }
@@ -1333,9 +1335,6 @@ menu a:hover {
     overflow : hidden;
 }
 
-.js #ondemiroir_domain {
-    transition: 0.3s all linear; 
-}
 
 #motto, #header-control {
   position : absolute;
@@ -1354,7 +1353,6 @@ menu a:hover {
 
 #header-control {
   opacity : 0;
-  transition: 0.3s opacity;
   pointer-events: none;
 }
 
@@ -1407,9 +1405,6 @@ menu a:hover {
   line-height: normal; /* due to Roboto */
 }
 
-.js .calque {
-	transition: 0.3s background linear;
-}
 
 .calque:focus , .calque:hover {
 	background-color: white !important;
@@ -1433,7 +1428,6 @@ audio {
 
 /**** removing old jkery animation ***/
 body #gotop {
-  transition: opacity 0.2s ;
   opacity : 0;
 }
 

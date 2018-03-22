@@ -89,9 +89,6 @@ function store_comment_informations() {
 function main() {
 	html_element = document.querySelector('html');
     header_player = document.getElementById('header-control');
-    // snippet qui était dans _user_footer.tpl
-    html_element.classList.remove('nojs');
-    html_element.classList.add('js');
     // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
     window.setTimeout(refresh_player_focus, 3000);
