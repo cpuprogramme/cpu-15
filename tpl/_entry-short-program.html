@@ -2,13 +2,6 @@
 
 	<h3 class="post-title"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h3>
 
-	<!-- # Entry with an excerpt -->
-	<tpl:EntryIf extended="1">
-		<div class="post-content no-images calque">
-			{{tpl:EntryExcerpt}}
-		</div>
-	</tpl:EntryIf>
-
 	<div class="post-meta">
 		<p class="post-info">
 			<span class="calque post-date">{{tpl:EntryDate}}</span>
