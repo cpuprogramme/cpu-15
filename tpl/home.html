@@ -5,6 +5,7 @@
 	<!-- First page -->
 	<tpl:SysIf current_mode="default">
 
+		<!-- #
 		<tpl:Entries lastn="4" category="Programmes ?sub" no_context="1">
 
 			<tpl:LoopPosition start="1" length="1">
@@ -20,6 +21,23 @@
 
 		</tpl:Entries>
 		</div>
+		-->
+
+
+		<h2>C'est l'été ! Nous revenons en Septembre !</h2>
+
+		<h3 class="notsobig">Programmes précédents</h3>
+		<div class="flex">
+
+		<tpl:Entries lastn="3" category="Programmes ?sub" no_context="1">
+			<tpl:LoopPosition>
+				{{tpl:include src="_entry-minimal.html"}}
+			</tpl:LoopPosition>
+
+		</tpl:Entries>
+		</div>
+
+
 
 		<h2 class="notsobig">Programmes en séries</h2>
 		<div class="flex">
