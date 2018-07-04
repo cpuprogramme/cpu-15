@@ -46,8 +46,10 @@
           &lt;/a&gt;
         &lt;/p&gt;
       </tpl:EntrySeries>
-      {{tpl:EntryExcerpt absolute_urls="1" encode_xml="1"}}
-    {{tpl:EntryContent absolute_urls="1" encode_xml="1"}}</content>
+      {{tpl:EntryContent absolute_urls="1" encode_xml="1"}}</content>
+      &lt;p&gt;
+        &lt;img src=&quot;{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}&quot; alt=&quot;&quot; /&gt;
+      &lt;/p&gt;
 
     <tpl:Attachments>
       <link rel="enclosure" href="{{tpl:AttachmentURL}}"
