@@ -20,3 +20,7 @@
 .minimal > a h3 {
   align-items : middle;
 }
+
+.minimal > a:focus .calque , .minimal > a:hover .calque {
+  background-color: white !important;
+}

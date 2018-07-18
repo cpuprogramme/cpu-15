@@ -865,6 +865,10 @@ flex: 0 0 33%;
   align-items : middle;
 }
 
+.minimal > a:focus .calque , .minimal > a:hover .calque {
+  background-color: white !important;
+}
+
 
 /* EVOLUTION 2018 ENDS */
 
