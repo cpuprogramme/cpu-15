@@ -21,6 +21,6 @@
   align-items : middle;
 }
 
-.minimal > a:focus .calque , .minimal > a:hover .calque {
+a:focus .calque , a:hover .calque {
   background-color: white !important;
 }
