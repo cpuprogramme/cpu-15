@@ -421,7 +421,7 @@ ul ul, ul ol, ol ol, ol ul {
 --------------------------------------------------- */
 * {
 
-  transition:  background 0.2s, opacity 0.2s;
+  transition:  background 0.1s, opacity 0.1s;
 }
 
 body {
