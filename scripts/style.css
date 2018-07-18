@@ -845,6 +845,29 @@ flex: 0 0 33%;
   display: inline;
   vertical-align: baseline; }
 
+/* EVOLUTION 2018 BEGINS */
+
+.minimal {
+  /* structure : article.short > a.block > h3 > span.calque  */
+  margin: 0;
+  padding : 0;
+  display : flex;
+}
+.minimal > a {
+  margin :  0;
+  padding : 1em 0;
+  display : flex;
+  flex-direction: column;
+  width : 100%;
+}
+
+.minimal > a h3 {
+  align-items : middle;
+}
+
+
+/* EVOLUTION 2018 ENDS */
+
 .post-tags-list {
   margin: 0;
   padding: 0;

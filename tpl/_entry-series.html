@@ -1,6 +1,12 @@
-<article class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
-    <div class="post-meta not-small">
-        <span class="calque">{{tpl:CountEntriesInSeries none="prochainement" one="un seul épisode" more="%s épisodes"}} épisode(s)</span>
-    </div>
-    <h3 class="post-title"><a href="{{tpl:SerieURL}}" class="calque">{{tpl:SerieID}}</a></h3>
+<article class="post minimal {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
+    <a href="{{tpl:SerieURL}}">
+       
+        <div class="post-meta not-small">
+            <span class="calque">{{tpl:CountEntriesInSeries none="prochainement" one="un seul épisode" more="%s épisodes"}} épisode(s)</span>
+        </div>
+        <h3 class="post-title">
+            <span class="calque">{{tpl:SerieID encode_html="1"}}</span>
+        </h3>
+    </a>
+
 </article>

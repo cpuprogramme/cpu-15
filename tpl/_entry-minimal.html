@@ -1,5 +1,7 @@
-<article id="p{{tpl:EntryID}}" class="post short {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
-
-	<h3 class="post-title"><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle encode_html="1"}}</a></h3>
-
+<article id="p{{tpl:EntryID}}" class="post minimal {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} banner-article" role="article" style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
+    <a href="{{tpl:EntryURL}}">
+	   <h3 class="post-title">
+            <span class="calque">{{tpl:EntryTitle encode_html="1"}}</span>
+        </h3>
+    </a>
 </article>
