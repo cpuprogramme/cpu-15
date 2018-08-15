@@ -268,7 +268,7 @@ h6 {
   margin-bottom: 0; }
 
 h2, h3, h4, h5, h6 {
-  color: #267daf; }
+  color: #133e57; }
 
 a {
   color: #d52125;
@@ -901,7 +901,7 @@ flex: 0 0 33%;
   .post-title a, .post-title a:link, .post-title a:visited {
     border-bottom-color: white; }
   .post-title a:hover, .post-title a:focus, .post-title a:active {
-    color: #267daf;
+    color: #133e57;
     background-color: transparent; }
   @media screen and (max-width: 40em) {
     .post-title {
@@ -922,7 +922,7 @@ flex: 0 0 33%;
   margin-bottom: 3em; }
   .footnotes h4 {
     display: inline-block;
-    border-top: 1px solid #267daf;
+    border-top: 1px solid #133e57;
     padding-right: 3em;
     margin-bottom: 0; }
 
@@ -1141,7 +1141,7 @@ button.submit:active, button.preview:active {
   font-style: italic;
   font-weight: normal;
   text-transform: lowercase;
-  color: #267daf; }
+  color: #133e57; }
 
 .arch-block h4 {
   font-weight: bold;
