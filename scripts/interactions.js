@@ -86,12 +86,21 @@ function store_comment_informations() {
 }
 **/
 
+
+function fix_focus_on_search_box() {
+    /* a very ugly way to have a correct focus on the search box when its label is focused */
+    if (location.hash.substr(1) === 'search') {
+        document.getElementById('q').focus();
+    }
+}
+
 function main() {
 	html_element = document.querySelector('html');
     header_player = document.getElementById('header-control');
     // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
     window.setTimeout(refresh_player_focus, 3000);
+    window.addEventListener('hashchange', fix_focus_on_search_box);
 
 	/**
 	comment_form = document.getElementById('comment_form');
