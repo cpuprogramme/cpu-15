@@ -40,7 +40,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto Condensed", sans-serif;
+	font-family: "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.2;
 }
 
@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-size: 1em;
   line-height: 1.5;
-  font-family: "Roboto Condensed", /*Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial,*/ sans-serif; 
+  font-family: "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
 }
 
 h1 {
