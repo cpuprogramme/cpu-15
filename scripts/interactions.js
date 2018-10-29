@@ -96,7 +96,7 @@ function fix_focus_on_search_box() {
 
 function main() {
 	html_element = document.querySelector('html');
-    header_player = document.querySelector('cpu-controller');
+    header_player = document.getElementById('header-control');
     // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
     window.setTimeout(refresh_player_focus, 3000);

@@ -1358,7 +1358,7 @@ menu a:hover {
 }
 
 
-#motto, cpu-controller {
+#motto, #header-control {
   position : absolute;
   top : 0;
   left : 0;
@@ -1373,14 +1373,23 @@ menu a:hover {
   text-overflow: ellipsis;
 }
 
-cpu-controller {
+#header-control {
   opacity : 0;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  min-height: 64px;
+  background: #555;
 }
 
-cpu-controller.delegated {
+.cpu-audio-with-webcomponents #header-control.delegated {
   opacity : 1; 
   pointer-events: auto;
+}
+
+#header-control cpu-controller {
+  flex : 1 0 auto;
 }
 
 /** CUT HERE END  */
