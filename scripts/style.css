@@ -1389,7 +1389,7 @@ menu a:hover {
 }
 
 #header-control cpu-controller {
-  flex : 1 0 auto;
+  flex : 1 1 auto;
 }
 
 /** CUT HERE END  */
