@@ -32,7 +32,7 @@ function scroll_go_to_top() {
 
 function refresh_player_focus() {
     if (article_player === null) {
-        article_player = document.querySelector('#content .OndeMiroirAudio-Player');
+        article_player = document.querySelector('#content cpu-audio');
     }
     if ( (header_player === null) || (article_player === null)) {
         return;
@@ -96,7 +96,7 @@ function fix_focus_on_search_box() {
 
 function main() {
 	html_element = document.querySelector('html');
-    header_player = document.getElementById('header-control');
+    header_player = document.querySelector('cpu-controller');
     // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
     window.setTimeout(refresh_player_focus, 3000);
@@ -112,7 +112,7 @@ function main() {
 
 }
 
-if ( (document.body) && (document.getElementById('header-control')) ) {
+if ( (document.body) && (document.querySelector('cpu-controller')) ) {
 	main();
 } else {
 	window.addEventListener('DOMContentLoaded', main);

@@ -1358,7 +1358,7 @@ menu a:hover {
 }
 
 
-#motto, #header-control {
+#motto, cpu-controller {
   position : absolute;
   top : 0;
   left : 0;
@@ -1373,21 +1373,15 @@ menu a:hover {
   text-overflow: ellipsis;
 }
 
-#header-control {
+cpu-controller {
   opacity : 0;
   pointer-events: none;
 }
 
-#header-control.delegated {
+cpu-controller.delegated {
   opacity : 1; 
   pointer-events: auto;
 }
-
-#header-control .OndeMiroirAudio-Player-cover {
-  /* removing cover illustration for avoiding confusion */
-  display  :none;
-}
-
 
 /** CUT HERE END  */
 
