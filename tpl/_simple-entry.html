@@ -45,15 +45,6 @@
 	{{tpl:SysBehavior behavior="publicEntryAfterContent"}}
 
 
-<tpl:EntrySeries>
-	<h3 id="serie" class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
-	<ul>
-		<tpl:Entries order="asc">
-			<li><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></li>
-		</tpl:Entries>
-	</ul>
-</tpl:EntrySeries>
-
 <!-- # Attachments -->
 <tpl:Attachments>
 	<tpl:AttachmentsHeader>
@@ -70,6 +61,15 @@
 	</tpl:AttachmentsFooter>
 </tpl:Attachments>
 </article>
+
+<tpl:EntrySeries>
+	<h3 id="serie" class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
+	<ul>
+		<tpl:Entries order="asc">
+			<li><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></li>
+		</tpl:Entries>
+	</ul>
+</tpl:EntrySeries>
 
 
 <!-- # Comments -->
