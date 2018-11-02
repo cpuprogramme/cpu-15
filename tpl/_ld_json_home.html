@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "{{tpl:BlogURL}}",
+  "name": "{{tpl:BlogName encode_html="1"}}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{tpl:BlogURL}}?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

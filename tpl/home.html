@@ -1,5 +1,10 @@
 {{tpl:extends parent="__layout.html"}}
 
+<tpl:Block name="html-head">
+	{{tpl:parent}}
+	{{tpl:include src="_ld_json_home.html"}}
+</tpl:Block>
+
 <tpl:Block name="main-content">
 
 	<!-- First page -->
