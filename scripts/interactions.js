@@ -11,7 +11,6 @@ var header_player = null;
 // snippets dont les originaux étaient dans _user_footer.tpl
 
 function scroll_go_to_top() {
-	// $('body,html').animate({scrollTop:0},800);
 	/* Honte à moi : repris de https://stackoverflow.com/posts/24559613/revisions */
 
 	scrollDuration = 800;
@@ -52,39 +51,14 @@ function on_scroll() {
     } else {
         document.body.classList.remove('scrolled');
     }
-
     refresh_player_focus();
 }
 
 function add_scroll_listeners() {
 	document.getElementById('gotop').addEventListener('click', scroll_go_to_top);
-	window.addEventListener('scroll', on_scroll);
-	window.addEventListener('resize', on_scroll);
+	window.addEventListener('scroll', on_scroll, {passive: true});
+	window.addEventListener('resize', on_scroll, {passive: true});
 }
-
-/** Not so useful
-
-var comment_keys = ['name', 'mail', 'site'];
-function repeal_comment_informations() {
-	for (var index in comment_keys) {
-		key = 'c_'+comment_keys[index];
-		var value = localStorage.getItem(key)
-		if (value.length > 0) {
-			document.getElementById(key).value = value;			
-		}
-	}
-}
-
-function store_comment_informations() {
-	if (!document.getElementById('c_remember').checked) {
-		return;
-	}
-	for (var index in comment_keys) {
-		key = 'c_'+comment_keys[index];
-		localStorage.setItem(key, document.getElementById(key))
-	}
-}
-**/
 
 
 function fix_focus_on_search_box() {
@@ -101,14 +75,6 @@ function main() {
 	add_scroll_listeners();
     window.setTimeout(refresh_player_focus, 3000);
     window.addEventListener('hashchange', fix_focus_on_search_box);
-
-	/**
-	comment_form = document.getElementById('comment_form');
-	if (comment_form) {
-		repeal_comment_informations();
-		comment_form.addEventListener('submit', store_comment_informations);
-	}
-	**/
 
 }
 
