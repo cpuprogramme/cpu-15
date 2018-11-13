@@ -211,7 +211,8 @@ svg:not(:root) {
 /* Headings reset */
 h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
-  font-weight: normal;
+  /*font-weight: normal;*/ 
+  font-weight : bold; /* for paint before having loaded roboto */
   margin: 0; }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
@@ -894,7 +895,8 @@ flex: 0 0 33%;
 
 .post-title {
   text-align: center;
-  font-weight: 200; }
+/*  font-weight: 200; */
+}
   .post-title a, .post-title a:link, .post-title a:visited {
     border-bottom-color: white; }
   .post-title a:hover, .post-title a:focus, .post-title a:active {
