@@ -1,31 +1,19 @@
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "RadioEpisode",
-  "headline":"{{tpl:EntryTitle encode_html="1"}}",
-  "description":"{{tpl:EntryContent full="1" encode_html="1" remove_html="1" cut_string="180"}}",
-  "image": {
-    "@type": "ImageObject",
-    "url": "http://cpu.dascritch.net{{tpl:EntryFirstImage no_tag="1" size="m"}}",
-    "caption": ""<!-- #,
-    "height": 391,
-    "width": 696 -->
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{tpl:EntryURL}}"
   },
+  "headline":"{{tpl:EntryTitle encode_html="1"}}",
+  "image": [
+    "http://cpu.dascritch.net{{tpl:EntryFirstImage no_tag="1" size="m"}}"
+   ],
   "datePublished":"{{tpl:EntryDate iso8601="1"}}",
   "dateModified":"{{tpl:EntryDate iso8601="1"}}",
   "url":"{{tpl:EntryURL}}",
-  "keywords":"<tpl:EntrySeries>{{tpl:SerieID}},</tpl:EntrySeries><tpl:EntryTags>{{tpl:TagID}},</tpl:EntryTags>",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Radio FMR",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "http://radio-fmr.net/param/pix/shared/logofmr.png",
-      "width": 397,
-      "height": 171
-    }
-  },
-  "producer":{
+  "author": {
     "@type": "Person",
     "image": {
       "@type": "ImageObject",
@@ -36,17 +24,16 @@
     },
     "name":"Xavier “dascritch” Mouton-Dubosc"
   },
-  "partOfSeries": {
-    "@type": "RadioSeries",
-    "name":"CPU ⬜ Carré Petit Utile",
-    "productionCompany":"Radio FMR, DaScritch and co",
-    "image": {
+  "publisher": {
+    "@type": "Organization",
+    "name": "Radio FMR",
+    "logo": {
       "@type": "ImageObject",
-      "url": "https://cpu.dascritch.net/assets/apple-touch-icon.png",
-      "caption": "CPU",
-      "width": 180,
-      "height": 180
+      "url": "http://radio-fmr.net/param/pix/shared/logofmr.png"<!-- #,
+      "width": 397,
+      "height": 171 -->
     }
-  }
+  },
+  "description": "{{tpl:EntryContent full="1" encode_html="1" remove_html="1" cut_string="180"}}"
 }
 </script>

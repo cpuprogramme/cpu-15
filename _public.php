@@ -19,6 +19,7 @@ $core->url->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15
 $core->tpl->addValue('EntryURLsegment',array('CPU15_template','EntryURLsegment'));
 $core->tpl->addBlock('Entry1stLevelCategory',array('CPU15_template','Entry1stLevelCategory'));
 $core->tpl->addValue('CountEntriesInSeries',array('CPU15_template','CountEntriesInSeries'));
+$core->tpl->addValue('EpisodeNumber',array('CPU15_template','EpisodeNumber'));
 
 $core->tpl->addBlock('AttachmentsNo',array('CPU15_template','AttachmentsNo'));
 
@@ -111,6 +112,10 @@ class CPU15_template
 	            $attr,
 	            true
     		);
+	}
+
+	public static function EpisodeNumber($attr) {
+		return '<?php echo substr($_ctx->posts->post_title, 2, 4); ?>';
 	}
 
 }
