@@ -57,11 +57,6 @@
       length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
     </tpl:Attachments>
 
-
-    <tpl:EntryIf comments_active="1">
-      <wfw:comment>{{tpl:EntryURL}}#comment-form</wfw:comment>
-      <wfw:commentRss>{{tpl:BlogFeedURL type="atom"}}/comments/{{tpl:EntryID}}</wfw:commentRss>
-    </tpl:EntryIf>
   </entry>
   </tpl:Entries>
 
