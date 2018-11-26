@@ -4,10 +4,6 @@
 	<title>{{tpl:CategoryTitle encode_html="1"}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
 </tpl:Block>
 
-<tpl:Block name="meta-robots">
-	<meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX"}}" />
-</tpl:Block>
-
 <tpl:Block name="meta-entry">
 	<meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:CategoryDescription encode_html="1" cut_string="180" remove_html="1"}}" />
 	<meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
