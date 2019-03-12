@@ -11,19 +11,23 @@
 		  font-family: 'Roboto Condensed';
 		  font-style: normal;
 		  font-weight: 400;
-		  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Regular.ttf) format('truetype');
+		  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Regular.woff2) format('woff2'), url('//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Regular.ttf') format('truetype');
 		}
 		@font-face {
 		  font-family: 'Roboto Condensed';
 		  font-style: normal;
 		  font-weight: 700;
-		  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+		  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url('//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Bold.woff2') format('woff2'), url('//cpu.dascritch.net/themes/cpu-15/fonts/RobotoCondensed-Bold.ttf') format('truetype');
 		}
 
 		* {
 			font-family: "Roboto Condensed", sans-serif;
 			padding : 0;
 			margin : 0;
+		}
+
+		body {
+			background: #ddd;
 		}
 
 		a {
@@ -38,6 +42,15 @@
 
 		h3 {
 		    margin : 0 0 6px;
+		}
+
+		img {
+			max-width: 2em;
+		    min-width: 2em;
+		    max-height: 2em;
+		    min-height: 2em;
+		    object-fit: contain;
+		    vertical-align: middle;
 		}
 
 		audio {
@@ -57,7 +70,7 @@
 			}
 
 		    if ((query.indexOf('autoplay=1')>0) || (query.indexOf('auto_play=true')>0)) {
-			document.querySelector('audio').play();
+				document.querySelector('audio').play();
 		    }
 		});
 	</script>
@@ -69,9 +82,8 @@
 	    </tpl:AttachmentIf>
 	</tpl:Attachments>
 	<a href="{{tpl:EntryURL}}">
-	    <img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" />
 	    <div>
-	      <h3>{{tpl:EntryTitle}}</h3>
+	      <h3><img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="t"}}" alt="" /> {{tpl:EntryTitle}}</h3>
 	      <p>{{tpl:EntryContent  encode_html="1" remove_html="1" cut_string="200"}}</p>
 	    </div>
 	</a>
