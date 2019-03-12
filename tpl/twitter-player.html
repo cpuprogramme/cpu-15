@@ -42,6 +42,8 @@
 
 		h3 {
 		    margin : 0 0 6px;
+		    display: flex;
+			align-items: center;
 		}
 
 		img {
@@ -83,7 +85,7 @@
 	</tpl:Attachments>
 	<a href="{{tpl:EntryURL}}">
 	    <div>
-	      <h3><img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="t"}}" alt="" /> {{tpl:EntryTitle}}</h3>
+	      <h3><img src="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="t"}}" alt="" /><span>{{tpl:EntryTitle}}</span></h3>
 	      <p>{{tpl:EntryContent  encode_html="1" remove_html="1" cut_string="200"}}</p>
 	    </div>
 	</a>
