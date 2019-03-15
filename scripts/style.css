@@ -67,8 +67,16 @@ html {
 }
 
 body {
+    --cpu-color-transitions : 0.1s;
+
   margin: 0;
-  padding: 0; }
+  padding: 0; 
+  background: #f2f2f2 url(img/bg_light.png);
+  color: #373737;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
+}
 
 a {
   background: transparent; }
@@ -237,11 +245,6 @@ h1, h2, h3, h4, h5, h6 {
     Common rules
 --------------------------------------------------- */
 /* Typographie */
-body {
-  font-size: 1em;
-  line-height: 1.5;
-  font-family: "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
-}
 
 h1 {
   font-size: 3em;
@@ -424,14 +427,9 @@ ul ul, ul ol, ol ol, ol ul {
 --------------------------------------------------- */
 * {
 
-  transition:  background 0.1s, opacity 0.1s;
+  transition:  background var(--cpu-color-transitions), opacity var(--cpu-color-transitions);
 }
 
-body {
-  background: #f2f2f2 url(img/bg_light.png);
-  color: #373737;
-
-}
 
 #main {
   background-color: white;
