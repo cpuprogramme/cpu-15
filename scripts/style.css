@@ -67,7 +67,7 @@ html {
 }
 
 body {
-    --cpu-color-transitions : 0.1s;
+    --cpu-background-transitions : 0.1s;
 
   margin: 0;
   padding: 0; 
@@ -427,7 +427,7 @@ ul ul, ul ol, ol ol, ol ul {
 --------------------------------------------------- */
 * {
 
-  transition:  background var(--cpu-color-transitions), opacity var(--cpu-color-transitions);
+  transition:  background var(--cpu-background-transitions), opacity var(--cpu-background-transitions);
 }
 
 
