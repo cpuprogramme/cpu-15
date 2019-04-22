@@ -736,6 +736,7 @@ flex: 0 0 33%;
 
 .series-posts .current {
   background-color: black;
+  padding: .25em;
 }
 
 .category-current {
