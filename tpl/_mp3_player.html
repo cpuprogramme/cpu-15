@@ -1,4 +1,4 @@
-<cpu-audio title="{{tpl:EntryTitle}}" canonical="{{tpl:EntryURL}}" poster="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="s"}}" hide="chapters" playlist="cpu">
+<cpu-audio title="{{tpl:EntryTitle}}" canonical="{{tpl:EntryURL}}" poster="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="s"}}" <tpl:HasWaveformFile>waveform="{{tpl:WaveformFile}}"</tpl:HasWaveformFile>  hide="panels" playlist="cpu">
     <audio controls="controls" style="width:100%">
         <source src="{{tpl:OggFile}}" type="audio/ogg; codecs=vorbis" />
         <source src="{{tpl:AttachmentURL}}" type="audio/mpeg" />
