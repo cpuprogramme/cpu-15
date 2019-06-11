@@ -31,13 +31,13 @@
 
 		<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
 		{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
-	</div>
 		
-<tpl:Attachments>
-	<tpl:AttachmentIf is_mp3="1">
-		{{tpl:include src="_mp3_player.html"}}
-	</tpl:AttachmentIf>
-</tpl:Attachments>
+		<tpl:Attachments>
+			<tpl:AttachmentIf is_mp3="1">
+				{{tpl:include src="_mp3_player.html"}}
+			</tpl:AttachmentIf>
+		</tpl:Attachments>
+	</div>
 		
 	<div class="post-content">{{tpl:EntryContent}}</div>
 
