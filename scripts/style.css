@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   color-scheme: light dark;
   --color-neutral : #333;
   --background-neutral : #eee;
-  --background-img : url(img/bg_light.png);
+  --background-img : url(/themes/cpu-15/img/bg_light.png);
   --background-main : #fff;
   --title-neutral : #133e57;
   --link : #d52125;
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   :root {
     --color-neutral : #ccc;
     --background-neutral : #111;
-    --background-img : url(img/bg_dark.png);
+    --background-img : url(/themes/cpu-15/img/bg_dark.png);
     --background-main : #000;
     --title-neutral : #3390c7;
     --link : #ff5155;
@@ -421,27 +421,27 @@ ul ul, ul ol, ol ol, ol ul {
   padding-right: .5em; }
 
 .post-date {
-  background-image: url(img/icon_date.png); }
+  background-image: url(/themes/cpu-15/img/icon_date.png); }
 
 .post-cat {
-  background-image: url(img/icon_category.png); }
+  background-image: url(/themes/cpu-15/img/icon_category.png); }
 
 .post-tags-list {
-  background-image: url(img/icon_tags.png);
+  background-image: url(/themes/cpu-15/img/icon_tags.png);
   padding-left: 22px !important; }
 
 .comment_count {
-  background-image: url(img/icon_comments.png); }
+  background-image: url(/themes/cpu-15/img/icon_comments.png); }
 
 .attach_count {
-  background-image: url(img/icon_attach.png); }
+  background-image: url(/themes/cpu-15/img/icon_attach.png); }
 
 .post-permalink {
-  background-image: url(img/icon_permalink.png); }
+  background-image: url(/themes/cpu-15/img/icon_permalink.png); }
 
 .feed {
-  background-image: url(img/icon_feed.png);
-  background-image: url(img/icon_feed.svg), none;
+  background-image: url(/themes/cpu-15/img/icon_feed.png);
+  background-image: url(/themes/cpu-15/img/icon_feed.svg), none;
   -webkit-background-size: .875em;
   -o-background-size: .875em;
   background-size: .875em;
@@ -636,8 +636,8 @@ a.site-title__link:visited {
   background-color: var(--link);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-image: url("img/icon_hamburger.png");
-  background-image: url("img/icon_hamburger.svg"), none;
+  background-image: url("/themes/cpu-15/img/icon_hamburger.png");
+  background-image: url("/themes/cpu-15/img/icon_hamburger.svg"), none;
   height: 2.5em;
   width: 2.5em;
   border: 2px solid var(--link); }
@@ -647,8 +647,8 @@ a.site-title__link:visited {
     background-color: #aa1a1d;
     border-color: var(--link); }
   #hamburger.open {
-    background-image: url(img/icon_close.png);
-    background-image: url(img/icon_close.svg), none; }
+    background-image: url(/themes/cpu-15/img/icon_close.png);
+    background-image: url(/themes/cpu-15/img/icon_close.svg), none; }
 
 @media screen and (max-width: 60em) {
   .header {
@@ -694,7 +694,7 @@ a.site-title__link:visited {
 
 .sidebar {
   padding-top: 2em;
-  background: var(--color-neutral) url(img/bg_dark.png);
+  background: var(--color-neutral) url(/themes/cpu-15/img/bg_dark.png);
   color: white;
   text-shadow: var(--color-neutral) 0px -1px 0px; 
 flex: 0 0 33%;
@@ -776,7 +776,7 @@ flex: 0 0 33%;
   background-color: var(--color-neutral); }
 
 .sidebar li:hover ul {
-  background: url(img/bg_dark.png); }
+  background: url(/themes/cpu-15/img/bg_dark.png); }
 
 @media screen and (min-width: 40.1em) and (max-width: 80em) {
 
@@ -962,8 +962,8 @@ flex: 0 0 33%;
   box-shadow: 0 2px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.2); }
 
 .post-attachments:before {
-  content: url(img/icon_attachments.png);
-  content: url(img/icon_attachments.svg);
+  content: url(/themes/cpu-15/img/icon_attachments.png);
+  content: url(/themes/cpu-15/img/icon_attachments.svg);
   display: block;
   position: absolute;
   margin-top: -.33em;
@@ -1214,17 +1214,17 @@ button.submit:active, button.preview:active {
 
 /* par categorie */
 .arch-cat-list, .arch-sub-cat-list {
-  background: transparent url(img/vline.png) repeat-y; }
+  background: transparent url(/themes/cpu-15/img/vline.png) repeat-y; }
 
 .arch-sub-cat-list {
   margin: .5em 0 0 .5em; }
 
 .arch-cat-list li {
   padding: .2em .2em .2em 20px;
-  background: transparent url(img/hline.png) no-repeat left 0.82em; }
+  background: transparent url(/themes/cpu-15/img/hline.png) no-repeat left 0.82em; }
 
 .arch-cat-list li:last-child {
-  background-image: url(img/last-hline.png); }
+  background-image: url(/themes/cpu-15/img/last-hline.png); }
 
 /* par tag */
 /*
