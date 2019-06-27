@@ -178,7 +178,13 @@ input, button, select {
 button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
-  margin: 0; }
+  margin: 0; 
+  color : var(--color-neutral);
+  background : var(--background-main);
+  border-radius: .25em;
+  border: 2px solid var(--color-neutral);
+  padding : 2px;
+}
 
 button, input {
   line-height: normal; }
