@@ -344,7 +344,6 @@ hr {
   background-image: linear-gradient(left, #dcdcdc, var(--quote), #dcdcdc); }
 
 blockquote, q {
-  color: var(--quote);
   font-style: italic; }
 
 blockquote {
