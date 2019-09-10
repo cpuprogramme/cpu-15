@@ -109,8 +109,7 @@ class CPU15_template
 	            	'one' => 'un épisode', 
 	            	'more' => '%s épisodes', 
 	            ),
-	            $attr,
-	            true
+	            $attr
     		);
 	}
 
