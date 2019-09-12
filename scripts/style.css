@@ -328,9 +328,10 @@ p a:visited {
 p a:hover, p  a:active {
   border-color: var(--link); 
 }*/
-p a:focus {
+#content a:hover, #content a:active , #content a:focus {
   background-color: var(--link);
   color: var(--link-focus); 
+  text-decoration: underline;
 }
 
 hr {
