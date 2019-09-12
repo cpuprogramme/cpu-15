@@ -318,7 +318,7 @@ a {
   text-decoration: none;
 }
 
-
+/* we have many links in some text, not useful. (and list with links are not underlined)
 p a:link, p a:visited {
   border-bottom: 1px solid gainsboro; 
 }
@@ -327,7 +327,7 @@ p a:visited {
 }
 p a:hover, p  a:active {
   border-color: var(--link); 
-}
+}*/
 p a:focus {
   background-color: var(--link);
   color: var(--link-focus); 
