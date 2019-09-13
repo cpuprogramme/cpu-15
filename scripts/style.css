@@ -328,11 +328,11 @@ p a:visited {
 p a:hover, p  a:active {
   border-color: var(--link); 
 }*/
-#content a:hover, #content a:active , #content a:focus {
-  background-color: var(--link);
-  color: var(--link-focus); 
+.link_und a:hover, .link_und a:active , .link_und a:focus {
   text-decoration: underline;
+  color: var(--link-focus); 
 }
+
 
 hr {
   border: 0;
@@ -711,7 +711,9 @@ flex: 0 0 33%;
     border: none; }
   .sidebar a:hover, .sidebar a:focus, .sidebar a:active,
   .sidebar li:hover, .sidebar li:focus {
-    background-color: var(--link); }
+    background-color: var(--link); 
+    text-decoration: none !important;
+  }
 
 .blognav__title,
 .blogextra__title {
@@ -1231,59 +1233,6 @@ button.submit:active, button.preview:active {
 .arch-cat-list li:last-child {
   background-image: url(/themes/cpu-15/img/last-hline.png); }
 
-/* par tag */
-/*
-.arch-by-tag {
-  width: 17em; }
-
-.arch-tag-list li {
-  display: inline;
-  padding-right: 1em; }
-
-.arch-tag-list .tag0 {
-  color: #909090;
-  font-size: 90%; }
-
-.arch-tag-list .tag10 {
-  color: #828282;
-  font-size: 92%; }
-
-.arch-tag-list .tag20 {
-  color: #737373;
-  font-size: 94%; }
-
-.arch-tag-list .tag30 {
-  color: #656565;
-  font-size: 96%; }
-
-.arch-tag-list .tag40 {
-  color: #484848;
-  font-size: 98%; }
-
-.arch-tag-list .tag50 {
-  color: #3A3A3A;
-  font-size: 100%; }
-
-.arch-tag-list .tag60 {
-  color: #2B2B2B;
-  font-size: 102%; }
-
-.arch-tag-list .tag70 {
-  color: #1D1D1D;
-  font-size: 104%; }
-
-.arch-tag-list .tag80 {
-  color: #0E0E0E;
-  font-size: 106%; }
-
-.arch-tag-list .tag90 {
-  color: #030303;
-  font-size: 108%; }
-
-.arch-tag-list .tag100 {
-  color: #000;
-  font-size: 110%; }
-*/
 /* archives par mois */
 .dc-archive-month #content-info h2 {
   margin-left: 2em;
@@ -1471,6 +1420,7 @@ menu a:hover {
 
 .calque:focus , .calque:hover, a:focus .calque , a:hover .calque {
 	background-color: var(--calque-out) !important;
+  text-decoration: none !important;
 }
 
 .no-images img { display : none }
