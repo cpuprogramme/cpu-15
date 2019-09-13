@@ -809,8 +809,7 @@ flex: 0 0 33%;
 
 /* *** content info *** */
 #content-info {
-  margin-bottom: 4em;
-  border-bottom: 1px solid gainsboro;
+  margin-bottom: 1em;
   padding: 0;
   font-size: 0.875em; }
 
