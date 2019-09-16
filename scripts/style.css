@@ -738,6 +738,7 @@ flex: 0 0 33%;
 .blogextra__widgets h3 {
   text-transform: uppercase; }
 
+
 .blognav__widgets h4,
 .blogextra__widgets h4 {
   margin-top: 1.5em;
@@ -1573,4 +1574,11 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 
 #search {
   padding-top : 5.5em;
+}
+
+
+
+.blogextra__widgets article h3 {
+  color: white;
+  text-transform: none;
 }
