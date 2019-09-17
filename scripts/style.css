@@ -99,6 +99,7 @@ html {
 
 body {
     --cpu-background-transitions : 0.1s;
+
   margin: 0;
   padding: 0; 
   background: var(--background-neutral) var(--background-img);
@@ -1367,7 +1368,7 @@ menu a:hover {
   background: #555;
 }
 
-.cpu-audio-with-webcomponents.delegated #header-control {
+.cpu-audio-with-webcomponents #header-control.delegated {
   opacity : 1; 
   pointer-events: auto;
 }

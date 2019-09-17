@@ -10,7 +10,7 @@ let header_player = null;
 
 
 let rotate_placeholder = {
-    list : ['hacker', 'serveur', 'startup', 'php', 'graphisme', 'fablab', 'meetup', 'démo', 'matériel', 'pro', 'apprendre', 'bug', 'festival', 'antivirus', 'couleur', 'cdkey', 'son', 'c̵r̵y̵p̵t̵e̵r̵ chiffrer', 'Eugène', 'emploi', 'réseau', 'blog'],
+    list : ['hacker', 'serveur', 'startup', 'php', 'graphisme', 'fablab', 'meetup', 'démo', 'matériel', 'pro', 'apprendre', 'bug', 'festival', 'antivirus', 'couleur', 'cdkey', 'son', 'c̵r̵y̵p̵t̵e̵r̵ chiffrer', 'emploi', 'réseau', 'blog'],
     count : 0,
     delay : 2000,
     element : null,
@@ -24,32 +24,58 @@ let rotate_placeholder = {
     }
 }
 
+// snippets dont les originaux étaient dans _user_footer.tpl
+
 function scroll_go_to_top() {
-	window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
+	/* Honte à moi : repris de https://stackoverflow.com/posts/24559613/revisions */
+
+	scrollDuration = 800;
+
+    var cosParameter = window.scrollY / 2,
+        scrollCount = 0,
+        oldTimestamp = performance.now();
+    function step (newTimestamp) {
+        scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
+        if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+        if (window.scrollY === 0) return;
+        window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+        oldTimestamp = newTimestamp;
+        window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+}
+
+function refresh_player_focus() {
+    if (article_player === null) {
+        article_player = document.querySelector('#content cpu-audio');
+    }
+    if ( (header_player === null) || (article_player === null)) {
+        return;
+    }
+    var position = article_player.getBoundingClientRect();
+    if ((position.bottom < 0) || (position.top > window.innerHeight)) {
+        header_player.classList.add('delegated');
+    } else {
+        header_player.classList.remove('delegated');
+       
+    }    
+}
+
+function on_scroll() {
+	if ( (html_element.scrollTop !== 0) || (document.body.scrollTop !== 0) ) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+    refresh_player_focus();
 }
 
 function add_scroll_listeners() {
-    function observe_gives(classname) {
-        return function observe_menu(elements) {
-            console.log(elements[0].intersectionRatio, elements[0])
-            if (elements[0].isIntersecting) {
-                document.body.classList.remove(classname);
-            } else {
-                document.body.classList.add(classname);
-            }
-        }    
-    }
-
 	document.getElementById('gotop').addEventListener('click', scroll_go_to_top);
-    new IntersectionObserver(observe_gives('scrolled')).observe(document.getElementById('menu'));
-    if (article_player) {
-        new IntersectionObserver(observe_gives('delegated')).observe(article_player);
-    }
+	window.addEventListener('scroll', on_scroll, {passive: true});
+	window.addEventListener('resize', on_scroll, {passive: true});
 }
+
 
 function fix_focus_on_search_box() {
     /* a very ugly way to have a correct focus on the search box when its label is focused */
@@ -58,12 +84,13 @@ function fix_focus_on_search_box() {
     }
 }
 
+
 function main() {
 	html_element = document.querySelector('html');
     header_player = document.getElementById('header-control');
-    article_player = document.querySelector('cpu-audio');
     // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
+    window.setTimeout(refresh_player_focus, 3000);
     window.addEventListener('hashchange', fix_focus_on_search_box);
     rotate_placeholder.run();
 }
