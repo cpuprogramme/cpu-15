@@ -2,11 +2,27 @@
 
 // pour ne pas avoir de balise <script> dans le source html, je code en dur la case à cocher. On peut le faire aussi avec un data="" , mais pas besoin : le site n'est qu'en Français
 
-var post_remember_str = 'Se rappeler de moi';
-var html_element = null;
-var comment_form = null;
-var article_player = null;
-var header_player = null;
+let post_remember_str = 'Se rappeler de moi';
+let html_element = null;
+let comment_form = null;
+let article_player = null;
+let header_player = null;
+
+
+let rotate_placeholder = {
+    list : ['hacker', 'serveur', 'startup', 'php', 'graphisme', 'fablab', 'meetup', 'démo', 'matériel', 'pro', 'apprendre', 'bug', 'festival', 'antivirus', 'couleur', 'cdkey', 'son', 'c̵r̵y̵p̵t̵e̵r̵ chiffrer', 'emploi', 'réseau', 'blog'],
+    count : 0,
+    delay : 2000,
+    element : null,
+    change : function() {
+        this.count = (this.count === (this.list.length-1)) ? 0 : ++this.count;
+        this.element.placeholder = this.list[this.count];
+    },
+    run : function() {
+        this.element = document.getElementById('q');
+        window.setInterval(this.change.bind(this), this.delay);
+    }
+}
 
 // snippets dont les originaux étaient dans _user_footer.tpl
 
@@ -68,6 +84,7 @@ function fix_focus_on_search_box() {
     }
 }
 
+
 function main() {
 	html_element = document.querySelector('html');
     header_player = document.getElementById('header-control');
@@ -75,7 +92,7 @@ function main() {
 	add_scroll_listeners();
     window.setTimeout(refresh_player_focus, 3000);
     window.addEventListener('hashchange', fix_focus_on_search_box);
-
+    rotate_placeholder.run();
 }
 
 if ( (document.body) && (document.querySelector('cpu-controller')) ) {
