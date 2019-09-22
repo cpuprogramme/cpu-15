@@ -35,7 +35,6 @@ function scroll_go_to_top() {
 function add_scroll_listeners() {
     function observe_gives(classname) {
         return function observe_menu(elements) {
-            console.log(elements[0].intersectionRatio, elements[0])
             if (elements[0].isIntersecting) {
                 document.body.classList.remove(classname);
             } else {

@@ -46,8 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   color-scheme: light dark;
-  --color-neutral : #333;
   --background-neutral : #eee;
+  --color-neutral : #333;
   --background-img : url(/themes/cpu-15/img/bg_light.png);
   --background-main : #fff;
   --background-comment : #eff;
@@ -1367,7 +1367,7 @@ menu a:hover {
   background: #555;
 }
 
-.cpu-audio-with-webcomponents.delegated #header-control {
+body.cpu-audio-with-webcomponents.delegated #header-control {
   opacity : 1; 
   pointer-events: auto;
 }
@@ -1578,6 +1578,6 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 
 
 .blogextra__widgets article h3 {
-  color: white;
+  color: var(--link);
   text-transform: none;
 }
