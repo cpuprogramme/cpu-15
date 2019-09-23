@@ -45,10 +45,11 @@ function add_scroll_listeners() {
 
 	document.getElementById('gotop').addEventListener('click', scroll_go_to_top);
     if (typeof IntersectionObserver !== 'function') {
-        new IntersectionObserver(observe_gives('scrolled')).observe(document.getElementById('menu'));
-        if (article_player) {
-            new IntersectionObserver(observe_gives('delegated')).observe(article_player);
-        }
+        return ;
+    }
+    new IntersectionObserver(observe_gives('scrolled')).observe(document.getElementById('menu'));
+    if (article_player) {
+        new IntersectionObserver(observe_gives('delegated')).observe(article_player);
     }
 }
 

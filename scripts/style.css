@@ -329,7 +329,7 @@ p a:hover, p  a:active {
 }*/
 .link_und a:hover, .link_und a:active , .link_und a:focus {
   text-decoration: underline;
-  color: var(--link-focus); 
+  /*color: var(--link-focus); */
 }
 
 
