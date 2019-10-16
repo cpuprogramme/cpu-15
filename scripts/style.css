@@ -459,7 +459,7 @@ ul ul, ul ol, ol ol, ol ul {
 --------------------------------------------------- */
 * {
 
-  transition:  background var(--cpu-background-transitions), opacity var(--cpu-background-transitions);
+  transition:  background var(--cpu-background-transitions), opacity var(--cpu-background-transitions), top var(--cpu-background-transitions);
 }
 
 
@@ -1359,7 +1359,7 @@ menu a:hover {
 
 #header-control {
   display: flex;
-  opacity : 0;
+  top : -80px;
   align-items: center;
   min-width: 100%;
   min-height: 64px;
@@ -1368,16 +1368,12 @@ menu a:hover {
 
 #header-control cpu-controller {
   flex : 1 1 auto;
-  pointer-events: none;
 }
 
 body.cpu-audio-with-webcomponents.delegated #header-control {
-  opacity : 1;
+  top : 0px;
 }
 
-body.cpu-audio-with-webcomponents.delegated #header-control cpu-controller {
-  pointer-events: auto;
-}
 /** CUT HERE END  */
 
 
