@@ -1358,24 +1358,26 @@ menu a:hover {
 }
 
 #header-control {
-  opacity : 0;
-  pointer-events: none;
   display: flex;
+  opacity : 0;
   align-items: center;
   min-width: 100%;
   min-height: 64px;
   background: #555;
 }
 
-body.cpu-audio-with-webcomponents.delegated #header-control {
-  opacity : 1; 
-  pointer-events: auto;
-}
-
 #header-control cpu-controller {
   flex : 1 1 auto;
+  pointer-events: none;
 }
 
+body.cpu-audio-with-webcomponents.delegated #header-control {
+  opacity : 1;
+}
+
+body.cpu-audio-with-webcomponents.delegated #header-control cpu-controller {
+  pointer-events: auto;
+}
 /** CUT HERE END  */
 
 
