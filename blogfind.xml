@@ -4,7 +4,7 @@
 	<Description>Chercher dans les archives du programme CPU</Description>
 	<Url type="text/html"
 		 method="get"
-		 template="http://cpu.dascritch.net/?q={searchTerms}">
+		 template="https://cpu.dascritch.net/?q={searchTerms}">
 	</Url>
 	<LongName>Chercher dans CPU ⬜ Carré Petit Utile</LongName>
 	<Image height="16" width="16" type="image/png">https://cpu.dascritch.net/assets/favicon-16x16.png</Image>
