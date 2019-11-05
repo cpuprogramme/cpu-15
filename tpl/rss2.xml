@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet title="XSL formatting" type="text/xsl" href="{{tpl:BlogURL}}feed/rss2/xslt" ?>
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:media="http://search.yahoo.com/mrss/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+	xmlns:spotify="http://www.spotify.com/ns/rss">
+
+<channel>
+	<title>{{tpl:BlogName encode_xml="1"}}</title>
+	<itunes:subtitle>{{tpl:BlogName encode_xml="1"}}</itunes:subtitle>
+	<media:description type="plain">{{tpl:BlogName encode_xml="1"}}</media:description>
+	<link>{{tpl:BlogURL}}</link>
+	<atom:link href="{{tpl:SysSelfURI}}" rel="self" type="application/rss+xml"/>
+	<description>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</description>
+	<itunes:summary>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</itunes:summary>
+	<googleplay:description>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</googleplay:description>
+	<language>{{tpl:BlogLanguage}}</language>
+	<spotify:countryOfOrigin>fr</spotify:countryOfOrigin>
+
+	<managingEditor>noemail@noemail.org (Da Scritch et associés pour Radio FMR)</managingEditor>
+	<itunes:author>{{tpl:BlogEditor encode_xml="1"}}</itunes:author>
+	<itunes:owner>
+		<itunes:email>noemail@noemail.org</itunes:email>
+		<itunes:name>{{tpl:BlogEditor encode_xml="1"}}</itunes:name>
+	</itunes:owner>
+	<googleplay:author>{{tpl:BlogEditor encode_xml="1"}}</googleplay:author>
+	<googleplay:email>noemail@noemail.org</googleplay:email>
+	
+	<copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</copyright>
+	<media:copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:copyright>
+	<media:credit role="author">{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:credit>
+
+	<media:thumbnail url="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
+	<media:rating>nonadult</media:rating>
+	<itunes:explicit>no</itunes:explicit>
+	<googleplay:explicit>no</googleplay:explicit>
+	<itunes:block>no</itunes:block>
+
+	<itunes:type>episodic</itunes:type>
+
+	<image>
+		<url>https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</url>
+		<title>{{tpl:BlogName encode_xml="1"}}</title>
+		<link>{{tpl:BlogURL}}</link>
+	</image>
+	<itunes:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<googleplay:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	
+	<itunes:category text="Technology" />
+	<googleplay:category text="Technology"/>
+	<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+
+	<generator>Dotclear http://www.dotclear.org/</generator>
+
+	<lastBuildDate>{{tpl:BlogUpdateDate rfc822="1"}}</lastBuildDate>
+	<pubDate>{{tpl:BlogUpdateDate rfc822="1"}}</pubDate>
+
+	<tpl:Entries>
+
+		<item>
+			<title>{{tpl:EntryTitle encode_xml="1"}}</title>
+			<link>{{tpl:EntryURL}}</link>
+			<dc:creator>{{tpl:EntryAuthorCommonName encode_xml="1"}}</dc:creator>
+			<itunes:author>{{tpl:EntryAuthorCommonName encode_xml="1"}}</itunes:author>
+			<pubDate>{{tpl:EntryDate rfc822="1"}}</pubDate>
+			<guid isPermaLink="false">{{tpl:EntryFeedID}}</guid>
+			<itunes:subtitle>{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…</itunes:subtitle>
+			<itunes:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1"}}"/>
+			<googleplay:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1"}}"/>
+			<description><![CDATA[
+				<tpl:EntrySeries>
+					<p>
+						<a href="{{tpl:SerieURL absolute_urls="1"}}">
+							Cette <em lang="en">release</em> fait partie de la série 
+							<q>{{tpl:SerieID}}</q>
+						</a>
+					</p>
+				</tpl:EntrySeries>
+				{{tpl:EntryContent absolute_urls="1"}}
+				<p>
+					<img src="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
+				</p>
+			]]></description>
+			<tpl:Attachments>
+				<enclosure url="{{tpl:AttachmentURL}}"
+				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
+				<media:content url="{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
+			</tpl:Attachments>
+
+			<tpl:EntryIf has_category="1">
+				<category>{{tpl:EntryCategory}}</category>
+			</tpl:EntryIf>
+			<tpl:EntryTags>
+				<category>{{tpl:TagID}}</category>
+			</tpl:EntryTags>
+			<!-- #
+			<itunes:keywords>
+				<tpl:EntryIf has_category="1">{{tpl:EntryCategory}},</tpl:EntryIf>
+				<tpl:EntryTags>{{tpl:TagID}},</tpl:EntryTags>
+			</itunes:keywords>
+			-->
+
+			<itunes:explicit>no</itunes:explicit>
+			<itunes:episodeType>full</itunes:episodeType>
+
+			<tpl:EntryIf comments_active="1">
+				<comments>{{tpl:EntryURL}}#comment-form</comments>
+				<wfw:comment>{{tpl:EntryURL}}#comment-form</wfw:comment>
+			</tpl:EntryIf>
+		</item>
+	</tpl:Entries>
+
+</channel>
+</rss>
