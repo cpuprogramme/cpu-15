@@ -16,7 +16,7 @@
 	<tpl:IfWidgets type="extra">
 		<div class="widgets blogextra__widgets" id="blogextra">
 	        <h2 class="blogextra__title">{{tpl:lang Extra menu}}</h2>
-	        	<tpl:Entries no_context="1" category="Teaser" lastn="1" selected="1">
+	        	<tpl:Entries no_context="1" category="Teaser" lastn="1" selected="1" ignore_pagination="1">
 	        		{{tpl:include src="_entry-minimal.html"}}
 	        	</tpl:Entries>
 			{{tpl:Widgets type="extra"}}
