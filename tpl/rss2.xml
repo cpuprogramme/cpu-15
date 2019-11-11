@@ -23,14 +23,14 @@
 	<language>{{tpl:BlogLanguage}}</language>
 	<spotify:countryOfOrigin>fr</spotify:countryOfOrigin>
 
-	<managingEditor>noemail@noemail.org (Da Scritch et associés pour Radio FMR)</managingEditor>
+	<managingEditor>annonces@cpu.pm</managingEditor>
 	<itunes:author>{{tpl:BlogEditor encode_xml="1"}}</itunes:author>
 	<itunes:owner>
-		<itunes:email>noemail@noemail.org</itunes:email>
+		<itunes:email>annonces@cpu.pm</itunes:email>
 		<itunes:name>{{tpl:BlogEditor encode_xml="1"}}</itunes:name>
 	</itunes:owner>
 	<googleplay:author>{{tpl:BlogEditor encode_xml="1"}}</googleplay:author>
-	<googleplay:email>noemail@noemail.org</googleplay:email>
+	<googleplay:email>annonces@cpu.pm</googleplay:email>
 	
 	<copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</copyright>
 	<media:copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:copyright>
