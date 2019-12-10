@@ -75,14 +75,10 @@
 			<itunes:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
 			<googleplay:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
 			<description>
-				Toute la documentation et les liens de cette émission sont sur : {{tpl:EntryURL}}.
+				Toute la documentation et les liens de cette émission sont sur : {{tpl:EntryURL}} .
 				<tpl:EntrySeries>Cette release fait partie de la série “{{tpl:SerieID}}”.</tpl:EntrySeries>
-
 				{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="1000"}}…
-				<p>
-					<img src="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
-				</p>
-			]]></description>
+			</description>
 			<content:encoded><![CDATA[
 				<tpl:EntrySeries>
 					<p>
