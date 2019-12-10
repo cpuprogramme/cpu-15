@@ -75,7 +75,7 @@
 			<itunes:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
 			<googleplay:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
 			<description>
-				La documentation et les liens de cette émission sont sur : http://cpu.pm/{{tpl:EpisodeNumber}} .
+				La documentation et les liens de cette émission sont sur https://cpu.pm/{{tpl:EpisodeNumber}} .
 				<tpl:EntrySeries>Cette release fait partie de la série “{{tpl:SerieID}}”.</tpl:EntrySeries>
 				{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…
 			</description>
