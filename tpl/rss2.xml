@@ -37,7 +37,6 @@
 	<media:credit role="author">{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:credit>
 
 	<media:thumbnail url="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
-	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
 	<media:rating>nonadult</media:rating>
 	<itunes:explicit>no</itunes:explicit>
 	<googleplay:explicit>no</googleplay:explicit>
@@ -53,6 +52,7 @@
 	<itunes:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
 	<googleplay:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
 	
+	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
 	<itunes:category text="Technology" />
 	<googleplay:category text="Technology"/>
 	<docs>http://blogs.law.harvard.edu/tech/rss</docs>
@@ -74,7 +74,16 @@
 			<itunes:subtitle>{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…</itunes:subtitle>
 			<itunes:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
 			<googleplay:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
-			<description><![CDATA[
+			<description>
+				Toute la documentation et les liens de cette émission sont sur : {{tpl:EntryURL}}.
+				<tpl:EntrySeries>Cette release fait partie de la série “{{tpl:SerieID}}”.</tpl:EntrySeries>
+
+				{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="1000"}}…
+				<p>
+					<img src="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
+				</p>
+			]]></description>
+			<content:encoded><![CDATA[
 				<tpl:EntrySeries>
 					<p>
 						<a href="{{tpl:SerieURL absolute_urls="1"}}">
@@ -87,7 +96,7 @@
 				<p>
 					<img src="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
 				</p>
-			]]></description>
+			]]></content:encoded>
 			<tpl:Attachments>
 				<enclosure url="{{tpl:AttachmentURL}}"
 				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
@@ -100,12 +109,6 @@
 			<tpl:EntryTags>
 				<category>{{tpl:TagID}}</category>
 			</tpl:EntryTags>
-			<!-- #
-			<itunes:keywords>
-				<tpl:EntryIf has_category="1">{{tpl:EntryCategory}},</tpl:EntryIf>
-				<tpl:EntryTags>{{tpl:TagID}},</tpl:EntryTags>
-			</itunes:keywords>
-			-->
 
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:episodeType>full</itunes:episodeType>
