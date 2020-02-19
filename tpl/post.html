@@ -45,31 +45,46 @@
 </tpl:Block>
 
 <tpl:Block name="main-content">
-		<ul class="breadcrumb" role="navigation">
-			<li class="not-small" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{tpl:BlogURL}}" itemprop="url" aria-label="Revenir à la page de garde"><span itemprop="title">CPU</span></a></li>
+		<ul class="breadcrumb" role="navigation" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
+				</a>
+				<meta itemprop="position" content="1">
+			</li>
 			<li aria-hidden="true">⬜</li>
 
-			<li>
-				<tpl:EntryCategoriesBreadcrumb>
-					<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumb_categories"><a href="{{tpl:CategoryURL}}" itemprop="url">
-	  					<span itemprop="title">{{tpl:CategoryTitle encode_html="1"}}</span></a>
-					</span>
-				</tpl:EntryCategoriesBreadcrumb>
+			<tpl:EntryCategoriesBreadcrumb>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:CategoryURL}}" itemprop="item">
+  					<span itemprop="name">{{tpl:CategoryTitle encode_html="1"}}</span>	
+  				</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+			</tpl:EntryCategoriesBreadcrumb>
 
-				<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumb_categories">
-					<a href="{{tpl:EntryCategoryURL}}" itemprop="url"><span itemprop="title">{{tpl:EntryCategory encode_html="1"}}</span></a>
-				</span>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:EntryCategoryURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:EntryCategory encode_html="1"}}</span>
+				</a>
+				<meta itemprop="position" content="3">
 			</li>
 			<li class="not-small" aria-hidden="true">›</li>
 
 			<tpl:EntrySeries>
-				<li class="not-small ellipsis" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-					<a href="{{tpl:SerieURL}}">{{tpl:SerieID}}</a>
-				</li>
-				<li class="not-small"aria-hidden="true">›</li>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:SerieURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:SerieID}}</span>
+				</a>
+				<meta itemprop="position" content="4">
+			</li>
+			<li class="not-small"aria-hidden="true">›</li>
 			</tpl:EntrySeries>
 
-			<li class="not-small ellipsis" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{tpl:EntryURL}}" itemprop="url"><span itemprop="title">{{tpl:EntryTitle encode_html="1"}}</span></a></li>
+			<li class="not-small ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{{tpl:EntryURL}}" itemprop="item"><span itemprop="name">{{tpl:EntryTitle encode_html="1"}}</span></a>
+				<meta itemprop="position" content="5">
+			</li>
 			<li class="spacer" aria-hidden="true"></li>
 
 			<tpl:EntryPrevious restrict_to_category="1">
