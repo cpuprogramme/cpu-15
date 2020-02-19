@@ -42,7 +42,7 @@ def remove_chaps(tag):
 
 def parse_chapters_file(fname):
     filename, ext = os.path.splitext(fname)
-    chapters_fname = "tracks/{}.vtt".format(filename)
+    chapters_fname = "../tracks/{}.vtt".format(filename)
     chaps = []
     with open(chapters_fname, 'r+', encoding='utf8') as f:
         for line in f:
