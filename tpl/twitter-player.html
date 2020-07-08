@@ -7,6 +7,20 @@
 	<link rel="canonical" href="{{tpl:EntryURL}}" />
 	<link rel="top" href="https://cpu.dascritch.net/" title="Accueil" />
 	<style type="text/css">
+
+		:root {
+		  color-scheme: light dark;
+		  --background : #eee;
+		  --color : #333;
+		}
+
+		@media (prefers-color-scheme: dark) {
+		  :root {
+		    --background : #111;
+		    --color : #ccc;
+		  }
+		}
+
 		@font-face {
 		  font-family: 'Roboto Condensed';
 		  font-style: normal;
@@ -27,7 +41,7 @@
 		}
 
 		body {
-			background: #ddd;
+			background: var(--background);
 		}
 
 		a {
@@ -36,7 +50,7 @@
 		    align-items : center;
 		    align-content : center;
 		    text-decoration : none;
-		    color : black;
+		    color : var(--color);
 		    max-height : 100%;
 		}
 
@@ -63,7 +77,7 @@
 
 	</style>
 	<script>
-		var query = window.location.search.toLowerCase();
+		let query = window.location.search.toLowerCase();
 		document.addEventListener('DOMContentLoaded',function() {
 			if ( (window.self === window.top) && (window.history.length > 0) ) {
 				// We are NOT in a iframe context, we also are in a browsing context, so redirect to the canonical page
