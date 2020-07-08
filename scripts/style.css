@@ -98,7 +98,7 @@ html {
 }
 
 body {
-    --cpu-background-transitions : 0.1s;
+  /* --cpu-background-transitions : 0.1s; */
   margin: 0;
   padding: 0; 
   background: var(--background-neutral) var(--background-img);
@@ -553,9 +553,6 @@ ul ul, ul ol, ol ol, ol ul {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
     white-space: nowrap;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -611,9 +608,6 @@ a.site-title__link:visited {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
     white-space: nowrap;
     padding-left: 1em;
     padding-right: 1em;
@@ -919,9 +913,6 @@ flex: 0 0 33%;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   white-space: nowrap;
   vertical-align: top; }
   .post-tags-item a:after {
