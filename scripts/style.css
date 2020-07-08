@@ -92,6 +92,8 @@ html {
   font-size: 100.01%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   margin: 0;
   padding: 0; 
   scroll-behavior:smooth;
@@ -1280,7 +1282,7 @@ nav {
 
 .header {
 	background : var(--background-neutral) var(--background-img);
-	line-height: auto;
+	line-height: normal;
     padding-top : 20px;
     position: sticky;
     top: -20px;
@@ -1289,7 +1291,7 @@ nav {
 }
 
 .banner * {
-	line-height: auto;
+	line-height: normal;
 	box-sizing: initial;
 }
 
