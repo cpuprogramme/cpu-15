@@ -92,13 +92,15 @@ html {
   font-size: 100.01%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   margin: 0;
   padding: 0; 
   scroll-behavior:smooth;
 }
 
 body {
-    --cpu-background-transitions : 0.1s;
+  /* --cpu-background-transitions : 0.1s; */
   margin: 0;
   padding: 0; 
   background: var(--background-neutral) var(--background-img);
@@ -553,9 +555,6 @@ ul ul, ul ol, ol ol, ol ul {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
     white-space: nowrap;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -611,9 +610,6 @@ a.site-title__link:visited {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
     white-space: nowrap;
     padding-left: 1em;
     padding-right: 1em;
@@ -919,9 +915,6 @@ flex: 0 0 33%;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   white-space: nowrap;
   vertical-align: top; }
   .post-tags-item a:after {
@@ -1289,7 +1282,7 @@ nav {
 
 .header {
 	background : var(--background-neutral) var(--background-img);
-	line-height: auto;
+	line-height: normal;
     padding-top : 20px;
     position: sticky;
     top: -20px;
@@ -1298,7 +1291,7 @@ nav {
 }
 
 .banner * {
-	line-height: auto;
+	line-height: normal;
 	box-sizing: initial;
 }
 

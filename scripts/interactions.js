@@ -60,12 +60,25 @@ function fix_focus_on_search_box() {
     }
 }
 
+function issue57() {
+    // https://github.com/dascritch/cpu-15/issues/57
+    console.info('Vous voulez contribuer ? Codes sources liés à notre émission :');
+    Array.from(
+        document.querySelector('.links [hreflang="xx-JS"]').closest('ul').querySelectorAll('li')
+    ).forEach( 
+        function (li) {
+            console.log(`— ${li.innerText} : ${li.querySelector('a').href}`);
+        }
+    );
+}
+
 function main() {
 	html_element = document.querySelector('html');
     header_player = document.getElementById('header-control');
     article_player = document.querySelector('cpu-audio');
     // la suite du snippet est déléguée et ré-écrite
 	add_scroll_listeners();
+    issue57();
     window.addEventListener('hashchange', fix_focus_on_search_box);
     rotate_placeholder.run();
 }
@@ -75,3 +88,4 @@ if ( (document.body) && (document.querySelector('cpu-controller')) ) {
 } else {
 	window.addEventListener('DOMContentLoaded', main);
 }
+
