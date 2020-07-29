@@ -62,14 +62,17 @@ function fix_focus_on_search_box() {
 
 function issue57() {
     // https://github.com/dascritch/cpu-15/issues/57
-    console.info('Vous voulez contribuer ? Codes sources liés à notre émission :');
+    let out = 'Vous voulez contribuer ? Codes sources liés à notre émission :';
+
+    function each_li(li) {
+        out += `\n — ${li.innerText} : ${li.querySelector('a').href}`;
+    }
+
     Array.from(
         document.querySelector('.links [hreflang="xx-JS"]').closest('ul').querySelectorAll('li')
-    ).forEach( 
-        function (li) {
-            console.log(`— ${li.innerText} : ${li.querySelector('a').href}`);
-        }
-    );
+    ).forEach(each_li);
+    out += "\nEt n'hésitez pas → https://cpu.dascritch.net/pages/Prendre-contact-avec-nous";
+    console.info(out);
 }
 
 function main() {
