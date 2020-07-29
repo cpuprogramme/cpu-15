@@ -1,7 +1,7 @@
 <article id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}} full banner-article" role="article"  style="background-image:url({{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}})">
 
 	<div class="post-meta">
-		<span class="calque">diffusé le {{tpl:EntryDate}}</span>
+		<span class="calque">diffusé le <time datetime="{{tpl:EntryDate iso8601="1"}}">{{tpl:EntryDate}}</time></span>
 		<tpl:EntrySeries>
 			<p><span class="calque">Dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></span></p>
 		</tpl:EntrySeries>
