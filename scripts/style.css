@@ -1295,9 +1295,9 @@ nav {
 	box-sizing: initial;
 }
 
-menu {
-    display : flex;
-    vertical-align : top;
+menu, menu ul {
+  display : flex;
+  vertical-align : top;
 	padding : 0;
 	margin : 0;
   width : 100%;
