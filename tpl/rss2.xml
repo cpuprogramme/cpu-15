@@ -25,8 +25,8 @@
 	<spotify:countryOfOrigin>fr</spotify:countryOfOrigin>
 	<podcast:location latlon="43.6153,1.4487" osm_id="N3272534720">FR|Toulouse</podcast:location>
 
-	<managingEditor>annonces@cpu.pm</managingEditor>
-	<webMaster>annonces@cpu.pm</webMaster>
+	<managingEditor>annonces@cpu.pm (Équipe de production)</managingEditor>
+	<webMaster>annonces@cpu.pm (Webdev)</webMaster>
 	<itunes:author>{{tpl:BlogEditor encode_xml="1"}}</itunes:author>
 	<itunes:owner>
 		<itunes:email>annonces@cpu.pm</itunes:email>
@@ -34,7 +34,8 @@
 	</itunes:owner>
 	<googleplay:author>{{tpl:BlogEditor encode_xml="1"}}</googleplay:author>
 	<googleplay:email>annonces@cpu.pm</googleplay:email>
-	 <podcast:email>annonces@cpu.pm</podcast:email>
+	<podcast:email>annonces@cpu.pm</podcast:email>
+	<podcast:verificationEmail>annonces@cpu.pm</podcast:verificationEmail>
 	
 	<copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</copyright>
 	<media:copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:copyright>
