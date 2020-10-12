@@ -16,6 +16,7 @@
 	<media:description type="plain">{{tpl:BlogName encode_xml="1"}}</media:description>
 	<link>{{tpl:BlogURL}}</link>
 	<link rel="self" href="{{tpl:SysSelfURI}}" type="application/rss+xml"/>
+	<atom:link href="https://feeds.feedburner.com/Cpu-Programmes" rel="self" type="application/rss+xml" />
 	<link rel="hub" href="https://pubsubhubbub.appspot.com/" xmlns="http://www.w3.org/2005/Atom" />
 
 	<description>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</description>
