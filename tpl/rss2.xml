@@ -7,7 +7,8 @@
 	xmlns:media="http://search.yahoo.com/mrss/"
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
 	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
-	xmlns:spotify="http://www.spotify.com/ns/rss">
+	xmlns:spotify="http://www.spotify.com/ns/rss"
+	xmlns:podcast="https://github.com/Podcastindex-org/podcastindex-namespace">
 
 <channel>
 	<title>{{tpl:BlogName encode_xml="1"}}</title>
@@ -22,8 +23,10 @@
 	<googleplay:description>CPU ⬜ Carré Petit Utile : Le programme radio des gens du numérique, tous les Jeudi à 11h sur Radio FMR</googleplay:description>
 	<language>{{tpl:BlogLanguage}}</language>
 	<spotify:countryOfOrigin>fr</spotify:countryOfOrigin>
+	<podcast:location latlon="43.6153,1.4487" osm_id="N3272534720">FR|Toulouse</podcast:location>
 
 	<managingEditor>annonces@cpu.pm</managingEditor>
+	<webMaster>annonces@cpu.pm</webMaster>
 	<itunes:author>{{tpl:BlogEditor encode_xml="1"}}</itunes:author>
 	<itunes:owner>
 		<itunes:email>annonces@cpu.pm</itunes:email>
@@ -31,10 +34,13 @@
 	</itunes:owner>
 	<googleplay:author>{{tpl:BlogEditor encode_xml="1"}}</googleplay:author>
 	<googleplay:email>annonces@cpu.pm</googleplay:email>
+	 <podcast:email>annonces@cpu.pm</podcast:email>
 	
 	<copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</copyright>
 	<media:copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:copyright>
 	<media:credit role="author">{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:credit>
+
+	<podcast:locked>no</podcast:locked>
 
 	<media:thumbnail url="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
 	<media:rating>nonadult</media:rating>
@@ -51,16 +57,23 @@
 	</image>
 	<itunes:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
 	<googleplay:image href="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
+	<podcast:imageLarge>https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png</podcast:imageLarge>
+	<podcast:imageMedium>https://cpu.dascritch.net/themes/cpu-15/assets/android-chrome-512x512.png</podcast:imageMedium>
+	<podcast:imageSmall>https://cpu.dascritch.net/assets/apple-touch-icon.png</podcast:imageSmall>
 	
 	<media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
 	<itunes:category text="Technology" />
 	<googleplay:category text="Technology"/>
+	<podcast:category>Technology</podcast:category>
 	<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 
 	<generator>Dotclear http://www.dotclear.org/</generator>
 
 	<lastBuildDate>{{tpl:BlogUpdateDate rfc822="1"}}</lastBuildDate>
 	<pubDate>{{tpl:BlogUpdateDate rfc822="1"}}</pubDate>
+
+	<podcast:social platform="twitter" url="https://twitter.com/cpuprogramme" name="Twitter">CPUprogramme</podcast:social>
+	<podcast:social platform="facebook.page" url="https://www.facebook.com/programmecpu" name="Page facebook">Programme CPU</podcast:social>
 
 	<tpl:Entries>
 
@@ -74,6 +87,8 @@
 			<!-- # itunes:subtitle>{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…</itunes:subtitle  -->
 			<itunes:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
 			<googleplay:image href="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}"/>
+			<podcast:imageMedium size="800">{{tpl:EntryFirstImage with_category="1" no_tag="1" size="o"}}</podcast:imageMedium>
+			<podcast:imageSmall size="240">{{tpl:EntryFirstImage with_category="1" no_tag="1" size="s"}}</podcast:imageSmall>
 			<description>
 				La documentation et les liens de cette émission sont sur http://cpu.pm/{{tpl:EpisodeNumber}} .
 				<tpl:EntrySeries>Cette release fait partie de la série “{{tpl:SerieID}}”.</tpl:EntrySeries>
@@ -97,6 +112,10 @@
 				<enclosure url="{{tpl:AttachmentURL}}"
 				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
 				<media:content url="{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
+				<podcast:alternateEnclosure type="audio/ogg" bitrate="160" title="Higher quality">{{tpl:OggFile}}</podcast:alternateEnclosure>
+				<tpl:HasHlsFile>
+					<podcast:alternateEnclosure type="application/x-mpegurl" bitrate="80" title="Stream">{{tpl:HlsFile}}</podcast:alternateEnclosure>
+				</tpl:HasHlsFile>
 			</tpl:Attachments>
 
 			<tpl:EntryIf has_category="1">
