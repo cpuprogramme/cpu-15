@@ -17,13 +17,13 @@ l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
 $core->url->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15_url', 'twitterplayer']);
 $core->url->register('showshortcut', 'ex', '^([0-9]{1,4})$', ['CPU15_url', 'showshortcut']);
 
-$core->tpl->addValue('EntryURLsegment',array('CPU15_template','EntryURLsegment'));
-$core->tpl->addBlock('Entry1stLevelCategory',array('CPU15_template','Entry1stLevelCategory'));
-$core->tpl->addValue('CountEntriesInSeries',array('CPU15_template','CountEntriesInSeries'));
-$core->tpl->addValue('EpisodeNumber',array('CPU15_template','EpisodeNumber'));
+$core->tpl->addValue('EntryURLsegment',['CPU15_template','EntryURLsegment']);
+$core->tpl->addBlock('Entry1stLevelCategory',['CPU15_template','Entry1stLevelCategory']);
+$core->tpl->addValue('CountEntriesInSeries',['CPU15_template','CountEntriesInSeries']);
+$core->tpl->addValue('EpisodeNumber',['CPU15_template','EpisodeNumber']);
 
-$core->tpl->addBlock('AttachmentsNo',array('CPU15_template','AttachmentsNo'));
-
+$core->tpl->addBlock('AttachmentsNo',['CPU15_template','AttachmentsNo']);
+$core->tpl->addBlock('SeriesNotLostAndFound', ['CPU15_template', 'SeriesNotLostAndFound']);
 
 class CPU15_url extends dcUrlHandlers
 {
@@ -113,8 +113,7 @@ class CPU15_template
 		return '<?php echo $_ctx->posts->post_url ; ?>';
 	}
 
-	public static function Entry1stLevelCategory($attr,$content)
-	{
+	public static function Entry1stLevelCategory($attr,$content) {
 		return
 		"<?php\n".
 		'$_ctx->categories = $core->blog->getCategoryParents($_ctx->posts->cat_id);'."\n".
@@ -159,6 +158,12 @@ class CPU15_template
 
 	public static function EpisodeNumber($attr) {
 		return '<?php echo substr($_ctx->posts->post_title, 2, 4); ?>';
+	}
+
+	public static function SeriesNotLostAndFound($attr,$content) {
+        return 
+            '<?php if ($_ctx->meta->meta_id != "lost and found") { ?>' . $content . '<?php }  ?>';
+
 	}
 
 }

@@ -37,10 +37,12 @@
 
 		<h2 class="notsobig">Programmes en séries</h2>
 		<div class="flex">
-			<tpl:Series sortby="latest" order="desc" limit="3">
-				<tpl:Entries lastn="1">
-					{{tpl:include src="_entry-series.html"}}
-				</tpl:Entries>
+			<tpl:Series sortby="latest" order="desc" limit="4">
+				<tpl:SeriesNotLostAndFound>
+					<tpl:Entries lastn="1">
+						{{tpl:include src="_entry-series.html"}}
+					</tpl:Entries>
+				</tpl:SeriesNotLostAndFound>
 			</tpl:Series>
 		</div>
 
