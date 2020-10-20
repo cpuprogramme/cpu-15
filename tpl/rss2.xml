@@ -41,7 +41,7 @@
 	<media:copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:copyright>
 	<media:credit role="author">{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:credit>
 
-	<podcast:locked>no</podcast:locked>
+	<podcast:locked>yes</podcast:locked>
 
 	<media:thumbnail url="https://cpu.dascritch.net/themes/cpu-15/assets/cpu_logo_exagerement_gros_pour_apple.png" />
 	<media:rating>nonadult</media:rating>
