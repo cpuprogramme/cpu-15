@@ -1133,6 +1133,7 @@ button.submit:active, button.preview:active {
     margin-left: 3em;
     margin-right: 3em; } }
 
+/*
 .arch-block {
   display: inline-block;
   margin: 0 0 2em 0;
@@ -1171,7 +1172,7 @@ button.submit:active, button.preview:active {
 .arch-sub-list {
   margin-left: 20px; }
 
-/* par date */
+ * par date *
 .arch-by-year {
   margin-right: 0;
   margin-bottom: 1em;
@@ -1201,7 +1202,7 @@ button.submit:active, button.preview:active {
 .arch-year-list span {
   font-size: .875em; }
 
-/* par categorie */
+* par categorie *
 .arch-cat-list, .arch-sub-cat-list {
   background: transparent url(/themes/cpu-15/img/vline.png) repeat-y; }
 
@@ -1215,11 +1216,13 @@ button.submit:active, button.preview:active {
 .arch-cat-list li:last-child {
   background-image: url(/themes/cpu-15/img/last-hline.png); }
 
-/* archives par mois */
+
+* archives par mois *
 .dc-archive-month #content-info h2 {
   margin-left: 2em;
   margin-top: .5em; }
 
+*/
 /** --------------------------------------------------
     Modules
 --------------------------------------------------- */
