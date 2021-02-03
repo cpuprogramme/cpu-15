@@ -419,18 +419,15 @@ ul ul, ul ol, ol ol, ol ul {
 .post-tags-list,
 .post-permalink,
 .comment_count,
-.attach_count,
-.feed {
+.attach_count {
   padding-left: 22px;
   background-repeat: no-repeat;
   background-position: 0 50%;
   padding-right: .5em; }
 
-.post-author {
-  padding-right: .5em; }
 
-.post-date {
-  background-image: url(/themes/cpu-15/img/icon_date.png); }
+/*.post-date {
+  background-image: url(/themes/cpu-15/img/icon_date.png); } */
 
 .post-cat {
   background-image: url(/themes/cpu-15/img/icon_category.png); }
@@ -445,16 +442,8 @@ ul ul, ul ol, ol ol, ol ul {
 .attach_count {
   background-image: url(/themes/cpu-15/img/icon_attach.png); }
 
-.post-permalink {
-  background-image: url(/themes/cpu-15/img/icon_permalink.png); }
-
-.feed {
-  background-image: url(/themes/cpu-15/img/icon_feed.png);
-  background-image: url(/themes/cpu-15/img/icon_feed.svg), none;
-  -webkit-background-size: .875em;
-  -o-background-size: .875em;
-  background-size: .875em;
-  padding-left: 1.25em; }
+/*.post-permalink {
+  background-image: url(/themes/cpu-15/img/icon_permalink.png); }*/
 
 /** --------------------------------------------------
     layout elements
