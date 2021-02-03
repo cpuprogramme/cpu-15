@@ -243,10 +243,6 @@ header, hgroup, main, nav, section, summary {
 audio, canvas, video {
   display: inline-block; }
 
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
 figure {
   margin: 0; }
 
@@ -263,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight : bold; /* for paint before having loaded roboto */
   margin: 0; }
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v *
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -273,6 +269,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+  */
 
 /*
 * Scut, a collection of Sass utilities to ease and improve our implementations of common style-code patterns.
@@ -401,11 +399,6 @@ kbd {
 pre {
   padding: .5em 1em; }
 
-  /*
-img {
-  max-width: 97%; }
-*/
-  
   
 p, ul, ol {
   margin-top: 1em;
@@ -417,9 +410,9 @@ ul ul, ul ol, ol ol, ol ul {
 .post-date,
 .post-cat,
 .post-tags-list,
-.post-permalink,
+/*.post-permalink, 
 .comment_count,
-.attach_count {
+.attach_count */{
   padding-left: 22px;
   background-repeat: no-repeat;
   background-position: 0 50%;
@@ -436,13 +429,14 @@ ul ul, ul ol, ol ol, ol ul {
   background-image: url(/themes/cpu-15/img/icon_tags.png);
   padding-left: 22px !important; }
 
+/*
 .comment_count {
   background-image: url(/themes/cpu-15/img/icon_comments.png); }
 
 .attach_count {
   background-image: url(/themes/cpu-15/img/icon_attach.png); }
 
-/*.post-permalink {
+.post-permalink {
   background-image: url(/themes/cpu-15/img/icon_permalink.png); }*/
 
 /** --------------------------------------------------
