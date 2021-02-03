@@ -100,7 +100,6 @@ html {
 }
 
 body {
-  /* --cpu-background-transitions : 0.1s; */
   margin: 0;
   padding: 0; 
   background: var(--background-neutral) var(--background-img);
@@ -409,15 +408,14 @@ ul ul, ul ol, ol ol, ol ul {
 
 .post-date,
 .post-cat,
-.post-tags-list,
+.post-tags-list
 /*.post-permalink, 
 .comment_count,
-.attach_count */{
+.attach_count */ {
   padding-left: 22px;
   background-repeat: no-repeat;
   background-position: 0 50%;
   padding-right: .5em; }
-
 
 /*.post-date {
   background-image: url(/themes/cpu-15/img/icon_date.png); } */
@@ -663,8 +661,9 @@ a.site-title__link:visited {
 
   #hamburger {
     top: 1.5em;
-    right: .5em; } }
+    right: .5em; } 
     */
+    }
 @media screen and (max-width: 40em) {
   .site-title {
     font-size: 1.8em; }
@@ -886,8 +885,6 @@ flex: 0 0 33%;
 }
 
 
-
-
 /* EVOLUTION 2018 ENDS */
 
 .post-tags-list {
@@ -914,7 +911,6 @@ flex: 0 0 33%;
 
 .post-title {
   text-align: center;
-/*  font-weight: 200; */
 }
   .post-title a, .post-title a:link, .post-title a:visited {
     border-bottom-color: white; }
@@ -1233,9 +1229,6 @@ button.submit:active, button.preview:active {
 #content-info h2,
 .content-info__feed {
   margin-right: 3.5em; }
-
-@media screen and (max-width: 80em) { }
-/*** dev only ***/
 
 /*
 .post-excerpt {
@@ -1566,3 +1559,4 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   color: var(--link);
   text-transform: none;
 }
+
