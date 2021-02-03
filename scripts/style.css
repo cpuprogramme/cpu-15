@@ -550,7 +550,7 @@ ul ul, ul ol, ol ol, ol ul {
       background-color: var(--background-neutral);
       color: var(--link); }
 
-
+/*
 a.site-title__link,
 a.site-title__link:link,
 a.site-title__link:visited {
@@ -612,8 +612,10 @@ a.site-title__link:visited {
   .header__nav li a:hover,
   .header__nav li a:focus {
     background-color: var(--quote); }
+*/
 
 /* Si js est actif, un bouton pour afficher/masquer le menu est créé */
+/*
 #hamburger {
   position: absolute;
   top: 3em;
@@ -635,6 +637,8 @@ a.site-title__link:visited {
   #hamburger.open {
     background-image: url(/themes/cpu-15/img/icon_close.png);
     background-image: url(/themes/cpu-15/img/icon_close.svg), none; }
+*/
+
 
 @media screen and (max-width: 60em) {
   .header {
@@ -653,12 +657,14 @@ a.site-title__link:visited {
     font-size: 0.625em;
     line-height: 2.4em; }
 
+  /*
   .site-baseline {
     display: none; }
 
   #hamburger {
     top: 1.5em;
     right: .5em; } }
+    */
 @media screen and (max-width: 40em) {
   .site-title {
     font-size: 1.8em; }
@@ -925,11 +931,11 @@ flex: 0 0 33%;
   max-width: 42em;
    }
 
+/*
 .post-read-it {
   margin-bottom: 1.5em; }
 
 .footnotes {
-  /*font-size: 0.875em;*/
   margin-top: 2em;
   margin-bottom: 3em; }
   .footnotes h4 {
@@ -937,7 +943,7 @@ flex: 0 0 33%;
     border-top: 1px solid var(--title-neutral);
     padding-right: 3em;
     margin-bottom: 0; }
-
+*/
 .post-attachments {
   position: relative;
   padding: 0 2.5em .25em;
@@ -1231,6 +1237,7 @@ button.submit:active, button.preview:active {
 @media screen and (max-width: 80em) { }
 /*** dev only ***/
 
+/*
 .post-excerpt {
 	position : relative;
 }
@@ -1242,6 +1249,7 @@ button.submit:active, button.preview:active {
 	min-height : 40px;
 	max-height : 100px;
 }
+*/
 
 .banner {
         display: -ms-flexbox;
