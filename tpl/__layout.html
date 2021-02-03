@@ -6,19 +6,21 @@
 
 		<tpl:Block name="head-title">
 			<title>{{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
-		</tpl:Block>	<!-- head-title -->
+		</tpl:Block><!-- # head-title -->
+
+		{{tpl:include src="_head.html"}}
 
 		<tpl:Block name="head-meta">
 			<meta name="copyright" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
 			<tpl:Block name="meta-robots">
 				<meta name="ROBOTS" content="{{tpl:BlogMetaRobots}}" />
-			</tpl:Block>	<!-- meta-robots -->
+			</tpl:Block><!-- # meta-robots -->
 			<tpl:Block name="meta-entry">
 				<meta name="description" lang="{{tpl:BlogLanguage}}" content="{{tpl:BlogDescription cut_string="180" encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>" />
 				<meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
 				<meta name="date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
-			</tpl:Block>	<!-- meta-entry -->
-		</tpl:Block>	<!-- head-meta -->
+			</tpl:Block><!-- # meta-entry -->
+		</tpl:Block><!-- # head-meta -->
 
 		<tpl:Block name="head-dc">
 			<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
@@ -31,8 +33,8 @@
 				<meta property="dc.description" lang="{{tpl:BlogLanguage}}" content="{{tpl:BlogDescription encode_html="1"}}" />
 				<meta property="dc.language" content="{{tpl:BlogLanguage}}" />
 				<meta property="dc.date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
-			</tpl:Block>	<!-- dc-title-head -->
-		</tpl:Block>	<!-- head-dc -->
+			</tpl:Block><!-- # dc-title-head -->
+		</tpl:Block><!-- # head-dc -->
 
 		<tpl:Block name="head-linkrel">
 			<link rel="contents" title="{{tpl:lang Archives}}" href="{{tpl:BlogArchiveURL}}" />
@@ -55,10 +57,9 @@
 			</tpl:Entries>
 
 			<link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
-		</tpl:Block>	<!-- head-linkrel -->
+		</tpl:Block><!-- # head-linkrel -->
 		<link type="application/rss+xml" rel="alternate" title="CPU ⬜ Carré Petit Utile" href="https://feeds.feedburner.com/Cpu-Programmes"/>
-		{{tpl:include src="_head.html"}}
-	</tpl:Block>	<!-- html-head -->
+	</tpl:Block><!-- # html-head -->
 </head>
 <tpl:Block name="body-tag">
 	<body class="dc-home <tpl:SysIf current_mode="default">dc-home-first</tpl:SysIf>">
@@ -68,7 +69,7 @@
 			<tpl:Block name="body-page">
 				<tpl:Block name="page-top">
 					{{tpl:include src="_top.html"}}
-				</tpl:Block>	<!-- page-top -->
+				</tpl:Block><!-- # page-top -->
 
 				<div id="wrapper">
 					<tpl:Block name="page-wrapper">
@@ -79,46 +80,39 @@
 
 										<tpl:Entries>
 
-											<!-- First page -->
+											<!-- # First page -->
 											<tpl:SysIf current_mode="default">
-												<!-- # tpl:LoopPosition start="1" length="1">
-													{{tpl:include src="_entry-full.html"}}
-												</tpl:LoopPosition>
-
-												<tpl:LoopPosition start="2">
-													{{tpl:include src="_entry-short.html"}}
-												</tpl:LoopPosition -->
 												{{tpl:include src="_entry-short.html"}}
 											</tpl:SysIf>
 
-											<!-- Next pages -->
+											<!-- # Next pages -->
 											<tpl:SysIf current_mode="!default">
 												{{tpl:include src="_entry-short.html"}}
 											</tpl:SysIf>
 
-											<!-- Pagination -->
+											<!-- # Pagination -->
 											<tpl:EntriesFooter>
 												{{tpl:include src="_pagination.html"}}
 											</tpl:EntriesFooter>
 
 										</tpl:Entries>
 
-									</tpl:Block>	<!-- page-content -->
-								</div> <!-- End #content -->
-							</tpl:Block>	<!-- wrapper-main -->
-						</div> <!-- End #main -->
+									</tpl:Block><!-- # page-content -->
+								</div><!-- # End #content -->
+							</tpl:Block><!-- # wrapper-main -->
+						</div><!-- #  End #main -->
 
 						<tpl:Block name="wrapper-sidebar">
 							{{tpl:include src="_sidebar.html"}}
-						</tpl:Block>	<!-- wrapper-sidebar -->
-					</tpl:Block>	<!-- page-wrapper -->
-				</div> <!-- End #wrapper -->
+						</tpl:Block><!-- #  wrapper-sidebar -->
+					</tpl:Block><!-- #  page-wrapper -->
+				</div><!-- #  End #wrapper -->
 
 				<tpl:Block name="page-footer">
 					{{tpl:include src="_footer.html"}}
-				</tpl:Block>	<!-- page-footer -->
-			</tpl:Block>	<!-- body-page -->
-		</div> <!-- End #page -->
-	</tpl:Block>	<!-- html-body -->
+				</tpl:Block><!-- # page-footer -->
+			</tpl:Block><!-- # body-page -->
+		</div> <!-- # End #page -->
+	</tpl:Block><!-- # html-body -->
 </body>
 </html>
