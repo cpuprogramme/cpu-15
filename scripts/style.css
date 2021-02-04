@@ -83,16 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
   font-size: 100.01%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
   margin: 0;
   padding: 0; 
@@ -152,7 +146,6 @@ dfn {
   font-style: italic; }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -189,15 +182,10 @@ button, input, select, textarea {
 button, input {
   line-height: normal; }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
+button {
   cursor: pointer; }
 
-button[disabled],
-html input[disabled] {
+button[disabled] {
   cursor: default; }
 
 input[type="checkbox"],
@@ -336,10 +324,6 @@ hr {
   border: 0;
   height: 1px;
   background: #333;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #dcdcdc), color-stop(50%, var(--quote)), color-stop(100%, #dcdcdc));
-  background-image: -webkit-linear-gradient(left, #dcdcdc, var(--quote), #dcdcdc);
-  background-image: -moz-linear-gradient(left, #dcdcdc, var(--quote), #dcdcdc);
-  background-image: -o-linear-gradient(left, #dcdcdc, var(--quote), #dcdcdc);
   background-image: linear-gradient(left, #dcdcdc, var(--quote), #dcdcdc); }
 
 blockquote, q {
@@ -440,16 +424,10 @@ ul ul, ul ol, ol ol, ol ul {
 /** --------------------------------------------------
     layout elements
 --------------------------------------------------- */
-* {
-
-  transition:  background var(--cpu-background-transitions), opacity var(--cpu-background-transitions), top var(--cpu-background-transitions);
-}
-
 
 #main {
   --cpu-background : #00000099;
   --cpu-playing-background : #000000bb;
-
 
   background-color: var(--background-main);
   padding: 1em .5em 2em; }
@@ -533,7 +511,6 @@ ul ul, ul ol, ol ol, ol ul {
     list-style-image: none;
     list-style-type: none;
     margin-left: 0;
-    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
@@ -668,7 +645,6 @@ a.site-title__link:visited {
   .site-title {
     font-size: 1.8em; }
      }
-
 
 .blogcustom__title {
   border: 0;
@@ -898,7 +874,6 @@ flex: 0 0 33%;
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -1047,11 +1022,6 @@ flex: 0 0 33%;
   text-align: right; }
 
 button.submit, button.preview {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #778f96), color-stop(100%, #5d757d));
-  background-image: -webkit-linear-gradient(top, #778f96, #5d757d);
-  background-image: -moz-linear-gradient(top, #778f96, #5d757d);
-  background-image: -o-linear-gradient(top, #778f96, #5d757d);
-  background-image: linear-gradient(top, #778f96, #5d757d);
   box-shadow: inset 0 1px 3px 0 #778f96;
   background-color: #778f96;
   border-radius: .25em;
@@ -1068,11 +1038,6 @@ button.submit:focus,
 button.preview:hover,
 button.preview:focus {
   cursor: pointer;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5d757d), color-stop(100%, #5d757d));
-  background-image: -webkit-linear-gradient(#5d757d, #5d757d);
-  background-image: -moz-linear-gradient(#5d757d, #5d757d);
-  background-image: -o-linear-gradient(#5d757d, #5d757d);
-  background-image: linear-gradient(#5d757d, #5d757d);
   background-color: #5d757d; }
 
 button.submit:active, button.preview:active {
@@ -1245,7 +1210,6 @@ button.submit:active, button.preview:active {
 */
 
 .banner {
-        display: -ms-flexbox;
 	display : flex;
       flex-direction: row;
 }
