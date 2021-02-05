@@ -4,7 +4,7 @@
             <source src="{{tpl:HlsFile}}" type="application/x-mpegurl" />
         </tpl:HasHlsFile>
         <source src="{{tpl:OggFile}}" type="audio/ogg; codecs=vorbis" />
-        <source src="{{tpl:AttachmentURL}}" type="audio/mpeg" />
+        <source src="{{tpl:AttachmentURL}}" type="audio/mpeg" data-downloadable />
         <tpl:HasChapterFile>
             <track kind="chapters" src="{{tpl:ChapterFile}}" default>
         </tpl:HasChapterFile>
