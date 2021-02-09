@@ -931,7 +931,7 @@ button.submit, button.preview {
   border: 1px solid #5d757d;
   display: inline-block;
   cursor: pointer;
-  color: var(--background-main);
+  color: black; /* var(--background-main);*/
   padding: .25em .5em;
   text-decoration: none;
   text-shadow: 0 -1px 0 var(--quote); }
@@ -1142,6 +1142,10 @@ body.cpu-audio-with-webcomponents.delegated #header-control {
   background-position : 50% 50%;
   background-repeat : no-repeat;
   background-color: #ccc;
+}
+
+.noir {
+  color : black;
 }
 
 
