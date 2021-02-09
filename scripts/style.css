@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   --quote : #626262;
   --calque-bg : #ffffff77;
   --calque-out : white;
+  --cpu-focus-color : #111;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -427,7 +428,7 @@ ul ul, ul ol, ol ol, ol ul {
 
 #main {
   --cpu-background : #00000099;
-  --cpu-playing-background : #000000bb;
+  --cpu-playing-background : #000000dd;
 
   background-color: var(--background-main);
   padding: 1em .5em 2em; }
