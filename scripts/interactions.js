@@ -17,6 +17,7 @@ let rotate_placeholder = {
     change : function() {
         this.count = (this.count === (this.list.length-1)) ? 0 : ++this.count;
         this.element.placeholder = this.list[this.count];
+        // this.element.style.appearance =  'none';  ? Is Safari reset this property when you modify placeholder ?
     },
     run : function() {
         this.element = document.getElementById('q');
