@@ -355,8 +355,8 @@ blockquote:after {
 
 blockquote:before {
   content: open-quote;
-  float: left;
-  margin-right: .25em; }
+/*  float: left;
+  margin-right: .25em; */}
 
 blockquote:after {
   content: close-quote;
