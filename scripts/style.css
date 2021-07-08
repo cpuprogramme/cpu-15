@@ -1153,7 +1153,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control {
 }
 
 
-.calque:focus , .calque:hover, a:focus .calque , a:hover .calque {
+.banner-article:focus-within .calque , .banner-article:hover .calque {
 	background-color: var(--calque-out) !important;
   text-decoration: none !important;
 }
