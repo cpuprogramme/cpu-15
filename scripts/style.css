@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6 {
   --background-img : url(/themes/cpu-15/img/bg_light.png);
   --background-main : #fff;
   --background-comment : #eff;
-  --title-neutral : #133e57;
   --link : #d52125;
   --link-focus : #f9f9f9;
   --quote : #626262;
@@ -67,7 +66,6 @@ h1, h2, h3, h4, h5, h6 {
     --background-img : url(/themes/cpu-15/img/bg_dark.png);
     --background-main : #000;
     --background-comment : #122;
-    --title-neutral : #3390c7;
     --link : #ff5155;
     --link-focus : #eee;
     --quote : #666;
@@ -302,9 +300,6 @@ h5 {
 h6 {
   font-size: 1em;
   margin-bottom: 0; }
-
-h2, h3, h4, h5, h6 {
-  color: var(--title-neutral); }
 
 a {
   color: var(--link);
@@ -800,7 +795,6 @@ flex: 0 0 33%;
   .post-title a, .post-title a:link, .post-title a:visited {
     border-bottom-color: white; }
   .post-title a:hover, .post-title a:focus, .post-title a:active {
-    color: var(--title-neutral);
     background-color: transparent; }
   @media screen and (max-width: 40em) {
     .post-title {
