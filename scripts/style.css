@@ -812,19 +812,7 @@ flex: 0 0 33%;
   max-width: 42em;
    }
 
-/*
-.post-read-it {
-  margin-bottom: 1.5em; }
 
-.footnotes {
-  margin-top: 2em;
-  margin-bottom: 3em; }
-  .footnotes h4 {
-    display: inline-block;
-    border-top: 1px solid var(--title-neutral);
-    padding-right: 3em;
-    margin-bottom: 0; }
-*/
 .post-attachments {
   position: relative;
   padding: 0 2.5em .25em;
