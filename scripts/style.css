@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   color-scheme: light dark;
   --background-neutral : #eee;
-  --color-neutral : #333;
+  --color-neutral : #222;
   --background-img : url(/themes/cpu-15/img/bg_light.png);
   --background-main : #fff;
   --background-comment : #eff;
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-neutral : #ccc;
+    --color-neutral : #ddd;
     --background-neutral : #111;
     --background-img : url(/themes/cpu-15/img/bg_dark.png);
     --background-main : #000;
