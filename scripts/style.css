@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   --background-img : url(/themes/cpu-15/img/bg_light.png);
   --background-main : #fff;
   --background-comment : #eff;
-  --link : #d52125;
+  --link : #ee0f0f;
   --link-focus : #f9f9f9;
   --quote : #626262;
   --calque-bg : #ffffff77;
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
     --background-img : url(/themes/cpu-15/img/bg_dark.png);
     --background-main : #000;
     --background-comment : #122;
-    --link : #ff5155;
+    --link : #fd8585;
     --link-focus : #eee;
     --quote : #666;
     --calque-bg : #00000077;
