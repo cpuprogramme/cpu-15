@@ -137,6 +137,10 @@ sup {
 sub {
   bottom: -0.25em; }
 
+abbr {
+  font-variant: small-caps;
+}
+
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help; }
@@ -339,7 +343,7 @@ blockquote, q {
   font-style: italic; }
 
 blockquote {
-  font-size: 1.125em;
+  /* font-size: 1.125em; */
   line-height: 1.33;
   quotes: '\201C' '\201D';
   margin-top: 1.7777778em; }
@@ -347,10 +351,9 @@ blockquote {
 blockquote:before,
 blockquote:after {
   margin-top: 0;
-  font-size: 3em;
+  font-size: 2em;
   display: block;
   line-height: .25;
-  color: gainsboro;
   margin-bottom: 0; }
 
 blockquote:before {
