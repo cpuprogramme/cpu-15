@@ -51,8 +51,9 @@ h1, h2, h3, h4, h5, h6 {
   --background-img : url(/themes/cpu-15/img/bg_light.png);
   --background-main : #fff;
   --background-comment : #eff;
-  --link : #ee0f0f;
+  --link : #D12625;
   --link-focus : #f9f9f9;
+  --link-side : #ee0f0f;
   --quote : #626262;
   --calque-bg : #ffffff77;
   --calque-out : white;
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     --background-img : url(/themes/cpu-15/img/bg_dark.png);
     --background-main : #000;
     --background-comment : #122;
-    --link : #fd8585;
+    --link : #F1CB29;
     --link-focus : #eee;
     --quote : #666;
     --calque-bg : #00000077;
@@ -581,11 +582,12 @@ flex: 0 0 33%;
 
 }
   .sidebar a:link, .sidebar a:visited {
-    color: var(--link-focus);
+    color: var(--link-side);
     border: none; }
+  /* .sidebar .serie-current, */
   .sidebar a:hover, .sidebar a:focus, .sidebar a:active,
   .sidebar li:hover, .sidebar li:focus {
-    background-color: var(--link); 
+    background-color: var(--link-side); 
     text-decoration: none !important;
   }
 
