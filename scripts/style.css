@@ -56,6 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   --link-side : #ee0f0f;
   --quote : #626262;
   --calque-bg : #ffffff77;
+  --calque-out-within : #ffffffbb;
   --calque-out : white;
   --cpu-focus-color : #111;
 }
@@ -71,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
     --link-focus : #eee;
     --quote : #666;
     --calque-bg : #00000077;
+    --calque-out-within : #000000bb;
     --calque-out : black;
   }
 }
@@ -1170,8 +1172,12 @@ body.cpu-audio-with-webcomponents.delegated #header-control {
 }
 
 
-.banner-article:focus-within .calque , .banner-article:hover .calque {
-	background-color: var(--calque-out) !important;
+.banner-article:focus-within .calque {
+	background-color: var(--calque-out-within) !important;
+}
+
+.banner-article a:hover {
+  background-color: var(--calque-out) !important;
 }
 
 .no-images img { display : none }
