@@ -329,7 +329,7 @@ p a:hover, p  a:active {
   border-color: var(--link); 
 }*/
 .link_und a:hover, .link_und a:active , .link_und a:focus {
-  text-decoration: underline;
+  text-decoration: underline dotted 1px;
   /*color: var(--link-focus); */
 }
 
@@ -446,11 +446,11 @@ ul ul, ul ol, ol ol, ol ul {
   padding: 1em .5em 2em; }
 
 #main a {
-  text-decoration: underline dotted;
+  text-decoration: underline dotted 1px;
 }
 
 #main a:hover, #main a:active {
-  text-decoration: underline;
+  text-decoration: underline solid 1px;
 }
 
 
