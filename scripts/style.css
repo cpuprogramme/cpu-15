@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   --background-img : url(/themes/cpu-15/img/bg_light.png);
   --background-main : #fff;
   --background-comment : #eff;
-  --link : #D12625;
+  --link : #D10000;
   --link-focus : #f9f9f9;
   --link-side : #ee0f0f;
   --quote : #626262;
@@ -446,7 +446,7 @@ ul ul, ul ol, ol ol, ol ul {
   padding: 1em .5em 2em; }
 
 #main a {
-  text-decoration: underline dotted 1px;
+  text-decoration: underline dotted 1px #777;
 }
 
 #main a:hover, #main a:active {
