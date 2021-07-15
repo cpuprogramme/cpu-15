@@ -328,10 +328,6 @@ p a:visited {
 p a:hover, p  a:active {
   border-color: var(--link); 
 }*/
-.link_und a:hover, .link_und a:active , .link_und a:focus {
-  text-decoration: underline dotted 1px;
-  /*color: var(--link-focus); */
-}
 
 
 hr {
@@ -445,12 +441,12 @@ ul ul, ul ol, ol ol, ol ul {
   background-color: var(--background-main);
   padding: 1em .5em 2em; }
 
-#main a {
-  text-decoration: underline dotted 1px #777;
+#main a  , .link_und a{
+  text-decoration: underline solid 1px #777;
 }
 
-#main a:hover, #main a:active {
-  text-decoration: underline solid 1px;
+#main a:hover, #main a:active , .link_und a:hover, .link_und a:active , .link_und a:focus  {
+  text-decoration: underline solid 1px var(--link);
 }
 
 
