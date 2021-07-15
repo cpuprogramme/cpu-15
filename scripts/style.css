@@ -445,6 +445,15 @@ ul ul, ul ol, ol ol, ol ul {
   background-color: var(--background-main);
   padding: 1em .5em 2em; }
 
+#main a {
+  text-decoration: underline dotted;
+}
+
+#main a:hover, #main a:active {
+  text-decoration: underline;
+}
+
+
 #page {
   max-width: 60em;
   margin: 0 auto;
@@ -582,7 +591,7 @@ flex: 0 0 33%;
 
 }
   .sidebar a:link, .sidebar a:visited {
-    color: var(--link-side);
+    color: white;
     border: none; }
   /* .sidebar .serie-current, */
   .sidebar a:hover, .sidebar a:focus, .sidebar a:active,
@@ -1167,7 +1176,6 @@ body.cpu-audio-with-webcomponents.delegated #header-control {
 
 .banner-article:focus-within .calque , .banner-article:hover .calque {
 	background-color: var(--calque-out) !important;
-  text-decoration: none !important;
 }
 
 .no-images img { display : none }
