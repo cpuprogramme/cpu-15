@@ -113,11 +113,16 @@
 				<enclosure url="{{tpl:AttachmentURL}}"
 				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
 				<media:content url="{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
-				<podcast:alternateEnclosure type="audio/ogg" bitrate="160" title="Higher quality">{{tpl:OggFile}}</podcast:alternateEnclosure>
-				<tpl:HasHlsFile>
-					<podcast:alternateEnclosure type="application/x-mpegurl" bitrate="80" title="Stream">{{tpl:HlsFile}}</podcast:alternateEnclosure>
-				</tpl:HasHlsFile>
+				<podcast:alternateEnclosure
+					type="audio/ogg"
+					length="{{tpl:OggFileSize}}"
+					title="Audio qualité broadcast"
+					rel="Audio qualité broadcast">
+					<podcast:source uri="{{tpl:OggFile}}" />
+				</podcast:alternateEnclosure>
 			</tpl:Attachments>
+
+
 
 			<tpl:EntryIf has_category="1">
 				<category>{{tpl:EntryCategory}}</category>

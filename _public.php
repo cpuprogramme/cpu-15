@@ -25,6 +25,8 @@ $core->tpl->addValue('EpisodeNumber',['CPU15_template','EpisodeNumber']);
 $core->tpl->addBlock('AttachmentsNo',['CPU15_template','AttachmentsNo']);
 $core->tpl->addBlock('SeriesNotLostAndFound', ['CPU15_template', 'SeriesNotLostAndFound']);
 
+$core->tpl->addValue('OggFileSize',['CPU15_template','OggFileSize']);
+
 class CPU15_url extends dcUrlHandlers
 {
 
@@ -164,6 +166,17 @@ class CPU15_template
         return 
             '<?php if ($_ctx->meta->meta_id != "lost and found") { ?>' . $content . '<?php }  ?>';
 
+	}
+
+	public static function OggFileSize($attr) {
+		return '<?php
+					$oggpossible = preg_replace(
+	                    ["/\.mp3/", "/\/podcast\//"],
+	                    [".ogg", "/"],
+	                    $attach_f->file);
+					// echo ",".$oggpossible.",";
+					echo filesize($oggpossible);
+				?>';
 	}
 
 }
