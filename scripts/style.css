@@ -1257,6 +1257,10 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
   display: none;
 }
 
+.pagination {
+  text-align : center;
+}
+
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;
