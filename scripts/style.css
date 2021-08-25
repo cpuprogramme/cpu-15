@@ -109,7 +109,7 @@ a {
   background: transparent; }
 
 a:focus {
-  outline: 2px solid; }
+  outline: var(--link) 2px solid; }
 
 @Media (prefers-reduced-motion: no-preference) {
   :focus {
@@ -1075,7 +1075,7 @@ menu li a {
     text-decoration : none;
 }
 
-menu a:hover {
+menu a:hover, menu a:focus {
     color : black;
     background : white
 }
