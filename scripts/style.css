@@ -1119,7 +1119,7 @@ menu a:hover, menu a:focus {
   flex : 1 1 auto;
 }
 
-body.cpu-audio-with-webcomponents.delegated #header-control {
+body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with-webcomponents #header-control:focus-within {
   top : 0px;
 }
 
