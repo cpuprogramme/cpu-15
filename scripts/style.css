@@ -1246,8 +1246,17 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
 
 .breadcrumb li {
   list-style: none;
-  padding-right : 10px;
+  
+  padding : 0 5px;
   flex : 0 1 auto;
+}
+
+.breadcrumb li:first-child {
+  padding-left : 0px;
+}
+
+.breadcrumb li:last-child {
+  padding-right : 0px;
 }
 
 .breadcrumb_categories:not(:first-child) {
