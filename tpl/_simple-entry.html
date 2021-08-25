@@ -63,19 +63,21 @@
 </article>
 
 <tpl:EntrySeries>
-	<h3 id="serie" class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
-	<ul>
-		<tpl:Entries order="asc">
-			<li><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></li>
-		</tpl:Entries>
-	</ul>
+	<nav>
+		<h3 id="serie" class="notsobig">Cette <em lang="en">release</em> est dans <a href="{{tpl:SerieURL}}">la série «&nbsp;<em>{{tpl:SerieID}}</em>&nbsp;»</a></h3>
+		<ul>
+			<tpl:Entries order="asc">
+				<li><strong><a href="{{tpl:EntryURL}}" class="calque">{{tpl:EntryTitle}}</a></strong></li>
+			</tpl:Entries>
+		</ul>
+	</nav>
 </tpl:EntrySeries>
 
 
 <!-- # Comments -->
 <tpl:EntryIf operator="or" show_comments="1" show_pings="1">
+	<aside class="post-feedback">
 	<h3 id="commentaires" class="notsobig">{{tpl:EntryCommentCount count_all="1" none="Aucun commentaire" one="Un commentaire" more="%s commentaires"}}</h3>
-	<div class="post-feedback">
 </tpl:EntryIf>
 
 	<tpl:Comments>
@@ -109,72 +111,72 @@
 	</tpl:Comments>
 
 <tpl:EntryIf comments_active="1">
-	<tpl:SysIfFormError>
-		<p class="error" id="pr">{{tpl:SysFormError}}</p>
-	</tpl:SysIfFormError>
+		<tpl:SysIfFormError>
+			<p class="error" id="pr">{{tpl:SysFormError}}</p>
+		</tpl:SysIfFormError>
 
-	<tpl:SysIfCommentPublished>
-		<p class="message" id="pr">{{tpl:lang Your comment has been published.}}</p>
-	</tpl:SysIfCommentPublished>
+		<tpl:SysIfCommentPublished>
+			<p class="message" id="pr">{{tpl:lang Your comment has been published.}}</p>
+		</tpl:SysIfCommentPublished>
 
-	<tpl:SysIfCommentPending>
-		<p class="message" id="pr">{{tpl:lang Your comment has been submitted and will be reviewed for publication.}}</p>
-	</tpl:SysIfCommentPending>
+		<tpl:SysIfCommentPending>
+			<p class="message" id="pr">{{tpl:lang Your comment has been submitted and will be reviewed for publication.}}</p>
+		</tpl:SysIfCommentPending>
 
-	<!-- # Comment form -->
-	<form class="comment-form" action="{{tpl:EntryURL}}#pr" method="post" id="comment-form" role="form">
-		<tpl:IfCommentPreview>
-			<h3 id="votre_commentaire" class="notsobig">{{tpl:lang Your comment}}</h3>
-			<div id="pr">
-				<div class="comment-preview">{{tpl:CommentPreviewContent}}</div>
-				<p class="buttons"><button type="submit" class="submit" value="{{tpl:lang Send}}">{{tpl:lang Send}}</button></p>
-			</div>
-		</tpl:IfCommentPreview>
+		<!-- # Comment form -->
+		<form class="comment-form" action="{{tpl:EntryURL}}#pr" method="post" id="comment-form" role="form">
+			<tpl:IfCommentPreview>
+				<h3 id="votre_commentaire" class="notsobig">{{tpl:lang Your comment}}</h3>
+				<div id="pr">
+					<div class="comment-preview">{{tpl:CommentPreviewContent}}</div>
+					<p class="buttons"><button type="submit" class="submit" value="{{tpl:lang Send}}">{{tpl:lang Send}}</button></p>
+				</div>
+			</tpl:IfCommentPreview>
 
-		<h3 id="commenter" class="notsobig">{{tpl:lang Add a comment}}</h3>
-			<!-- # --BEHAVIOR-- publicCommentFormBeforeContent -->
-			{{tpl:SysBehavior behavior="publicCommentFormBeforeContent"}}
+			<h3 id="commenter" class="notsobig">{{tpl:lang Add a comment}}</h3>
+				<!-- # --BEHAVIOR-- publicCommentFormBeforeContent -->
+				{{tpl:SysBehavior behavior="publicCommentFormBeforeContent"}}
 
-			<p class="field field-content"><label for="c_content" aria-describedby="c_help">{{tpl:lang Comment}}<abbr title="{{tpl:lang Required field}}">*</abbr>&nbsp;:</label>
-				<textarea name="c_content" id="c_content" cols="35"
-				 rows="7" required>{{tpl:CommentPreviewContent raw="1" encode_html="1"}}</textarea>
-			</p>
-
-
-			<p class="field name-field"><label for="c_name">{{tpl:lang Name or nickname}}<abbr title="{{tpl:lang Required field}}">*</abbr>&nbsp;:</label>
-				<input name="c_name" id="c_name" type="text" size="30" maxlength="255"
-				 value="{{tpl:CommentPreviewName encode_html="1"}}" required />
-			</p>
-
-			<p class="field mail-field"><label for="c_mail">{{tpl:lang Email address}}<abbr title="{{tpl:lang Required field}}">*</abbr>&nbsp;:</label>
-				<input name="c_mail" id="c_mail" type="email" size="30" maxlength="255"
-				 value="{{tpl:CommentPreviewEmail encode_html="1"}}" required />
-			</p>
-
-			<p class="field site-field"><label for="c_site">{{tpl:lang Website}}&nbsp;:</label>
-				<input name="c_site" id="c_site" type="url" size="30" maxlength="255"
-				 value="{{tpl:CommentPreviewSite encode_html="1"}}" />
-			</p>
-
-			<p style="display:none">
-				<input name="f_mail" type="text" size="30" maxlength="255" value="" />
-			</p>
+				<p class="field field-content"><label for="c_content" aria-describedby="c_help">{{tpl:lang Comment}}<abbr title="{{tpl:lang Required field}}">*</abbr>&nbsp;:</label>
+					<textarea name="c_content" id="c_content" cols="35"
+					 rows="7" required>{{tpl:CommentPreviewContent raw="1" encode_html="1"}}</textarea>
+				</p>
 
 
-			<p class="form-help" id="c_help">Le code HTML est affiché comme du texte et les adresses web sont automatiquement transformées. Votre e-mail ne sera pas affiché.</p>
+				<p class="field name-field"><label for="c_name">{{tpl:lang Name or nickname}}<abbr title="{{tpl:lang Required field}}">*</abbr>&nbsp;:</label>
+					<input name="c_name" id="c_name" type="text" size="30" maxlength="255"
+					 value="{{tpl:CommentPreviewName encode_html="1"}}" required />
+				</p>
 
-			<!-- # --BEHAVIOR-- publicCommentFormAfterContent -->
-			{{tpl:SysBehavior behavior="publicCommentFormAfterContent"}}
+				<p class="field mail-field"><label for="c_mail">{{tpl:lang Email address}}<abbr title="{{tpl:lang Required field}}">*</abbr>&nbsp;:</label>
+					<input name="c_mail" id="c_mail" type="email" size="30" maxlength="255"
+					 value="{{tpl:CommentPreviewEmail encode_html="1"}}" required />
+				</p>
 
-			<p class="buttons">
-				<button type="submit" class="preview" name="preview" value="{{tpl:lang Preview}}">{{tpl:lang Preview}}</button>
-		        <tpl:IfCommentPreviewOptional>
-		        	<button type="submit" class="submit" value="{{tpl:lang Send}}">{{tpl:lang Send}}</button>
-		        </tpl:IfCommentPreviewOptional>
-			</p>
-	</form>
+				<p class="field site-field"><label for="c_site">{{tpl:lang Website}}&nbsp;:</label>
+					<input name="c_site" id="c_site" type="url" size="30" maxlength="255"
+					 value="{{tpl:CommentPreviewSite encode_html="1"}}" />
+				</p>
+
+				<p style="display:none">
+					<input name="f_mail" type="text" size="30" maxlength="255" value="" />
+				</p>
+
+
+				<p class="form-help" id="c_help">Le code HTML est affiché comme du texte et les adresses web sont automatiquement transformées. Votre e-mail ne sera pas affiché.</p>
+
+				<!-- # --BEHAVIOR-- publicCommentFormAfterContent -->
+				{{tpl:SysBehavior behavior="publicCommentFormAfterContent"}}
+
+				<p class="buttons">
+					<button type="submit" class="preview" name="preview" value="{{tpl:lang Preview}}">{{tpl:lang Preview}}</button>
+			        <tpl:IfCommentPreviewOptional>
+			        	<button type="submit" class="submit" value="{{tpl:lang Send}}">{{tpl:lang Send}}</button>
+			        </tpl:IfCommentPreviewOptional>
+				</p>
+		</form>
 </tpl:EntryIf>
 
 <tpl:EntryIf operator="or" show_comments="1" show_pings="1">
-	</div> <!-- end post-feedback -->
+	</aside> <!-- end post-feedback -->
 </tpl:EntryIf>

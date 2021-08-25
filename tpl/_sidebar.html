@@ -1,6 +1,6 @@
 <div class="sidebar" id="sidebar" role="complementary">
 	<tpl:IfWidgets type="nav">
-		<div class="widgets blognav__widgets" id="blognav">
+		<nav class="widgets blognav__widgets" id="blognav">
 	        <h2 class="blognav__title">{{tpl:lang Blog menu}}</h2>
 			<div class="widget">
 				<form action="https://cpu.dascritch.net/" method="get" role="search">
@@ -11,15 +11,15 @@
 				</form>
 			</div>
 			{{tpl:Widgets type="nav"}}
-		</div> <!-- End #blognav -->
+		</nav>
 	</tpl:IfWidgets>
 	<tpl:IfWidgets type="extra">
-		<div class="widgets blogextra__widgets" id="blogextra">
+		<aside class="widgets blogextra__widgets" id="blogextra">
 	        <h2 class="blogextra__title">{{tpl:lang Extra menu}}</h2>
 	        	<tpl:Entries no_context="1" category="Teaser" lastn="1" selected="1" ignore_pagination="1">
 	        		{{tpl:include src="_entry-minimal.html"}}
 	        	</tpl:Entries>
 			{{tpl:Widgets type="extra"}}
-		</div> <!-- End #blogextra -->
+		</aside>
 	</tpl:IfWidgets>
 </div>
