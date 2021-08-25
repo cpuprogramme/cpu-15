@@ -108,7 +108,7 @@ body {
 a {
   background: transparent; }
 
-a:focus {
+:focus {
   outline: var(--link) 2px solid; }
 
 @Media (prefers-reduced-motion: no-preference) {
