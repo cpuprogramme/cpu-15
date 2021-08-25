@@ -44,57 +44,59 @@
 </tpl:Block>
 
 <tpl:Block name="main-content">
-	<ul class="breadcrumb" role="navigation" itemscope itemtype="http://schema.org/BreadcrumbList">
-		<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
-				<span itemprop="name">CPU</span>
-			</a>
-			<meta itemprop="position" content="1">
-		</li>
-		<li aria-hidden="true">⬜</li>
-
-		<tpl:EntryCategoriesBreadcrumb>
-		<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="{{tpl:CategoryURL}}" itemprop="item">
-					<span itemprop="name">{{tpl:CategoryTitle encode_html="1"}}</span>	
+	<nav>
+		<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="not-small" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:BlogURL}}" aria-label="Revenir à la page de garde" itemprop="item">
+					<span itemprop="name">CPU</span>
 				</a>
-			<meta itemprop="position" content="2">
-		</li>
-		<li class="not-small" aria-hidden="true">›</li>
-		</tpl:EntryCategoriesBreadcrumb>
-
-		<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="{{tpl:EntryCategoryURL}}" itemprop="item">
-				<span itemprop="name">{{tpl:EntryCategory encode_html="1"}}</span>
-			</a>
-			<meta itemprop="position" content="3">
-		</li>
-		<li class="not-small" aria-hidden="true">›</li>
-
-		<tpl:EntrySeries>
-		<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<a href="{{tpl:SerieURL}}" itemprop="item">
-				<span itemprop="name">{{tpl:SerieID}}</span>
-			</a>
-			<meta itemprop="position" content="4">
-		</li>
-		<li class="not-small" aria-hidden="true">›</li>
-		</tpl:EntrySeries>
-
-		<li class="not-small ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{{tpl:EntryURL}}" itemprop="item"><span itemprop="name">{{tpl:EntryTitle encode_html="1"}}</span></a>
-			<meta itemprop="position" content="5">
-		</li>
-		<li class="spacer" aria-hidden="true"></li>
-
-		<tpl:EntryPrevious restrict_to_category="1">
-			<li><a href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" rel="previous">←&nbsp;<span class="not-small" aria-label="Aller à l'article précédent du même type">précédent</span></a></li>
-		</tpl:EntryPrevious>
-		<tpl:EntryNext  restrict_to_category="1">
+				<meta itemprop="position" content="1">
+			</li>
 			<li aria-hidden="true">⬜</li>
-			<li><a href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" rel="next"><span class="not-small" aria-label="Aller à l'article suivant du même type">suivant</span>&nbsp;→</a></li>
-		 </tpl:EntryNext>
 
-	</ul>
+			<tpl:EntryCategoriesBreadcrumb>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:CategoryURL}}" itemprop="item">
+						<span itemprop="name">{{tpl:CategoryTitle encode_html="1"}}</span>	
+					</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+			</tpl:EntryCategoriesBreadcrumb>
+
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:EntryCategoryURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:EntryCategory encode_html="1"}}</span>
+				</a>
+				<meta itemprop="position" content="3">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+
+			<tpl:EntrySeries>
+			<li class="ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="{{tpl:SerieURL}}" itemprop="item">
+					<span itemprop="name">{{tpl:SerieID}}</span>
+				</a>
+				<meta itemprop="position" content="4">
+			</li>
+			<li class="not-small" aria-hidden="true">›</li>
+			</tpl:EntrySeries>
+
+			<li class="not-small ellipsis" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{{tpl:EntryURL}}" itemprop="item"><span itemprop="name">{{tpl:EntryTitle encode_html="1"}}</span></a>
+				<meta itemprop="position" content="5">
+			</li>
+			<li class="spacer" aria-hidden="true"></li>
+
+			<tpl:EntryPrevious restrict_to_category="1">
+				<li><a href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" rel="previous">←&nbsp;<span class="not-small" aria-label="Aller à l'article précédent du même type">précédent</span></a></li>
+			</tpl:EntryPrevious>
+			<tpl:EntryNext  restrict_to_category="1">
+				<li aria-hidden="true">⬜</li>
+				<li><a href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" rel="next"><span class="not-small" aria-label="Aller à l'article suivant du même type">suivant</span>&nbsp;→</a></li>
+			 </tpl:EntryNext>
+
+		</ul>
+	</nav>
 
 	{{tpl:include src="_simple-entry.html"}}
 
