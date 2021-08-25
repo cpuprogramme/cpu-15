@@ -521,29 +521,30 @@ ul ul, ul ol, ol ol, ol ul {
     vertical-align: top; } }
 
   
-.skip-links {
+#skip-links {
   margin: 0;
   padding: 0;
   border: 0;
   overflow: hidden;
-  text-align: right; }
-  .skip-links li {
-    list-style-image: none;
-    list-style-type: none;
-    margin-left: 0;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: nowrap;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    font-size: 0.75em;
-    line-height: 1;
-    padding-bottom: .5em; }
-    .skip-links li a:link, .skip-links li a:visited {
-      color: var(--quote); }
-    .skip-links li a:hover, .skip-links li a:focus {
-      background-color: var(--background-neutral);
-      color: var(--link); }
+  text-align: right; 
+  height : 0;
+}
+#skip-links:focus-within {
+  height : auto;
+}
+#skip-links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 0.75em;
+  line-height: 1;
+  padding-bottom: .5em;
+}
 
 
 @media screen and (max-width: 60em) {
@@ -558,7 +559,7 @@ ul ul, ul ol, ol ol, ol ul {
       margin-right: 0;
       border-bottom: 1px solid white; } }
 @media screen and (max-width: 30em) {
-  .skip-links {
+  #skip-links {
     text-align: center;
     font-size: 0.625em;
     line-height: 2.4em; }
@@ -1033,10 +1034,6 @@ h1 {
 	margin : 0;
 	border-bottom : none !important;
   height : 64px;
-}
-
-nav {
-	display : none;
 }
 
 .header {
