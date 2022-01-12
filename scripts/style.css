@@ -1395,3 +1395,12 @@ ul.tags li a:hover, ul.tags li a:active, ul.tags li .tag a:focus {
           left : 0px;
       }
   }
+
+
+/** Ajout de media dans le corps de l'article **/ 
+
+figure, figure iframe, figure img {
+  max-width : 100%;
+  text-align : center;
+}
+
