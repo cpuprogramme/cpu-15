@@ -39,6 +39,10 @@
   font-display : fallback;
 }
 
+:root {
+  color-scheme: dark
+}
+
 body/*:root*/ {
   scroll-margin: 100px;
   color-scheme: light dark;
