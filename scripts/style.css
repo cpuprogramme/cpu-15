@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
+  scroll-margin: 100px;
   color-scheme: light dark;
   --background-neutral : #eee;
   --color-neutral : #222;
@@ -59,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   --calque-out-within : #ffffffbb;
   --calque-out : white;
   --cpu-focus-color : #111;
+
 }
 
 @media (prefers-color-scheme: dark) {
