@@ -39,14 +39,10 @@
   font-display : fallback;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.2;
-}
-
-:root {
+body/*:root*/ {
   scroll-margin: 100px;
   color-scheme: light dark;
+  --cpu-font-family : "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   --background-neutral : #eee;
   --color-neutral : #222;
   --background-img : url(/themes/cpu-15/img/bg_light.png);
@@ -64,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  body /*:root*/ {
     --color-neutral : #ddd;
     --background-neutral : #111;
     --background-img : url(/themes/cpu-15/img/bg_dark.png);
@@ -104,7 +100,12 @@ body {
   color: var(--color-neutral);
   font-size: 1em;
   line-height: 1.5;
-  font-family: "Roboto Condensed", Lato, "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
+  font-family: var(--cpu-font-family); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--cpu-font-family);
+    line-height: 1.2;
 }
 
 a {
@@ -168,10 +169,11 @@ mark {
   background: #ff0;
   color: #000; }
 
+/*
 code, pre, samp {
   font-family: monospace, serif;
   font-size: 1em; }
-
+*/
 pre {
   white-space: pre-wrap; }
 
@@ -370,7 +372,7 @@ q, cite, quote  {
     quotes:"\201c" "\201d" "\00ab\00a0" "\00a0\00bb"
 }
 
-code, pre {
+code, pre, samp {
   background-color: #555;
   color: #EFD540;
   font-family: "Andale Mono", AndaleMono, monospace;
