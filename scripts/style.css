@@ -720,25 +720,6 @@ flex: 0 0 33%;
   .content-info__sub-cat h3 {
     font-weight: bold; }
 
-#gotop {
-  display: block;
-  z-index: 1000;
-  position: fixed;
-  bottom: 0;
-  right: .5em;
-  width: 10em;
-  padding: .25em;
-  border: 1px solid var(--quote);
-  border-radius: .25em;
-  background-color: white;
-  color: #333;
-  font-size: .875em;
-  text-align: center; }
-  #gotop a, #gotop a:link, #gotop a:hover, #gotop a:active {
-    background: transparent;
-    border: none;
-    font-weight: bold;
-    color: var(--quote); }
 
 /**
     POST
@@ -1197,14 +1178,6 @@ audio {
 
 }
 
-/**** removing old jkery animation ***/
-body #gotop {
-  opacity : 0;
-}
-
-body.scrolled #gotop {
-  opacity : 1;
-}
 
 /*** SPECIFIC DSN 15 **/
 

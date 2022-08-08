@@ -57,14 +57,6 @@ const texts = [
 
 ];
 
-function scroll_go_to_top() {
-	window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
-}
-
 function add_scroll_listeners() {
     function observe_gives(classname) {
         return function observe_menu(elements) {
@@ -76,8 +68,7 @@ function add_scroll_listeners() {
         }    
     }
 
-	document.getElementById('gotop').addEventListener('click', scroll_go_to_top);
-    if (typeof IntersectionObserver !== 'function') {
+	if (typeof IntersectionObserver !== 'function') {
         return ;
     }
     new IntersectionObserver(observe_gives('scrolled')).observe(document.getElementById('menu'));
