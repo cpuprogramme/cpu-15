@@ -253,10 +253,10 @@ td:first-child, th:first-child {
 
 /* HTML5 for old browsers */
 article, aside, details, figcaption, figure, footer,
-header, hgroup, main, nav, section, summary {
+header, hgroup, main, nav, section {
 	display: block; }
 
-audio, canvas, video {
+audio, canvas, video, summary {
 	display: inline-block; }
 
 figure {
