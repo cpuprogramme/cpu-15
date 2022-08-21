@@ -1388,3 +1388,39 @@ figure, figure iframe, figure img {
 	text-align : center;
 }
 
+@media (prefers-contrast: more) {
+	body, #main, #motto, #header-control {
+	 --cpu-background:#fff;
+	 --cpu-color:#000;
+	 --cpu-playing-background:#fff;
+	 --cpu-playing-color:#000;
+	 --cpu-error-background:#fff;
+	 --cpu-error-color:#000;
+	 --cpu-popup-background:#000;
+	 --cpu-popup-color:#fff ;
+	 --cpu-focus-background:#000;
+	 --cpu-focus-color:#fff;
+	 --cpu-cue:#000;
+	 --cpu-timeline-limits:#000;
+	 --cpu-elapse-width:160px;                   
+	 --cpu-min-padding:16px;
+	 --cpu-inner-shadow:none;
+	 --cpu-color-transitions:0s;
+	 --cpu-background-transitions:0s
+	}
+
+	*, *::placeholder {
+	  color : #000 !important;
+	  background : #fff !important;
+	  text-shadow : none !important;
+	  border-color : #000 !important;
+	}
+
+	a:hover , a:focus , a:active,
+	button:hover , button:focus , button:active,
+	{
+	  outline : 2px solid #000 !important;
+	  color : #fff !important;
+	  background : #000 !important;
+	}
+}
