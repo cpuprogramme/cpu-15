@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet title="XSL formatting" type="text/xsl" href="{{tpl:BlogURL}}feed/rss2/xslt" ?>
+<!--<?xml-stylesheet title="XSL formatting" type="text/xsl" href="{{tpl:BlogURL}}feed/rss2/xslt" ?> -->
 <rss version="2.0"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
