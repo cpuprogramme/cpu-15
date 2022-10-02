@@ -40,7 +40,46 @@
 }
 
 :root {
-	color-scheme: dark
+	color-scheme: dark;
+}
+
+/* Global default style for cpu-audio, usign var. Integrators may override them */
+
+:root {
+	--cpu-height : 64px;
+	--cpu-font-small-size : calc(var(--cpu-font-size) * 0.8);
+	--cpu-background : #555;
+	--cpu-color : #ddd;
+	--cpu-playing-background : #444;
+	--cpu-playing-color : #fff;
+	--cpu-error-background : #a00 ;
+	--cpu-error-color : #ff7 ;
+	--cpu-popup-background : #aaa;
+	--cpu-popup-color : #333;
+	--cpu-cue : #000;
+	--cpu-timeline-limits : #f00;
+	--cpu-elapse-width : 160px;
+	--cpu-min-padding : 16px;
+	--cpu-inner-shadow : inset 0px 5px 10px -5px black;
+	--cpu-color-transitions : 0s;
+	--cpu-background-transitions : 0s;
+	/* --cpu-unfold : 0s; not actived */
+}
+
+@media (max-width: 640px) {
+	:root , .interface {
+		--cpu-font-size : 13px;
+		--cpu-height : 48px;
+		--cpu-elapse-width : 140px;
+		--cpu-min-padding : 4px;
+	}
+}
+
+@media (max-width: 480px) {
+	:root , .interface {
+		--cpu-elapse-width : 70px;
+	}
+
 }
 
 body/*:root*/ {
@@ -79,6 +118,13 @@ body/*:root*/ {
 		--calque-out-within : #000000bb;
 		--calque-out : black;
 	}
+}
+
+
+/* Fallback */
+audio[controls] {
+	display : block;
+	width : 100%;
 }
 
 
