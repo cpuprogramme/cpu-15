@@ -4,6 +4,14 @@
 	{{tpl:parent}}
 	{{tpl:include src="_ld_json_home.html"}}
 	<link rel="canonical" href="https://cpu.dascritch.net" />
+
+	<tpl:Entries lastn="1" category="Programmes ?sub" no_context="1">
+		<tpl:Attachments>
+			<tpl:AttachmentIf is_mp3="1">
+				<link rel="preload" as="track" href="{{tpl:ChapterFile}}" />
+			</tpl:AttachmentIf>
+		</tpl:Attachments>
+	</tpl:Entries>
 </tpl:Block>
 
 <tpl:Block name="dc-entry">
