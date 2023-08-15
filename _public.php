@@ -11,39 +11,37 @@
 
 if (!defined('DC_RC_PATH')) { return; }
 
-l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
+l10n::set(dirname(__FILE__).'/locales/'.dcCore::app()->lang.'/main');
 
 # Access to twitter-player
-$core->url->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15_url', 'twitterplayer']);
-$core->url->register('showshortcut', 'ex', '^([0-9]{1,4})$', ['CPU15_url', 'showshortcut']);
+dcCore::app()->url->register('twitterplayer', 'm', '^twitter-player(?:/(.+))?$', ['CPU15_url', 'twitterplayer']);
+dcCore::app()->url->register('showshortcut', 'ex', '^([0-9]{1,4})$', ['CPU15_url', 'showshortcut']);
 
-$core->tpl->addValue('EntryURLsegment',['CPU15_template','EntryURLsegment']);
-$core->tpl->addBlock('Entry1stLevelCategory',['CPU15_template','Entry1stLevelCategory']);
-$core->tpl->addValue('CountEntriesInSeries',['CPU15_template','CountEntriesInSeries']);
-$core->tpl->addValue('EpisodeNumber',['CPU15_template','EpisodeNumber']);
+dcCore::app()->tpl->addValue('EntryURLsegment',['CPU15_template','EntryURLsegment']);
+dcCore::app()->tpl->addBlock('Entry1stLevelCategory',['CPU15_template','Entry1stLevelCategory']);
+dcCore::app()->tpl->addValue('CountEntriesInSeries',['CPU15_template','CountEntriesInSeries']);
+dcCore::app()->tpl->addValue('EpisodeNumber',['CPU15_template','EpisodeNumber']);
 
-$core->tpl->addBlock('AttachmentsNo',['CPU15_template','AttachmentsNo']);
-$core->tpl->addBlock('SeriesNotLostAndFound', ['CPU15_template', 'SeriesNotLostAndFound']);
+dcCore::app()->tpl->addBlock('AttachmentsNo',['CPU15_template','AttachmentsNo']);
+dcCore::app()->tpl->addBlock('SeriesNotLostAndFound', ['CPU15_template', 'SeriesNotLostAndFound']);
 
-$core->tpl->addValue('OggFileSize',['CPU15_template','OggFileSize']);
+dcCore::app()->tpl->addValue('OggFileSize',['CPU15_template','OggFileSize']);
 
 class CPU15_url extends dcUrlHandlers
 {
 
 	public static function twitterplayer($args) {
-		global $core, $_ctx;
-
 		if ($args === '') {
 			# No entry was specified.
 			self::p404();
 		}
 
-		$core->blog->withoutPassword(false);
+		dcCore::app()->blog->withoutPassword(false);
 		$params = new ArrayObject([ 'post_url' => $args ]);
-		$core->callBehavior('publicPostBeforeGetPosts',$params,$args);
+		dcCore::app()->callBehavior('publicPostBeforeGetPosts',$params,$args);
 
-		$_ctx->posts = $core->blog->getPosts($params);
-		if ($_ctx->posts->isEmpty()) {
+		dcCore::app()->ctx->posts = dcCore::app()->blog->getPosts($params);
+		if (dcCore::app()->ctx->posts->isEmpty()) {
 			# The specified entry does not exist.
 			self::p404();
 		}
@@ -53,8 +51,6 @@ class CPU15_url extends dcUrlHandlers
 
 
 	public static function showshortcut($args) {
-		global $core, $_ctx;
-
 		if ($args === '') {
 			# No entry was specified.
 			self::p404();
@@ -62,7 +58,7 @@ class CPU15_url extends dcUrlHandlers
 
 		$numero = str_pad(strval(intval($args, 10)), 4, '0', STR_PAD_LEFT);
 
-		$core->blog->withoutPassword(false);
+		dcCore::app()->blog->withoutPassword(false);
 		$params = new ArrayObject([
 			'post_status' 	=> 1, 		# published
 			'post_type'		=> 'post',
@@ -70,7 +66,7 @@ class CPU15_url extends dcUrlHandlers
 			'sql' 			=> ' and ( "post_title" like \'Ex'.$numero.'%\' )'
 
 		]);
-		$post = $core->blog->getPosts($params);
+		$post = dcCore::app()->blog->getPosts($params);
 		if ($post->isEmpty()) {
 			# The specified entry does not exist.
 			self::p404();
@@ -101,33 +97,33 @@ class CPU15_template
 	public static function AttachmentsNo($attr,$content) {
 		return
 		"<?php\n".
-		'if ($_ctx->posts !== null && $core->media) {'."\n".
-			'$_ctx->attachments = new ArrayObject($core->media->getPostMedia($_ctx->posts->post_id));'."\n".
+		'if (dcCore::app()->ctx->posts !== null && dcCore::app()->media) {'."\n".
+			'dcCore::app()->ctx->attachments = new ArrayObject(dcCore::app()->media->getPostMedia(dcCore::app()->ctx->posts->post_id));'."\n".
 		"?>\n".
 		
-		'<?php if (sizeof($_ctx->attachments) === 0) ?>'.
+		'<?php if (sizeof(dcCore::app()->ctx->attachments) === 0) ?>'.
 		$content.
 		
 		"<?php } ?>\n";
 	}
 
 	public static function EntryURLsegment($attr) {
-		return '<?php echo $_ctx->posts->post_url ; ?>';
+		return '<?php echo dcCore::app()->ctx->posts->post_url ; ?>';
 	}
 
 	public static function Entry1stLevelCategory($attr,$content) {
 		return
 		"<?php\n".
-		'$_ctx->categories = $core->blog->getCategoryParents($_ctx->posts->cat_id);'."\n".
-		'$_ctx->categories->fetch();'.
+		'dcCore::app()->ctx->categories = dcCore::app()->blog->getCategoryParents(dcCore::app()->ctx->posts->cat_id);'."\n".
+		'dcCore::app()->ctx->categories->fetch();'.
 		"\n".
-		' if ($_ctx->categories !== null) { ?>'.
+		' if (dcCore::app()->ctx->categories !== null) { ?>'.
 			"\n".
 			$content.
 			"\n".
 		'<?php }'.
 		"\n".
-		' $_ctx->categories = null; ?>';
+		' dcCore::app()->ctx->categories = null; ?>';
 	}
 
 	public static function CountEntriesInSeries($attr) 
@@ -138,14 +134,14 @@ class CPU15_template
 		return 
 			"<?php \n".
 			'$sql = "SELECT count(*) FROM ".'.
-		    '    $core->prefix . "meta as m," .'.
-	        '    $core->prefix . "post as p ".'.
+		    '    dcCore::app()->prefix . "meta as m," .'.
+	        '    dcCore::app()->prefix . "post as p ".'.
 	        '    " WHERE m.post_id = p.post_id " .'.
 	        '    " AND post_type = \'post\' ".'.
 	        '    " AND post_status = 1 ".'.
-	        '    " AND blog_id = \'" . $core->blog->id . "\'" .'.
-       		'	" AND meta_type = \'serie\' AND meta_id = \'".$_ctx->meta->meta_id."\' ;";'.
-			'$rs = $core->con->select($sql);'.
+	        '    " AND blog_id = \'" . dcCore::app()->blog->id . "\'" .'.
+       		'	" AND meta_type = \'serie\' AND meta_id = \'".dcCore::app()->ctx->meta->meta_id."\' ;";'.
+			'$rs = dcCore::app()->con->select($sql);'.
 			'$_nb = $rs->f(0); ?>'.
 		    $that->displayCounter(
 	            sprintf($f, '$_nb'),
@@ -159,12 +155,12 @@ class CPU15_template
 	}
 
 	public static function EpisodeNumber($attr) {
-		return '<?php echo substr($_ctx->posts->post_title, 2, 4); ?>';
+		return '<?php echo substr(dcCore::app()->ctx->posts->post_title, 2, 4); ?>';
 	}
 
 	public static function SeriesNotLostAndFound($attr,$content) {
         return 
-            '<?php if ($_ctx->meta->meta_id != "lost and found") { ?>' . $content . '<?php }  ?>';
+            '<?php if (dcCore::app()->ctx->meta->meta_id != "lost and found") { ?>' . $content . '<?php }  ?>';
 
 	}
 

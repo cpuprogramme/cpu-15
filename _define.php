@@ -16,8 +16,9 @@ $this->registerModule(
 	/* Description*/		"D'après le thème Berlin, par défaut de Dotclear 2.7",
 	/* Author */			"Dotclear Team, remixé par Dascritch",
 	/* Version */			'1.0',
-	/* Properties */		array(
+	/* Properties */		[
 								'type' => 'theme',
-								'tplset' => 'currywurst'
-							)
+								'tplset' => 'currywurst',
+								'requires' => [['core', '2.24']]
+							]
 );
