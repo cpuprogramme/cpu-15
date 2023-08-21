@@ -18,7 +18,6 @@ $this->registerModule(
 	/* Version */			'1.0',
 	/* Properties */		[
 								'type' => 'theme',
-								'tplset' => 'currywurst',
 								'requires' => [['core', '2.24']]
 							]
 );
