@@ -1,12 +1,14 @@
 <cpu-audio title="{{tpl:EntryTitle}}" canonical="{{tpl:EntryURL}}" poster="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="s"}}" <tpl:HasWaveformFile>waveform="{{tpl:WaveformFile}}"</tpl:HasWaveformFile> playlist="cpu" hide="panels-except-play panels-title">
     <audio controls="controls" style="width:100%" id="sonore-{{tpl:EntryID}}" preload="none">
+        <source src="{{tpl:HlsFile}}" type="application/x-mpegurl" />
         <tpl:HasHlsFile>
             <source src="{{tpl:HlsFile}}" type="application/x-mpegurl" />
         </tpl:HasHlsFile>
         <source src="{{tpl:OggFile}}" type="audio/ogg; codecs=vorbis" />
         <source src="{{tpl:AttachmentURL}}" type="audio/mpeg" data-downloadable />
+        <track kind="chapters" src="{{tpl:ChapterFile}}" default>
         <tpl:HasChapterFile>
-            <track kind="chapters" src="{{tpl:ChapterFile}}" default>
+            <track kind="chapters" src="{{tpl:ChapterFile}}" default />
         </tpl:HasChapterFile>
     </audio>
 </cpu-audio>
