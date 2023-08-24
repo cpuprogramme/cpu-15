@@ -18,6 +18,9 @@ $this->registerModule(
 	/* Version */			'1.0',
 	/* Properties */		[
 								'type' => 'theme',
-								'requires' => [['core', '2.24']]
+								'requires' => [['core', '2.24']],
+								# Widget rendering
+								'widgetcontainerformat' => '<details open class="%1$s" %2$s>%3$s</details>',
+								'widgettitleformat' => '<summary><h3>%s</h3></summary>', # Needed to force widgets to use h3 
 							]
 );
