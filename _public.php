@@ -25,8 +25,6 @@ dcCore::app()->tpl->addValue('EpisodeNumber',['CPU15_template','EpisodeNumber'])
 dcCore::app()->tpl->addBlock('AttachmentsNo',['CPU15_template','AttachmentsNo']);
 dcCore::app()->tpl->addBlock('SeriesNotLostAndFound', ['CPU15_template', 'SeriesNotLostAndFound']);
 
-dcCore::app()->tpl->addValue('OggFileSize',['CPU15_template','OggFileSize']);
-
 class CPU15_url extends dcUrlHandlers
 {
 
@@ -164,16 +162,6 @@ class CPU15_template
 
 	}
 
-	public static function OggFileSize($attr) {
-		return '<?php
-					$oggpossible = preg_replace(
-	                    ["/\.mp3/", "/\/podcast\//"],
-	                    [".ogg", "/"],
-	                    $attach_f->file);
-					// echo ",".$oggpossible.",";
-					echo filesize($oggpossible);
-				?>';
-	}
 
 }
 
