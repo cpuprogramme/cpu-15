@@ -2,13 +2,18 @@
     <audio controls="controls" style="width:100%">
         <source src="{{tpl:HlsFile}}" type="application/x-mpegurl" />
         <tpl:HasHlsFile>
+            <!-- 
             <source src="{{tpl:HlsFile}}" type="application/x-mpegurl" />
+            -->
         </tpl:HasHlsFile>
         <source src="{{tpl:OggFile}}" type="audio/ogg; codecs=vorbis" />
+        <source src="{{tpl:MP3File}}" type="audio/mpeg" data-downloadable />
         <source src="{{tpl:AttachmentURL}}" type="audio/mpeg" data-downloadable />
         <track kind="chapters" src="{{tpl:ChapterFile}}" default />
+        <!-- 
         <tpl:HasChapterFile>
             <track kind="chapters" src="{{tpl:ChapterFile}}" default />
         </tpl:HasChapterFile>
+        -->
     </audio>
 </cpu-audio>
