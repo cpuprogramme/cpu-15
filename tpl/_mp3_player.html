@@ -1,4 +1,5 @@
-<cpu-audio title="{{tpl:EntryTitle}}" canonical="{{tpl:EntryURL}}" poster="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="s"}}" waveform="{{tpl:WaveformFile}}" <tpl:HasWaveformFile>waveform="{{tpl:WaveformFile}}"</tpl:HasWaveformFile>  hide="panels" playlist="cpu" glow>
+<cpu-audio title="{{tpl:EntryTitle}}" canonical="{{tpl:EntryURL}}" poster="{{tpl:EntryFirstImage with_category="1" no_tag="1" size="s"}}" waveform="{{tpl:WaveformFile}}" hide="panels" playlist="cpu" glow>
+    <!-- <tpl:HasWaveformFile>waveform="{{tpl:WaveformFile}}"</tpl:HasWaveformFile> -->
     <audio controls="controls" style="width:100%">
         <source src="{{tpl:HlsFile}}" type="application/x-mpegurl" />
         <tpl:HasHlsFile>
