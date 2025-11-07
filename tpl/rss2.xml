@@ -36,6 +36,7 @@
 	<googleplay:email>annonces@cpu.pm</googleplay:email>
 	<podcast:email>annonces@cpu.pm</podcast:email>
 	<podcast:verificationEmail>annonces@cpu.pm</podcast:verificationEmail>
+	<podcast:guid>539609d9-d651-5bad-aa7b-a5956fba7725</podcast:guid>
 	
 	<copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</copyright>
 	<media:copyright>{{tpl:BlogCopyrightNotice encode_xml="1"}}</media:copyright>
