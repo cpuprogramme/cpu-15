@@ -45,26 +45,6 @@
 
 /* Global default style for cpu-audio, usign var. Integrators may override them */
 
-:root {
-	--cpu-height : 64px;
-	--cpu-font-small-size : calc(var(--cpu-font-size) * 0.8);
-	--cpu-background : #555;
-	--cpu-color : #ddd;
-	--cpu-playing-background : #444;
-	--cpu-playing-color : #fff;
-	--cpu-error-background : #a00 ;
-	--cpu-error-color : #ff7 ;
-	--cpu-popup-background : #aaa;
-	--cpu-popup-color : #333;
-	--cpu-cue : #000;
-	--cpu-timeline-limits : #f00;
-	--cpu-elapse-width : 160px;
-	--cpu-min-padding : 16px;
-	--cpu-inner-shadow : inset 0px 5px 10px -5px black;
-	--cpu-color-transitions : 0s;
-	--cpu-background-transitions : 0s;
-	/* --cpu-unfold : 0s; not actived */
-}
 
 @media (max-width: 640px) {
 	:root , .interface {
@@ -100,8 +80,28 @@ body/*:root*/ {
 	--calque-bg : #ffffff77;
 	--calque-out-within : #ffffffbb;
 	--calque-out : white;
-	--cpu-focus-color : #111;
+	/*--cpu-focus-color : #111;*/
 
+	--cpu-height : 64px;
+	--cpu-font-small-size : calc(var(--cpu-font-size) * 0.8);
+	--cpu-background : #333;
+	--cpu-color : #ddd;
+	--cpu-playing-background : #444;
+	--cpu-playing-color : #fff;
+	--cpu-focus-background : #fff;
+	--cpu-focus-color : #000;
+	--cpu-error-background : #a00 ;
+	--cpu-error-color : #ff7 ;
+	--cpu-popup-background : #aaa;
+	--cpu-popup-color : #333;
+	--cpu-cue : #000;
+	--cpu-timeline-limits : #f00;
+	--cpu-elapse-width : 160px;
+	--cpu-min-padding : 16px;
+	--cpu-inner-shadow : inset 0px 5px 10px -5px black;
+	--cpu-color-transitions : 0s;
+	--cpu-background-transitions : 0s;
+	/* --cpu-unfold : 0s; not actived */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -117,6 +117,13 @@ body/*:root*/ {
 		--calque-bg : #00000077;
 		--calque-out-within : #000000bb;
 		--calque-out : black;
+
+		--cpu-background : #ddd;
+		--cpu-color : #222;
+		--cpu-playing-background : #eee;
+		--cpu-playing-color : #111;
+		--cpu-focus-background : #000;
+		--cpu-focus-color : #fff;
 	}
 }
 
@@ -492,8 +499,9 @@ ul ul, ul ol, ol ol, ol ul {
 --------------------------------------------------- */
 
 #main {
-	--cpu-background : #00000099;
-	--cpu-playing-background : #000000dd;
+	/*
+	--cpu-background : #333;
+	--cpu-playing-background : #111;*/
 
 	background-color: var(--background-main);
 	padding: 1em .5em 2em; }
@@ -1133,8 +1141,10 @@ menu a:hover, menu a:focus {
 	left : 0;
 	width : 100%;
 	height : 64px;
+	/*
 	--cpu-background : #555;
 	--cpu-playing-background : #555;
+	*/
 }
 
 #motto {
