@@ -1204,7 +1204,7 @@ body.cpu-audio-with-webcomponents.delegated #header-control, body.cpu-audio-with
 	background : var(--calque-bg);
 	text-shadow : 1px 1px 0 var(--calque-out), -1px 1px 0 var(--calque-out), 1px -1px 0 var(--calque-out), -1px -1px 0 var(--calque-out);
 	line-height: normal; /* due to Roboto */
-	backdrop-filter: blur(5px);
+	/*backdrop-filter: blur(5px);*/
 }
 
 
@@ -1436,7 +1436,7 @@ figure, figure iframe, figure img {
 }
 
 cpu-audio {
-	backdrop-filter: blur(5px);
+	/*backdrop-filter: blur(5px);*/
 }
 
 @media (prefers-contrast: more) {
