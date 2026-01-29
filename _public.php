@@ -132,24 +132,24 @@ class CPU15_template
 		return 
 			"<?php \n".
 			'$sql = "SELECT count(*) FROM ".'.
-		    '    dcCore::app()->prefix . "meta as m," .'.
-	        '    dcCore::app()->prefix . "post as p ".'.
-	        '    " WHERE m.post_id = p.post_id " .'.
-	        '    " AND post_type = \'post\' ".'.
-	        '    " AND post_status = 1 ".'.
-	        '    " AND blog_id = \'" . dcCore::app()->blog->id . "\'" .'.
-       		'	" AND meta_type = \'serie\' AND meta_id = \'".dcCore::app()->ctx->meta->meta_id."\' ;";'.
+			'    dcCore::app()->prefix . "meta as m," .'.
+			'    dcCore::app()->prefix . "post as p ".'.
+			'    " WHERE m.post_id = p.post_id " .'.
+			'    " AND post_type = \'post\' ".'.
+			'    " AND post_status = 1 ".'.
+			'    " AND blog_id = \'" . dcCore::app()->blog->id . "\'" .'.
+			'	" AND meta_type = \'serie\' AND meta_id = \'".dcCore::app()->ctx->meta->meta_id."\' ;";'.
 			'$rs = dcCore::app()->con->select($sql);'.
 			'$_nb = $rs->f(0); ?>'.
-		    $that->displayCounter(
-	            sprintf($f, '$_nb'),
-	            array(
-	            	'none' => '(prochainement)', 
-	            	'one' => 'un épisode', 
-	            	'more' => '%s épisodes', 
-	            ),
-	            $attr
-    		);
+			$that->displayCounter(
+				sprintf($f, '$_nb'),
+				array(
+					'none' => '(prochainement)', 
+					'one' => 'un épisode', 
+					'more' => '%s épisodes', 
+				),
+				$attr
+			);
 	}
 
 	public static function EpisodeNumber($attr) {
