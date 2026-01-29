@@ -21,9 +21,11 @@ dcCore::app()->tpl->addValue('EntryURLsegment',['CPU15_template','EntryURLsegmen
 dcCore::app()->tpl->addBlock('Entry1stLevelCategory',['CPU15_template','Entry1stLevelCategory']);
 dcCore::app()->tpl->addValue('CountEntriesInSeries',['CPU15_template','CountEntriesInSeries']);
 dcCore::app()->tpl->addValue('EpisodeNumber',['CPU15_template','EpisodeNumber']);
+dcCore::app()->tpl->addValue('EpisodeCountReset',['CPU15_template','EpisodeCountReset']);
 
 dcCore::app()->tpl->addBlock('AttachmentsNo',['CPU15_template','AttachmentsNo']);
 dcCore::app()->tpl->addBlock('SeriesNotLostAndFound', ['CPU15_template', 'SeriesNotLostAndFound']);
+dcCore::app()->tpl->addBlock('EpisodeCountLowerThan', ['CPU15_template', 'EpisodeCountLowerThan']);
 
 class CPU15_url extends dcUrlHandlers
 {
@@ -46,7 +48,6 @@ class CPU15_url extends dcUrlHandlers
 
 		self::serveDocument('twitter-player.html');
 	}	
-
 
 	public static function showshortcut($args) {
 		if ($args === '') {
@@ -92,7 +93,7 @@ class CPU15_url extends dcUrlHandlers
 
 class CPU15_template
 {
-	public static function AttachmentsNo($attr,$content) {
+	public static function AttachmentsNo($attr, $content) {
 		return
 		"<?php\n".
 		'if (dcCore::app()->ctx->posts !== null && dcCore::app()->media) {'."\n".
@@ -156,12 +157,22 @@ class CPU15_template
 		return '<?php echo substr(dcCore::app()->ctx->posts->post_title, 2, 4); ?>';
 	}
 
-	public static function SeriesNotLostAndFound($attr,$content) {
-        return 
-            '<?php if (dcCore::app()->ctx->meta->meta_id != "lost and found") { ?>' . $content . '<?php }  ?>';
-
+	public static function EpisodeCountReset(ArrayObject $attr) {
+		# Ugly but faster
+		return  '<?php $_EpisodeCountReset = 0; ?>';
 	}
 
+	public static function EpisodeCountLowerThan(ArrayObject $attr, string $content) {
+		$number = (int) $attr['number'];
+		return 
+			'<?php if ( $_EpisodeCountReset++ < '.$number.' ) { ?>' . $content . '<?php }  ?>';
+	}
+
+	public static function SeriesNotLostAndFound($attr,$content) {
+		return 
+			'<?php if (dcCore::app()->ctx->meta->meta_id != "lost and found") { ?>' . $content . '<?php }  ?>';
+
+	}
 
 }
 

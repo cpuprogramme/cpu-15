@@ -77,7 +77,9 @@
 	<podcast:social platform="twitter" url="https://twitter.com/cpuprogramme" name="Twitter">CPUprogramme</podcast:social>
 	<podcast:social platform="facebook.page" url="https://www.facebook.com/programmecpu" name="Page facebook">Programme CPU</podcast:social>
 
-	<tpl:Entries>
+
+	{{tpl:EpisodeCountReset}}
+	<tpl:Entries lastn="0">
 
 		<item>
 			<title>{{tpl:EntryTitle encode_xml="1"}}</title>
@@ -96,20 +98,22 @@
 				<tpl:EntrySeries>Cette release fait partie de la série “{{tpl:SerieID}}”.</tpl:EntrySeries>
 				{{tpl:EntryContent remove_html="1" encode_xml="1" cut_string="250"}}…
 			</description>
-			<content:encoded><![CDATA[
-				<tpl:EntrySeries>
+			<tpl:EpisodeCountLowerThan number="100">
+				<content:encoded><![CDATA[
+					<tpl:EntrySeries>
+						<p>
+							<a href="{{tpl:SerieURL absolute_urls="1"}}">
+								Cette <em lang="en">release</em> fait partie de la série 
+								<q>{{tpl:SerieID}}</q>
+							</a>
+						</p>
+					</tpl:EntrySeries>
+					{{tpl:EntryContent absolute_urls="1"}}
 					<p>
-						<a href="{{tpl:SerieURL absolute_urls="1"}}">
-							Cette <em lang="en">release</em> fait partie de la série 
-							<q>{{tpl:SerieID}}</q>
-						</a>
+						<img src="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
 					</p>
-				</tpl:EntrySeries>
-				{{tpl:EntryContent absolute_urls="1"}}
-				<p>
-					<img src="https://cpu.dascritch.net{{tpl:EntryFirstImage with_category="1" no_tag="1" size="m"}}" alt="" >
-				</p>
-			]]></content:encoded>
+				]]></content:encoded>
+			</tpl:EpisodeCountLowerThan>
 			<tpl:Attachments>
 				<enclosure url="https://cpu.dascritch.net{{tpl:AttachmentURL}}"
 				length="{{tpl:AttachmentSize}}" full="1" type="{{tpl:AttachmentMimeType}}" />
@@ -122,8 +126,6 @@
 					<podcast:source uri="{{tpl:OggFile}}" />
 				</podcast:alternateEnclosure> -->
 			</tpl:Attachments>
-
-
 
 			<tpl:EntryIf has_category="1">
 				<category>{{tpl:EntryCategory}}</category>
