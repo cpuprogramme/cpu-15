@@ -103,7 +103,7 @@
 						<p>
 							<a href="{{tpl:SerieURL absolute_urls="1"}}">
 								Cette <em lang="en">release</em> fait partie de la série 
-								<q>{{tpl:SerieID}}</q>
+								<q>{{tpl:SerieID}}</q>.
 							</a>
 						</p>
 					</tpl:EntrySeries>
@@ -157,7 +157,7 @@
 			<pubDate>{{tpl:EntryDate rfc822="1"}}</pubDate>
 			<guid isPermaLink="false">{{tpl:EntryFeedID}}</guid>
 			<description>
-				Bande-annonce de CPU, l'émission Carré Petit Utile de radio FMR. Tous les Jeudi à 11h et sur https://cpu.pm .
+				Bande-annonce de CPU, l'émission Carré Petit Utile de radio FMR. Tous les Jeudi à 11h et sur https://cpu.pm.
 			</description>
 			<content:encoded><![CDATA[
 				<p>
