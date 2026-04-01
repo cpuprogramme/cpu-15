@@ -115,8 +115,8 @@
 			</tpl:EpisodeCountLowerThan>
 			<tpl:Attachments>
 				<enclosure url="https://cpu.dascritch.net{{tpl:AttachmentURL}}"
-				length="{{tpl:AttachmentSize}}" full="1" type="{{tpl:AttachmentMimeType}}" />
-				<media:content url="https://cpu.dascritch.net{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize}}" full="1" type="{{tpl:AttachmentMimeType}}" />
+				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
+				<media:content url="https://cpu.dascritch.net{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
 				<!-- # <podcast:alternateEnclosure
 					type="audio/ogg"
 					length="{{tpl:OggFileSize}}"
@@ -167,8 +167,8 @@
 			]]></content:encoded>
 			<tpl:Attachments>
 				<enclosure url="https://cpu.dascritch.net{{tpl:AttachmentURL}}"
-				length="{{tpl:AttachmentSize}}" full="1" type="{{tpl:AttachmentMimeType}}" />
-				<media:content url="https://cpu.dascritch.net{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize}}" full="1" type="{{tpl:AttachmentMimeType}}" />
+				length="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
+				<media:content url="https://cpu.dascritch.net{{tpl:AttachmentURL}}" fileSize="{{tpl:AttachmentSize full="1"}}" type="{{tpl:AttachmentMimeType}}" />
 				<!-- # <podcast:alternateEnclosure
 					type="audio/ogg"
 					length="{{tpl:OggFileSize}}"
