@@ -84,14 +84,13 @@
 
 			<div class="content-inner">
 	<tpl:Entries>
-		<tpl:EntriesHeader>
-			{{tpl:include src="_entry-short-player.html"}}
+		{{tpl:include src="_entry-short-player.html"}}
 
-			<tpl:EntriesFooter>
-				<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
-					{{tpl:include src="_pagination.html"}}
-				</p>
-			</tpl:EntriesFooter>
+		<tpl:EntriesFooter>
+			<p class="pagination" aria-label="{{tpl:lang Pagination}}" role="navigation">
+				{{tpl:include src="_pagination.html"}}
+			</p>
+		</tpl:EntriesFooter>
 
 		</tpl:Entries>
 	</div> <!-- End #content-inner -->
