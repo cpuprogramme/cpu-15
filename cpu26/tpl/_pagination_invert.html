@@ -1,0 +1,19 @@
+<<tpl:Pagination>
+
+	<tpl:PaginationIf end="0">
+		<a href="{{tpl:PaginationURL offset="+1"}}" class="next">
+			<span class="not-small">Ça sera mieux</span> après			
+			<span aria-hidden="true"> ⇐</span>
+		</a>
+	</tpl:PaginationIf>
+
+	Page n°&nbsp;{{tpl:PaginationCurrent}}&nbsp;/&nbsp;{{tpl:PaginationCounter}}
+
+	<tpl:PaginationIf start="0">
+		<a href="{{tpl:PaginationURL offset="-1"}}" class="prev">
+			<span aria-hidden="true">⇒ </span>
+			<span class="not-small">C'était mieux</span> avant
+		</a>
+	</tpl:PaginationIf>
+
+</tpl:Pagination>
